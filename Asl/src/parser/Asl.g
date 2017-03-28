@@ -59,8 +59,8 @@ package parser;
 // A program is a list of functions
 prog	: func+ EOF -> ^(LIST_FUNCTIONS func+)
         ;
-            
-// A function has a name, a list of parameters and a block of instructions	
+
+// A function has a name, a list of parameters and a block of instructions
 func	: FUNC^ ID params block_instructions ENDFUNC!
         ;
 
@@ -142,7 +142,7 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // Atom of the expressions (variables, integer and boolean literals).
 // An atom can also be a function call or another expression
 // in parenthesis
-atom    :   ID 
+atom    :   ID
         |   INT
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
         |   funcall
@@ -156,6 +156,52 @@ funcall :   ID '(' expr_list? ')' -> ^(FUNCALL ID ^(ARGLIST expr_list?))
 // A list of expressions separated by commas
 expr_list:  expr (','! expr)*
         ;
+
+//Musical expressions
+
+nota: (  (modificacioPre? ( DO | RE | MI | FA | SOL | LA | SI))
+                         | SILENCI )
+      modificacioPost?
+      ;
+
+
+
+
+//Musical tokens
+DO: 'Do';
+RE: 'Re';
+MI: 'Mi';
+FA: 'Fa';
+SOL:'Sol';
+LA: 'La';
+SI: 'Si';
+SILENCI: 'Silenci';
+
+SOSTINGUT: '#';
+BEMOLL: 'b';
+BEQUADRE: 'bq';
+
+PUNTET: '·';
+SEPARADOR_COMPAS: '|';
+DOS_PUNTS: ':';
+PUNT: '.';
+
+NEGRA: 'n';
+BLANCA: 'b';
+CORXERA: 'c';
+SEMICORXERA: 'sc';
+FUSA: 'f';
+SEMIFUSA: 'sf';
+RODONA: 'r';
+
+TEMPO: 'Tempo';
+COMPAS: 'Compas';
+ARMADURA: 'Armadura';
+REPETICIO: 'Repeticio';
+
+OCTAVA: '1'..'9';
+
+
 
 // Basic tokens
 EQUAL	: '=' ;
@@ -171,7 +217,7 @@ DIV	    : '/';
 MOD	    : '%' ;
 NOT	    : 'not';
 AND	    : 'and' ;
-OR	    : 'or' ;	
+OR	    : 'or' ;
 IF  	: 'if' ;
 THEN	: 'then' ;
 ELSE	: 'else' ;
@@ -194,7 +240,7 @@ COMMENT	: '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
     	| '/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
     	;
 
-// Strings (in quotes) with escape sequences        
+// Strings (in quotes) with escape sequences
 STRING  :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
         ;
 
@@ -210,5 +256,3 @@ WS  	: ( ' '
         | '\n'
         ) {$channel=HIDDEN;}
     	;
-
-
