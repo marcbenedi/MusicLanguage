@@ -1,0 +1,199 @@
+digraph {
+
+	ordering=out;
+	ranksep=.4;
+	bgcolor="lightgrey"; node [shape=box, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
+	edge [arrowsize=.5, color="black", style="bold"]
+
+  n0 [label="LIST_FUNCTIONS"];
+  n1 [label="Piezzo"];
+  n1 [label="Piezzo"];
+  n2 [label="nom"];
+  n3 [label="PARAMS"];
+  n3 [label="PARAMS"];
+  n4 [label="vel"];
+  n5 [label="Partitura"];
+  n5 [label="Partitura"];
+  n6 [label="MODS"];
+  n6 [label="MODS"];
+  n7 [label="Adagio"];
+  n8 [label="BEAT"];
+  n8 [label="BEAT"];
+  n9 [label="3"];
+  n10 [label="4"];
+  n11 [label="VEUS"];
+  n11 [label="VEUS"];
+  n12 [label="Voice"];
+  n12 [label="Voice"];
+  n13 [label="Marc"];
+  n14 [label="COMPAS"];
+  n14 [label="COMPAS"];
+  n15 [label="MODS"];
+  n15 [label="MODS"];
+  n16 [label="EXPR_TIME"];
+  n16 [label="EXPR_TIME"];
+  n17 [label="="];
+  n17 [label="="];
+  n18 [label="TIME"];
+  n19 [label="2"];
+  n20 [label="Adagio"];
+  n21 [label="f"];
+  n22 [label="NOTES_ACORDS"];
+  n22 [label="NOTES_ACORDS"];
+  n23 [label="La"];
+  n23 [label="La"];
+  n24 [label="7"];
+  n25 [label="n"];
+  n26 [label="·"];
+  n27 [label="Re"];
+  n28 [label="ACORD"];
+  n28 [label="ACORD"];
+  n29 [label="Re"];
+  n30 [label="Re"];
+  n31 [label="COMPAS"];
+  n31 [label="COMPAS"];
+  n32 [label="NOTES_ACORDS"];
+  n32 [label="NOTES_ACORDS"];
+  n33 [label="La"];
+  n34 [label="Si"];
+  n35 [label="Do"];
+  n36 [label="Voice"];
+  n36 [label="Voice"];
+  n37 [label="Reps"];
+  n38 [label="REP_COMPAS"];
+  n38 [label="REP_COMPAS"];
+  n39 [label="3"];
+  n40 [label="COMPAS"];
+  n40 [label="COMPAS"];
+  n41 [label="NOTES_ACORDS"];
+  n41 [label="NOTES_ACORDS"];
+  n42 [label="Si"];
+  n42 [label="Si"];
+  n43 [label="#"];
+  n44 [label="7"];
+  n45 [label="b"];
+  n46 [label="COMPAS"];
+  n46 [label="COMPAS"];
+  n47 [label="NOTES_ACORDS"];
+  n47 [label="NOTES_ACORDS"];
+  n48 [label="Re"];
+  n49 [label="Mi"];
+  n50 [label="COMPAS"];
+  n50 [label="COMPAS"];
+  n51 [label="NOTES_ACORDS"];
+  n51 [label="NOTES_ACORDS"];
+  n52 [label="ACORD"];
+  n52 [label="ACORD"];
+  n53 [label="Fa"];
+  n54 [label="Sol"];
+  n55 [label="Voice"];
+  n55 [label="Voice"];
+  n56 [label="Inception"];
+  n57 [label="REP_COMPAS"];
+  n57 [label="REP_COMPAS"];
+  n58 [label="10"];
+  n59 [label="COMPAS"];
+  n59 [label="COMPAS"];
+  n60 [label="NOTES_ACORDS"];
+  n60 [label="NOTES_ACORDS"];
+  n61 [label="Fa"];
+  n61 [label="Fa"];
+  n62 [label="#"];
+  n63 [label="REP_COMPAS"];
+  n63 [label="REP_COMPAS"];
+  n64 [label="3"];
+  n65 [label="COMPAS"];
+  n65 [label="COMPAS"];
+  n66 [label="NOTES_ACORDS"];
+  n66 [label="NOTES_ACORDS"];
+  n67 [label="Si"];
+  n67 [label="Si"];
+  n68 [label="#"];
+  n69 [label="COMPAS"];
+  n69 [label="COMPAS"];
+  n70 [label="NOTES_ACORDS"];
+  n70 [label="NOTES_ACORDS"];
+  n71 [label="Do"];
+  n71 [label="Do"];
+  n72 [label="bm"];
+  n73 [label="100"];
+  n74 [label="r"];
+  n75 [label="·"];
+
+  n0 -> n1 // "LIST_FUNCTIONS" -> "Piezzo"
+  n1 -> n2 // "Piezzo" -> "nom"
+  n1 -> n3 // "Piezzo" -> "PARAMS"
+  n3 -> n4 // "PARAMS" -> "vel"
+  n1 -> n5 // "Piezzo" -> "Partitura"
+  n5 -> n6 // "Partitura" -> "MODS"
+  n6 -> n7 // "MODS" -> "Adagio"
+  n6 -> n8 // "MODS" -> "BEAT"
+  n8 -> n9 // "BEAT" -> "3"
+  n8 -> n10 // "BEAT" -> "4"
+  n5 -> n11 // "Partitura" -> "VEUS"
+  n11 -> n12 // "VEUS" -> "Voice"
+  n12 -> n13 // "Voice" -> "Marc"
+  n12 -> n14 // "Voice" -> "COMPAS"
+  n14 -> n15 // "COMPAS" -> "MODS"
+  n15 -> n16 // "MODS" -> "EXPR_TIME"
+  n16 -> n17 // "EXPR_TIME" -> "="
+  n17 -> n18 // "=" -> "TIME"
+  n17 -> n19 // "=" -> "2"
+  n15 -> n20 // "MODS" -> "Adagio"
+  n15 -> n21 // "MODS" -> "f"
+  n14 -> n22 // "COMPAS" -> "NOTES_ACORDS"
+  n22 -> n23 // "NOTES_ACORDS" -> "La"
+  n23 -> n24 // "La" -> "7"
+  n23 -> n25 // "La" -> "n"
+  n23 -> n26 // "La" -> "·"
+  n22 -> n27 // "NOTES_ACORDS" -> "Re"
+  n22 -> n28 // "NOTES_ACORDS" -> "ACORD"
+  n28 -> n29 // "ACORD" -> "Re"
+  n28 -> n30 // "ACORD" -> "Re"
+  n12 -> n31 // "Voice" -> "COMPAS"
+  n31 -> n32 // "COMPAS" -> "NOTES_ACORDS"
+  n32 -> n33 // "NOTES_ACORDS" -> "La"
+  n32 -> n34 // "NOTES_ACORDS" -> "Si"
+  n32 -> n35 // "NOTES_ACORDS" -> "Do"
+  n11 -> n36 // "VEUS" -> "Voice"
+  n36 -> n37 // "Voice" -> "Reps"
+  n36 -> n38 // "Voice" -> "REP_COMPAS"
+  n38 -> n39 // "REP_COMPAS" -> "3"
+  n38 -> n40 // "REP_COMPAS" -> "COMPAS"
+  n40 -> n41 // "COMPAS" -> "NOTES_ACORDS"
+  n41 -> n42 // "NOTES_ACORDS" -> "Si"
+  n42 -> n43 // "Si" -> "#"
+  n42 -> n44 // "Si" -> "7"
+  n42 -> n45 // "Si" -> "b"
+  n38 -> n46 // "REP_COMPAS" -> "COMPAS"
+  n46 -> n47 // "COMPAS" -> "NOTES_ACORDS"
+  n47 -> n48 // "NOTES_ACORDS" -> "Re"
+  n47 -> n49 // "NOTES_ACORDS" -> "Mi"
+  n36 -> n50 // "Voice" -> "COMPAS"
+  n50 -> n51 // "COMPAS" -> "NOTES_ACORDS"
+  n51 -> n52 // "NOTES_ACORDS" -> "ACORD"
+  n52 -> n53 // "ACORD" -> "Fa"
+  n52 -> n54 // "ACORD" -> "Sol"
+  n11 -> n55 // "VEUS" -> "Voice"
+  n55 -> n56 // "Voice" -> "Inception"
+  n55 -> n57 // "Voice" -> "REP_COMPAS"
+  n57 -> n58 // "REP_COMPAS" -> "10"
+  n57 -> n59 // "REP_COMPAS" -> "COMPAS"
+  n59 -> n60 // "COMPAS" -> "NOTES_ACORDS"
+  n60 -> n61 // "NOTES_ACORDS" -> "Fa"
+  n61 -> n62 // "Fa" -> "#"
+  n57 -> n63 // "REP_COMPAS" -> "REP_COMPAS"
+  n63 -> n64 // "REP_COMPAS" -> "3"
+  n63 -> n65 // "REP_COMPAS" -> "COMPAS"
+  n65 -> n66 // "COMPAS" -> "NOTES_ACORDS"
+  n66 -> n67 // "NOTES_ACORDS" -> "Si"
+  n67 -> n68 // "Si" -> "#"
+  n57 -> n69 // "REP_COMPAS" -> "COMPAS"
+  n69 -> n70 // "COMPAS" -> "NOTES_ACORDS"
+  n70 -> n71 // "NOTES_ACORDS" -> "Do"
+  n71 -> n72 // "Do" -> "bm"
+  n71 -> n73 // "Do" -> "100"
+  n71 -> n74 // "Do" -> "r"
+  n71 -> n75 // "Do" -> "·"
+}

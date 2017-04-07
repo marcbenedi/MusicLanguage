@@ -170,12 +170,28 @@ expr_list:  expr (','! expr)*
 
 //Musical expressions-----------------------------------------------------------
 //------------------------------------------------------------------------------
+/*// A list of instructions, all of them gouped in a subtree
+block_instructions_music
+        :	 instruction_music (';' instruction_music)*
+            -> ^(LIST_INSTR instruction_music+)
+        ;
 
-piezzo	: PIEZZO^ ID params partitura ENDPIEZZO!
+// The different types of instructions
+instruction_music
+        :	assign          // Assignment
+        |	ite_stmt        // if-then-else
+        |	while_stmt      // while statement
+        |   funcall         // Call to a procedure (no result produced)
+        |	read            // Read a variable
+        | 	write           // Write a string or an expression
+        |                   // Nothing
+        ;*/
+
+piezzo	: PIEZZO^ ID params partitura /*block_instructions_music*/ENDPIEZZO!
         ;
 
 nota: (
-      ((PREMOD'.')? INT? NOTA_MUSICAL ('.' FIGURA)? PUNTET?) -> ^(NOTA_MUSICAL PREMOD? INT? FIGURA? PUNTET?)
+      ((PREMOD'.')? INT? NOTA_MUSICAL /*OCTAVA?*/ ('.' FIGURA)? PUNTET?) -> ^(NOTA_MUSICAL PREMOD? INT? FIGURA? PUNTET?)
       | SILENCI ('.'FIGURA)? PUNTET?
       )
       ;
@@ -196,13 +212,13 @@ tempo: TEMPO ( (PARAULA_TEMPO -> ^(PARAULA_TEMPO) )
               )
      ;
 
-compas_beat: INT ':' INT -> ^(BEAT INT INT)
+compas_beat: INT ':' INT/*NUMERO_FIGURA */ -> ^(BEAT INT INT)
            ;
 
 veu: 'Voice'^ ID  SEPARADOR_COMPAS! grup_compases SEPARADOR_COMPAS! SEPARADOR_COMPAS!
    ;
 
-grup_compases: (repeticion_compases | '|'! compas)+
+grup_compases: (repeticion_compases | '|'! compas)+ //('|' | '|:') compas ('|' | ':'!INT'||'!)
              ;
 
 repeticion_compases: REP_OBRIR  dentro_repeticio rep_tancar -> ^(REP_COMPAS rep_tancar dentro_repeticio)
@@ -234,7 +250,7 @@ SILENCI: 'Silenci';
 
 PREMOD: ('#' | 'bm' | 'bq');
 
-PUNTET: '·';
+PUNTET: '·'; ///Hi havia conflicte amb el mul = *
 SEPARADOR_COMPAS: '|';
 REP_OBRIR: '|:';
 //REP_TANCAR: ':' INT '|';
@@ -245,6 +261,10 @@ TEMPO: 'Tempo';
 COMPAS: 'Compas';
 ARMADURA: 'Armadura';
 REPETICIO: 'Repeticio';
+
+//OCTAVA: '1'..'9'; //Va conflicte amb els ints
+
+//NUMERO_FIGURA: ('1' | '2' | '4' | '8' | '16' | '32' | '64'); //Pot haver-hi conflicte amb els ints
 
 PARTITURA: 'Partitura' ;
 

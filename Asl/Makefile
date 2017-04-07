@@ -50,6 +50,7 @@ INTERP_SRC =	$(INTERP)/Interp.java \
 
 ALL_SRC =		$(MAIN_SRC) $(PARSER_SRC) $(INTERP_SRC)
 
+#all: compile exec docs
 all: compile exec
 
 compile:
