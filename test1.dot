@@ -119,7 +119,6 @@ digraph {
   n72 [label="bm"];
   n73 [label="100"];
   n74 [label="r"];
-  n75 [label="·"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "Piezzo"
   n1 -> n2 // "Piezzo" -> "nom"
@@ -195,6 +194,5 @@ digraph {
   n71 -> n72 // "Do" -> "bm"
   n71 -> n73 // "Do" -> "100"
   n71 -> n74 // "Do" -> "r"
-  n71 -> n75 // "Do" -> "·"
 
 }
