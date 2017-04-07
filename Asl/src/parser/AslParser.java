@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/marcbenedi/Programs/Asl/src/parser/Asl.g 2017-04-06 21:13:50
+// $ANTLR 3.4 /home/marcbenedi/Programs/Asl/src/parser/Asl.g 2017-04-07 17:35:23
 
 package parser;
 import interp.AslTree;
@@ -2621,7 +2621,7 @@ public TreeAdaptor getTreeAdaptor() {
                 if ( (LA21_1==73) ) {
                     alt21=4;
                 }
-                else if ( (LA21_1==AND||(LA21_1 >= DIV && LA21_1 <= ENDIF)||(LA21_1 >= ENDWHILE && LA21_1 <= EQUAL)||(LA21_1 >= GE && LA21_1 <= GT)||LA21_1==LE||(LA21_1 >= LT && LA21_1 <= MOD)||LA21_1==MUL||(LA21_1 >= NOT_EQUAL && LA21_1 <= OR)||LA21_1==PLUS||LA21_1==THEN||(LA21_1 >= 74 && LA21_1 <= 75)||LA21_1==78||LA21_1==83) ) {
+                else if ( (LA21_1==AND||(LA21_1 >= COMPAS && LA21_1 <= ENDIF)||(LA21_1 >= ENDWHILE && LA21_1 <= EQUAL)||(LA21_1 >= GE && LA21_1 <= GT)||LA21_1==LE||(LA21_1 >= LT && LA21_1 <= MOD)||LA21_1==MUL||(LA21_1 >= NOT_EQUAL && LA21_1 <= OR)||LA21_1==PLUS||LA21_1==THEN||(LA21_1 >= 74 && LA21_1 <= 75)||(LA21_1 >= 77 && LA21_1 <= 79)||LA21_1==83) ) {
                     alt21=1;
                 }
                 else {
@@ -3061,7 +3061,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "piezzo"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:190:1: piezzo : PIEZZO ^ ID params partitura ENDPIEZZO !;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:174:1: piezzo : PIEZZO ^ ID params partitura ENDPIEZZO !;
     public final AslParser.piezzo_return piezzo() throws RecognitionException {
         AslParser.piezzo_return retval = new AslParser.piezzo_return();
         retval.start = input.LT(1);
@@ -3082,41 +3082,41 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDPIEZZO92_tree=null;
 
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:190:8: ( PIEZZO ^ ID params partitura ENDPIEZZO !)
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:190:10: PIEZZO ^ ID params partitura ENDPIEZZO !
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:174:8: ( PIEZZO ^ ID params partitura ENDPIEZZO !)
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:174:10: PIEZZO ^ ID params partitura ENDPIEZZO !
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            PIEZZO88=(Token)match(input,PIEZZO,FOLLOW_PIEZZO_in_piezzo1239); 
+            PIEZZO88=(Token)match(input,PIEZZO,FOLLOW_PIEZZO_in_piezzo1237); 
             PIEZZO88_tree = 
             (AslTree)adaptor.create(PIEZZO88)
             ;
             root_0 = (AslTree)adaptor.becomeRoot(PIEZZO88_tree, root_0);
 
 
-            ID89=(Token)match(input,ID,FOLLOW_ID_in_piezzo1242); 
+            ID89=(Token)match(input,ID,FOLLOW_ID_in_piezzo1240); 
             ID89_tree = 
             (AslTree)adaptor.create(ID89)
             ;
             adaptor.addChild(root_0, ID89_tree);
 
 
-            pushFollow(FOLLOW_params_in_piezzo1244);
+            pushFollow(FOLLOW_params_in_piezzo1242);
             params90=params();
 
             state._fsp--;
 
             adaptor.addChild(root_0, params90.getTree());
 
-            pushFollow(FOLLOW_partitura_in_piezzo1246);
+            pushFollow(FOLLOW_partitura_in_piezzo1244);
             partitura91=partitura();
 
             state._fsp--;
 
             adaptor.addChild(root_0, partitura91.getTree());
 
-            ENDPIEZZO92=(Token)match(input,ENDPIEZZO,FOLLOW_ENDPIEZZO_in_piezzo1249); 
+            ENDPIEZZO92=(Token)match(input,ENDPIEZZO,FOLLOW_ENDPIEZZO_in_piezzo1246); 
 
             }
 
@@ -3149,7 +3149,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "nota"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:193:1: nota : ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:177:1: nota : ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) ;
     public final AslParser.nota_return nota() throws RecognitionException {
         AslParser.nota_return retval = new AslParser.nota_return();
         retval.start = input.LT(1);
@@ -3189,10 +3189,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_76=new RewriteRuleTokenStream(adaptor,"token 76");
 
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:193:5: ( ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:193:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:177:5: ( ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:193:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -3211,12 +3211,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt30) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:7: ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? )
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:7: ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? )
                     {
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:7: ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? )
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:8: ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:7: ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? )
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:8: ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )?
                     {
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:8: ( PREMOD '.' )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:8: ( PREMOD '.' )?
                     int alt24=2;
                     int LA24_0 = input.LA(1);
 
@@ -3225,13 +3225,13 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt24) {
                         case 1 :
-                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:9: PREMOD '.'
+                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:9: PREMOD '.'
                             {
-                            PREMOD93=(Token)match(input,PREMOD,FOLLOW_PREMOD_in_nota1276);  
+                            PREMOD93=(Token)match(input,PREMOD,FOLLOW_PREMOD_in_nota1273);  
                             stream_PREMOD.add(PREMOD93);
 
 
-                            char_literal94=(Token)match(input,76,FOLLOW_76_in_nota1277);  
+                            char_literal94=(Token)match(input,76,FOLLOW_76_in_nota1274);  
                             stream_76.add(char_literal94);
 
 
@@ -3241,7 +3241,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:21: ( INT )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:21: ( INT )?
                     int alt25=2;
                     int LA25_0 = input.LA(1);
 
@@ -3250,9 +3250,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt25) {
                         case 1 :
-                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:21: INT
+                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:21: INT
                             {
-                            INT95=(Token)match(input,INT,FOLLOW_INT_in_nota1281);  
+                            INT95=(Token)match(input,INT,FOLLOW_INT_in_nota1278);  
                             stream_INT.add(INT95);
 
 
@@ -3262,11 +3262,11 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    NOTA_MUSICAL96=(Token)match(input,NOTA_MUSICAL,FOLLOW_NOTA_MUSICAL_in_nota1284);  
+                    NOTA_MUSICAL96=(Token)match(input,NOTA_MUSICAL,FOLLOW_NOTA_MUSICAL_in_nota1281);  
                     stream_NOTA_MUSICAL.add(NOTA_MUSICAL96);
 
 
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:51: ( '.' FIGURA )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:39: ( '.' FIGURA )?
                     int alt26=2;
                     int LA26_0 = input.LA(1);
 
@@ -3275,13 +3275,13 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt26) {
                         case 1 :
-                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:52: '.' FIGURA
+                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:40: '.' FIGURA
                             {
-                            char_literal97=(Token)match(input,76,FOLLOW_76_in_nota1289);  
+                            char_literal97=(Token)match(input,76,FOLLOW_76_in_nota1284);  
                             stream_76.add(char_literal97);
 
 
-                            FIGURA98=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_nota1291);  
+                            FIGURA98=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_nota1286);  
                             stream_FIGURA.add(FIGURA98);
 
 
@@ -3291,7 +3291,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:65: ( PUNTET )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:53: ( PUNTET )?
                     int alt27=2;
                     int LA27_0 = input.LA(1);
 
@@ -3300,9 +3300,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt27) {
                         case 1 :
-                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:65: PUNTET
+                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:53: PUNTET
                             {
-                            PUNTET99=(Token)match(input,PUNTET,FOLLOW_PUNTET_in_nota1295);  
+                            PUNTET99=(Token)match(input,PUNTET,FOLLOW_PUNTET_in_nota1290);  
                             stream_PUNTET.add(PUNTET99);
 
 
@@ -3326,16 +3326,16 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 194:74: -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? )
+                    // 178:62: -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? )
                     {
-                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:77: ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? )
+                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:65: ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
                         stream_NOTA_MUSICAL.nextNode()
                         , root_1);
 
-                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:92: ( PREMOD )?
+                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:80: ( PREMOD )?
                         if ( stream_PREMOD.hasNext() ) {
                             adaptor.addChild(root_1, 
                             stream_PREMOD.nextNode()
@@ -3344,7 +3344,7 @@ public TreeAdaptor getTreeAdaptor() {
                         }
                         stream_PREMOD.reset();
 
-                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:100: ( INT )?
+                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:88: ( INT )?
                         if ( stream_INT.hasNext() ) {
                             adaptor.addChild(root_1, 
                             stream_INT.nextNode()
@@ -3353,7 +3353,7 @@ public TreeAdaptor getTreeAdaptor() {
                         }
                         stream_INT.reset();
 
-                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:105: ( FIGURA )?
+                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:93: ( FIGURA )?
                         if ( stream_FIGURA.hasNext() ) {
                             adaptor.addChild(root_1, 
                             stream_FIGURA.nextNode()
@@ -3362,7 +3362,7 @@ public TreeAdaptor getTreeAdaptor() {
                         }
                         stream_FIGURA.reset();
 
-                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:113: ( PUNTET )?
+                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:178:101: ( PUNTET )?
                         if ( stream_PUNTET.hasNext() ) {
                             adaptor.addChild(root_1, 
                             stream_PUNTET.nextNode()
@@ -3382,13 +3382,13 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:9: SILENCI ( '.' FIGURA )? ( PUNTET )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:179:9: SILENCI ( '.' FIGURA )? ( PUNTET )?
                     {
-                    SILENCI100=(Token)match(input,SILENCI,FOLLOW_SILENCI_in_nota1325);  
+                    SILENCI100=(Token)match(input,SILENCI,FOLLOW_SILENCI_in_nota1320);  
                     stream_SILENCI.add(SILENCI100);
 
 
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:17: ( '.' FIGURA )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:179:17: ( '.' FIGURA )?
                     int alt28=2;
                     int LA28_0 = input.LA(1);
 
@@ -3397,13 +3397,13 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt28) {
                         case 1 :
-                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:18: '.' FIGURA
+                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:179:18: '.' FIGURA
                             {
-                            char_literal101=(Token)match(input,76,FOLLOW_76_in_nota1328);  
+                            char_literal101=(Token)match(input,76,FOLLOW_76_in_nota1323);  
                             stream_76.add(char_literal101);
 
 
-                            FIGURA102=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_nota1329);  
+                            FIGURA102=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_nota1324);  
                             stream_FIGURA.add(FIGURA102);
 
 
@@ -3413,7 +3413,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:30: ( PUNTET )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:179:30: ( PUNTET )?
                     int alt29=2;
                     int LA29_0 = input.LA(1);
 
@@ -3422,9 +3422,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt29) {
                         case 1 :
-                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:30: PUNTET
+                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:179:30: PUNTET
                             {
-                            PUNTET103=(Token)match(input,PUNTET,FOLLOW_PUNTET_in_nota1333);  
+                            PUNTET103=(Token)match(input,PUNTET,FOLLOW_PUNTET_in_nota1328);  
                             stream_PUNTET.add(PUNTET103);
 
 
@@ -3471,7 +3471,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "acord"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:1: acord : '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:183:1: acord : '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) ;
     public final AslParser.acord_return acord() throws RecognitionException {
         AslParser.acord_return retval = new AslParser.acord_return();
         retval.start = input.LT(1);
@@ -3495,21 +3495,21 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_75=new RewriteRuleTokenStream(adaptor,"token 75");
         RewriteRuleSubtreeStream stream_nota=new RewriteRuleSubtreeStream(adaptor,"rule nota");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:6: ( '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:8: '[' nota ( ',' nota )+ ']'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:183:6: ( '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:183:8: '[' nota ( ',' nota )+ ']'
             {
-            char_literal104=(Token)match(input,80,FOLLOW_80_in_acord1356);  
+            char_literal104=(Token)match(input,80,FOLLOW_80_in_acord1351);  
             stream_80.add(char_literal104);
 
 
-            pushFollow(FOLLOW_nota_in_acord1358);
+            pushFollow(FOLLOW_nota_in_acord1353);
             nota105=nota();
 
             state._fsp--;
 
             stream_nota.add(nota105.getTree());
 
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:17: ( ',' nota )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:183:17: ( ',' nota )+
             int cnt31=0;
             loop31:
             do {
@@ -3523,13 +3523,13 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt31) {
             	case 1 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:18: ',' nota
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:183:18: ',' nota
             	    {
-            	    char_literal106=(Token)match(input,75,FOLLOW_75_in_acord1361);  
+            	    char_literal106=(Token)match(input,75,FOLLOW_75_in_acord1356);  
             	    stream_75.add(char_literal106);
 
 
-            	    pushFollow(FOLLOW_nota_in_acord1363);
+            	    pushFollow(FOLLOW_nota_in_acord1358);
             	    nota107=nota();
 
             	    state._fsp--;
@@ -3549,7 +3549,7 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            char_literal108=(Token)match(input,81,FOLLOW_81_in_acord1367);  
+            char_literal108=(Token)match(input,81,FOLLOW_81_in_acord1362);  
             stream_81.add(char_literal108);
 
 
@@ -3564,9 +3564,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 199:33: -> ^( ACORD nota ( nota )+ )
+            // 183:33: -> ^( ACORD nota ( nota )+ )
             {
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:36: ^( ACORD nota ( nota )+ )
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:183:36: ^( ACORD nota ( nota )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3623,7 +3623,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "partitura"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:202:1: partitura : PARTITURA ^ '{' ! optionsPart veus '}' !;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:186:1: partitura : PARTITURA ^ '{' ! optionsPart veus '}' !;
     public final AslParser.partitura_return partitura() throws RecognitionException {
         AslParser.partitura_return retval = new AslParser.partitura_return();
         retval.start = input.LT(1);
@@ -3644,36 +3644,36 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal113_tree=null;
 
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:202:10: ( PARTITURA ^ '{' ! optionsPart veus '}' !)
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:202:12: PARTITURA ^ '{' ! optionsPart veus '}' !
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:186:10: ( PARTITURA ^ '{' ! optionsPart veus '}' !)
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:186:12: PARTITURA ^ '{' ! optionsPart veus '}' !
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            PARTITURA109=(Token)match(input,PARTITURA,FOLLOW_PARTITURA_in_partitura1391); 
+            PARTITURA109=(Token)match(input,PARTITURA,FOLLOW_PARTITURA_in_partitura1386); 
             PARTITURA109_tree = 
             (AslTree)adaptor.create(PARTITURA109)
             ;
             root_0 = (AslTree)adaptor.becomeRoot(PARTITURA109_tree, root_0);
 
 
-            char_literal110=(Token)match(input,82,FOLLOW_82_in_partitura1394); 
+            char_literal110=(Token)match(input,82,FOLLOW_82_in_partitura1389); 
 
-            pushFollow(FOLLOW_optionsPart_in_partitura1397);
+            pushFollow(FOLLOW_optionsPart_in_partitura1392);
             optionsPart111=optionsPart();
 
             state._fsp--;
 
             adaptor.addChild(root_0, optionsPart111.getTree());
 
-            pushFollow(FOLLOW_veus_in_partitura1399);
+            pushFollow(FOLLOW_veus_in_partitura1394);
             veus112=veus();
 
             state._fsp--;
 
             adaptor.addChild(root_0, veus112.getTree());
 
-            char_literal113=(Token)match(input,83,FOLLOW_83_in_partitura1401); 
+            char_literal113=(Token)match(input,83,FOLLOW_83_in_partitura1396); 
 
             }
 
@@ -3706,7 +3706,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "optionsPart"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:204:1: optionsPart : tempo compas_beat -> ^( MODS tempo compas_beat ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:188:1: optionsPart : tempo compas_beat -> ^( MODS tempo compas_beat ) ;
     public final AslParser.optionsPart_return optionsPart() throws RecognitionException {
         AslParser.optionsPart_return retval = new AslParser.optionsPart_return();
         retval.start = input.LT(1);
@@ -3722,17 +3722,17 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_compas_beat=new RewriteRuleSubtreeStream(adaptor,"rule compas_beat");
         RewriteRuleSubtreeStream stream_tempo=new RewriteRuleSubtreeStream(adaptor,"rule tempo");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:204:12: ( tempo compas_beat -> ^( MODS tempo compas_beat ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:204:14: tempo compas_beat
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:188:12: ( tempo compas_beat -> ^( MODS tempo compas_beat ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:188:14: tempo compas_beat
             {
-            pushFollow(FOLLOW_tempo_in_optionsPart1418);
+            pushFollow(FOLLOW_tempo_in_optionsPart1413);
             tempo114=tempo();
 
             state._fsp--;
 
             stream_tempo.add(tempo114.getTree());
 
-            pushFollow(FOLLOW_compas_beat_in_optionsPart1420);
+            pushFollow(FOLLOW_compas_beat_in_optionsPart1415);
             compas_beat115=compas_beat();
 
             state._fsp--;
@@ -3750,9 +3750,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 204:32: -> ^( MODS tempo compas_beat )
+            // 188:32: -> ^( MODS tempo compas_beat )
             {
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:204:35: ^( MODS tempo compas_beat )
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:188:35: ^( MODS tempo compas_beat )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3802,7 +3802,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "veus"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:207:1: veus : ( veu )+ -> ^( VEUS ( veu )+ ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:191:1: veus : ( veu )+ -> ^( VEUS ( veu )+ ) ;
     public final AslParser.veus_return veus() throws RecognitionException {
         AslParser.veus_return retval = new AslParser.veus_return();
         retval.start = input.LT(1);
@@ -3815,10 +3815,10 @@ public TreeAdaptor getTreeAdaptor() {
 
         RewriteRuleSubtreeStream stream_veu=new RewriteRuleSubtreeStream(adaptor,"rule veu");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:207:5: ( ( veu )+ -> ^( VEUS ( veu )+ ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:207:7: ( veu )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:191:5: ( ( veu )+ -> ^( VEUS ( veu )+ ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:191:7: ( veu )+
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:207:7: ( veu )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:191:7: ( veu )+
             int cnt32=0;
             loop32:
             do {
@@ -3832,9 +3832,9 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt32) {
             	case 1 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:207:7: veu
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:191:7: veu
             	    {
-            	    pushFollow(FOLLOW_veu_in_veus1449);
+            	    pushFollow(FOLLOW_veu_in_veus1444);
             	    veu116=veu();
 
             	    state._fsp--;
@@ -3865,9 +3865,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 207:12: -> ^( VEUS ( veu )+ )
+            // 191:12: -> ^( VEUS ( veu )+ )
             {
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:207:15: ^( VEUS ( veu )+ )
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:191:15: ^( VEUS ( veu )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3922,7 +3922,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "tempo"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:210:1: tempo : TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' INT -> ^( FIGURA_TEMPO FIGURA INT ) ) ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:1: tempo : TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) ) ;
     public final AslParser.tempo_return tempo() throws RecognitionException {
         AslParser.tempo_return retval = new AslParser.tempo_return();
         retval.start = input.LT(1);
@@ -3934,28 +3934,27 @@ public TreeAdaptor getTreeAdaptor() {
         Token PARAULA_TEMPO118=null;
         Token FIGURA119=null;
         Token char_literal120=null;
-        Token INT121=null;
+        AslParser.num_expr_return num_expr121 =null;
+
 
         AslTree TEMPO117_tree=null;
         AslTree PARAULA_TEMPO118_tree=null;
         AslTree FIGURA119_tree=null;
         AslTree char_literal120_tree=null;
-        AslTree INT121_tree=null;
         RewriteRuleTokenStream stream_PARAULA_TEMPO=new RewriteRuleTokenStream(adaptor,"token PARAULA_TEMPO");
         RewriteRuleTokenStream stream_EQUAL=new RewriteRuleTokenStream(adaptor,"token EQUAL");
         RewriteRuleTokenStream stream_FIGURA=new RewriteRuleTokenStream(adaptor,"token FIGURA");
         RewriteRuleTokenStream stream_TEMPO=new RewriteRuleTokenStream(adaptor,"token TEMPO");
-        RewriteRuleTokenStream stream_INT=new RewriteRuleTokenStream(adaptor,"token INT");
-
+        RewriteRuleSubtreeStream stream_num_expr=new RewriteRuleSubtreeStream(adaptor,"rule num_expr");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:210:6: ( TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' INT -> ^( FIGURA_TEMPO FIGURA INT ) ) ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:210:8: TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' INT -> ^( FIGURA_TEMPO FIGURA INT ) ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:6: ( TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:8: TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) )
             {
-            TEMPO117=(Token)match(input,TEMPO,FOLLOW_TEMPO_in_tempo1471);  
+            TEMPO117=(Token)match(input,TEMPO,FOLLOW_TEMPO_in_tempo1466);  
             stream_TEMPO.add(TEMPO117);
 
 
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:210:14: ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' INT -> ^( FIGURA_TEMPO FIGURA INT ) ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:14: ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) )
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -3974,12 +3973,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt33) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:210:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
                     {
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:210:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:210:17: PARAULA_TEMPO
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:17: PARAULA_TEMPO
                     {
-                    PARAULA_TEMPO118=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_tempo1476);  
+                    PARAULA_TEMPO118=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_tempo1471);  
                     stream_PARAULA_TEMPO.add(PARAULA_TEMPO118);
 
 
@@ -3994,9 +3993,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 210:31: -> ^( PARAULA_TEMPO )
+                    // 194:31: -> ^( PARAULA_TEMPO )
                     {
-                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:210:34: ^( PARAULA_TEMPO )
+                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:194:34: ^( PARAULA_TEMPO )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -4017,25 +4016,28 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:17: ( FIGURA '=' INT -> ^( FIGURA_TEMPO FIGURA INT ) )
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:17: ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) )
                     {
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:17: ( FIGURA '=' INT -> ^( FIGURA_TEMPO FIGURA INT ) )
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:18: FIGURA '=' INT
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:17: ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) )
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:18: FIGURA '=' num_expr
                     {
-                    FIGURA119=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_tempo1503);  
+                    FIGURA119=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_tempo1498);  
                     stream_FIGURA.add(FIGURA119);
 
 
-                    char_literal120=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_tempo1505);  
+                    char_literal120=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_tempo1500);  
                     stream_EQUAL.add(char_literal120);
 
 
-                    INT121=(Token)match(input,INT,FOLLOW_INT_in_tempo1507);  
-                    stream_INT.add(INT121);
+                    pushFollow(FOLLOW_num_expr_in_tempo1502);
+                    num_expr121=num_expr();
 
+                    state._fsp--;
+
+                    stream_num_expr.add(num_expr121.getTree());
 
                     // AST REWRITE
-                    // elements: FIGURA, INT
+                    // elements: FIGURA, num_expr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4045,9 +4047,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 211:33: -> ^( FIGURA_TEMPO FIGURA INT )
+                    // 195:38: -> ^( FIGURA_TEMPO FIGURA num_expr )
                     {
-                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:36: ^( FIGURA_TEMPO FIGURA INT )
+                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:195:41: ^( FIGURA_TEMPO FIGURA num_expr )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -4058,9 +4060,7 @@ public TreeAdaptor getTreeAdaptor() {
                         stream_FIGURA.nextNode()
                         );
 
-                        adaptor.addChild(root_1, 
-                        stream_INT.nextNode()
-                        );
+                        adaptor.addChild(root_1, stream_num_expr.nextTree());
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -4110,7 +4110,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "compas_beat"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:215:1: compas_beat : INT ':' INT -> ^( BEAT INT INT ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:1: compas_beat : 'Compas' num_expr ':' num_expr -> ^( BEAT num_expr num_expr ) ;
     public final AslParser.compas_beat_return compas_beat() throws RecognitionException {
         AslParser.compas_beat_return retval = new AslParser.compas_beat_return();
         retval.start = input.LT(1);
@@ -4118,34 +4118,46 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token INT122=null;
-        Token char_literal123=null;
-        Token INT124=null;
+        Token string_literal122=null;
+        Token char_literal124=null;
+        AslParser.num_expr_return num_expr123 =null;
 
-        AslTree INT122_tree=null;
-        AslTree char_literal123_tree=null;
-        AslTree INT124_tree=null;
+        AslParser.num_expr_return num_expr125 =null;
+
+
+        AslTree string_literal122_tree=null;
+        AslTree char_literal124_tree=null;
         RewriteRuleTokenStream stream_77=new RewriteRuleTokenStream(adaptor,"token 77");
-        RewriteRuleTokenStream stream_INT=new RewriteRuleTokenStream(adaptor,"token INT");
-
+        RewriteRuleTokenStream stream_COMPAS=new RewriteRuleTokenStream(adaptor,"token COMPAS");
+        RewriteRuleSubtreeStream stream_num_expr=new RewriteRuleSubtreeStream(adaptor,"rule num_expr");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:215:12: ( INT ':' INT -> ^( BEAT INT INT ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:215:14: INT ':' INT
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:12: ( 'Compas' num_expr ':' num_expr -> ^( BEAT num_expr num_expr ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:14: 'Compas' num_expr ':' num_expr
             {
-            INT122=(Token)match(input,INT,FOLLOW_INT_in_compas_beat1547);  
-            stream_INT.add(INT122);
+            string_literal122=(Token)match(input,COMPAS,FOLLOW_COMPAS_in_compas_beat1542);  
+            stream_COMPAS.add(string_literal122);
 
 
-            char_literal123=(Token)match(input,77,FOLLOW_77_in_compas_beat1549);  
-            stream_77.add(char_literal123);
+            pushFollow(FOLLOW_num_expr_in_compas_beat1544);
+            num_expr123=num_expr();
+
+            state._fsp--;
+
+            stream_num_expr.add(num_expr123.getTree());
+
+            char_literal124=(Token)match(input,77,FOLLOW_77_in_compas_beat1546);  
+            stream_77.add(char_literal124);
 
 
-            INT124=(Token)match(input,INT,FOLLOW_INT_in_compas_beat1551);  
-            stream_INT.add(INT124);
+            pushFollow(FOLLOW_num_expr_in_compas_beat1548);
+            num_expr125=num_expr();
 
+            state._fsp--;
+
+            stream_num_expr.add(num_expr125.getTree());
 
             // AST REWRITE
-            // elements: INT, INT
+            // elements: num_expr, num_expr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4155,22 +4167,18 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 215:44: -> ^( BEAT INT INT )
+            // 199:45: -> ^( BEAT num_expr num_expr )
             {
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:215:47: ^( BEAT INT INT )
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:199:48: ^( BEAT num_expr num_expr )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(BEAT, "BEAT")
                 , root_1);
 
-                adaptor.addChild(root_1, 
-                stream_INT.nextNode()
-                );
+                adaptor.addChild(root_1, stream_num_expr.nextTree());
 
-                adaptor.addChild(root_1, 
-                stream_INT.nextNode()
-                );
+                adaptor.addChild(root_1, stream_num_expr.nextTree());
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -4211,7 +4219,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "veu"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:218:1: veu : 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:202:1: veu : 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !;
     public final AslParser.veu_return veu() throws RecognitionException {
         AslParser.veu_return retval = new AslParser.veu_return();
         retval.start = input.LT(1);
@@ -4219,53 +4227,53 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token string_literal125=null;
-        Token ID126=null;
-        Token SEPARADOR_COMPAS127=null;
-        Token SEPARADOR_COMPAS129=null;
+        Token string_literal126=null;
+        Token ID127=null;
+        Token SEPARADOR_COMPAS128=null;
         Token SEPARADOR_COMPAS130=null;
-        AslParser.grup_compases_return grup_compases128 =null;
+        Token SEPARADOR_COMPAS131=null;
+        AslParser.grup_compases_return grup_compases129 =null;
 
 
-        AslTree string_literal125_tree=null;
-        AslTree ID126_tree=null;
-        AslTree SEPARADOR_COMPAS127_tree=null;
-        AslTree SEPARADOR_COMPAS129_tree=null;
+        AslTree string_literal126_tree=null;
+        AslTree ID127_tree=null;
+        AslTree SEPARADOR_COMPAS128_tree=null;
         AslTree SEPARADOR_COMPAS130_tree=null;
+        AslTree SEPARADOR_COMPAS131_tree=null;
 
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:218:4: ( 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !)
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:218:6: 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:202:4: ( 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !)
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:202:6: 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            string_literal125=(Token)match(input,79,FOLLOW_79_in_veu1581); 
-            string_literal125_tree = 
-            (AslTree)adaptor.create(string_literal125)
+            string_literal126=(Token)match(input,79,FOLLOW_79_in_veu1577); 
+            string_literal126_tree = 
+            (AslTree)adaptor.create(string_literal126)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(string_literal125_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(string_literal126_tree, root_0);
 
 
-            ID126=(Token)match(input,ID,FOLLOW_ID_in_veu1584); 
-            ID126_tree = 
-            (AslTree)adaptor.create(ID126)
+            ID127=(Token)match(input,ID,FOLLOW_ID_in_veu1580); 
+            ID127_tree = 
+            (AslTree)adaptor.create(ID127)
             ;
-            adaptor.addChild(root_0, ID126_tree);
+            adaptor.addChild(root_0, ID127_tree);
 
 
-            SEPARADOR_COMPAS127=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1587); 
+            SEPARADOR_COMPAS128=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1583); 
 
-            pushFollow(FOLLOW_grup_compases_in_veu1590);
-            grup_compases128=grup_compases();
+            pushFollow(FOLLOW_grup_compases_in_veu1586);
+            grup_compases129=grup_compases();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, grup_compases128.getTree());
+            adaptor.addChild(root_0, grup_compases129.getTree());
 
-            SEPARADOR_COMPAS129=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1592); 
+            SEPARADOR_COMPAS130=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1588); 
 
-            SEPARADOR_COMPAS130=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1595); 
+            SEPARADOR_COMPAS131=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1591); 
 
             }
 
@@ -4298,7 +4306,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "grup_compases"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:221:1: grup_compases : ( repeticion_compases | '|' ! compas )+ ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:205:1: grup_compases : ( repeticion_compases | '|' ! compas )+ ;
     public final AslParser.grup_compases_return grup_compases() throws RecognitionException {
         AslParser.grup_compases_return retval = new AslParser.grup_compases_return();
         retval.start = input.LT(1);
@@ -4306,22 +4314,22 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token char_literal132=null;
-        AslParser.repeticion_compases_return repeticion_compases131 =null;
+        Token char_literal133=null;
+        AslParser.repeticion_compases_return repeticion_compases132 =null;
 
-        AslParser.compas_return compas133 =null;
+        AslParser.compas_return compas134 =null;
 
 
-        AslTree char_literal132_tree=null;
+        AslTree char_literal133_tree=null;
 
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:221:14: ( ( repeticion_compases | '|' ! compas )+ )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:221:16: ( repeticion_compases | '|' ! compas )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:205:14: ( ( repeticion_compases | '|' ! compas )+ )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:205:16: ( repeticion_compases | '|' ! compas )+
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:221:16: ( repeticion_compases | '|' ! compas )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:205:16: ( repeticion_compases | '|' ! compas )+
             int cnt34=0;
             loop34:
             do {
@@ -4344,28 +4352,28 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt34) {
             	case 1 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:221:17: repeticion_compases
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:205:17: repeticion_compases
             	    {
-            	    pushFollow(FOLLOW_repeticion_compases_in_grup_compases1608);
-            	    repeticion_compases131=repeticion_compases();
+            	    pushFollow(FOLLOW_repeticion_compases_in_grup_compases1604);
+            	    repeticion_compases132=repeticion_compases();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, repeticion_compases131.getTree());
+            	    adaptor.addChild(root_0, repeticion_compases132.getTree());
 
             	    }
             	    break;
             	case 2 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:221:39: '|' ! compas
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:205:39: '|' ! compas
             	    {
-            	    char_literal132=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_grup_compases1612); 
+            	    char_literal133=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_grup_compases1608); 
 
-            	    pushFollow(FOLLOW_compas_in_grup_compases1615);
-            	    compas133=compas();
+            	    pushFollow(FOLLOW_compas_in_grup_compases1611);
+            	    compas134=compas();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, compas133.getTree());
+            	    adaptor.addChild(root_0, compas134.getTree());
 
             	    }
             	    break;
@@ -4411,7 +4419,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "repeticion_compases"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:1: repeticion_compases : REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:208:1: repeticion_compases : REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) ;
     public final AslParser.repeticion_compases_return repeticion_compases() throws RecognitionException {
         AslParser.repeticion_compases_return retval = new AslParser.repeticion_compases_return();
         retval.start = input.LT(1);
@@ -4419,37 +4427,37 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token REP_OBRIR134=null;
-        AslParser.dentro_repeticio_return dentro_repeticio135 =null;
+        Token REP_OBRIR135=null;
+        AslParser.dentro_repeticio_return dentro_repeticio136 =null;
 
-        AslParser.rep_tancar_return rep_tancar136 =null;
+        AslParser.rep_tancar_return rep_tancar137 =null;
 
 
-        AslTree REP_OBRIR134_tree=null;
+        AslTree REP_OBRIR135_tree=null;
         RewriteRuleTokenStream stream_REP_OBRIR=new RewriteRuleTokenStream(adaptor,"token REP_OBRIR");
         RewriteRuleSubtreeStream stream_rep_tancar=new RewriteRuleSubtreeStream(adaptor,"rule rep_tancar");
         RewriteRuleSubtreeStream stream_dentro_repeticio=new RewriteRuleSubtreeStream(adaptor,"rule dentro_repeticio");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:20: ( REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:22: REP_OBRIR dentro_repeticio rep_tancar
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:208:20: ( REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:208:22: REP_OBRIR dentro_repeticio rep_tancar
             {
-            REP_OBRIR134=(Token)match(input,REP_OBRIR,FOLLOW_REP_OBRIR_in_repeticion_compases1639);  
-            stream_REP_OBRIR.add(REP_OBRIR134);
+            REP_OBRIR135=(Token)match(input,REP_OBRIR,FOLLOW_REP_OBRIR_in_repeticion_compases1634);  
+            stream_REP_OBRIR.add(REP_OBRIR135);
 
 
-            pushFollow(FOLLOW_dentro_repeticio_in_repeticion_compases1642);
-            dentro_repeticio135=dentro_repeticio();
-
-            state._fsp--;
-
-            stream_dentro_repeticio.add(dentro_repeticio135.getTree());
-
-            pushFollow(FOLLOW_rep_tancar_in_repeticion_compases1644);
-            rep_tancar136=rep_tancar();
+            pushFollow(FOLLOW_dentro_repeticio_in_repeticion_compases1637);
+            dentro_repeticio136=dentro_repeticio();
 
             state._fsp--;
 
-            stream_rep_tancar.add(rep_tancar136.getTree());
+            stream_dentro_repeticio.add(dentro_repeticio136.getTree());
+
+            pushFollow(FOLLOW_rep_tancar_in_repeticion_compases1639);
+            rep_tancar137=rep_tancar();
+
+            state._fsp--;
+
+            stream_rep_tancar.add(rep_tancar137.getTree());
 
             // AST REWRITE
             // elements: rep_tancar, dentro_repeticio
@@ -4462,9 +4470,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 224:61: -> ^( REP_COMPAS rep_tancar dentro_repeticio )
+            // 208:61: -> ^( REP_COMPAS rep_tancar dentro_repeticio )
             {
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:64: ^( REP_COMPAS rep_tancar dentro_repeticio )
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:208:64: ^( REP_COMPAS rep_tancar dentro_repeticio )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -4514,7 +4522,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "dentro_repeticio"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:227:1: dentro_repeticio : compas ( repeticion_compases | '|' ! compas )* ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:1: dentro_repeticio : compas ( repeticion_compases | '|' ! compas )* ;
     public final AslParser.dentro_repeticio_return dentro_repeticio() throws RecognitionException {
         AslParser.dentro_repeticio_return retval = new AslParser.dentro_repeticio_return();
         retval.start = input.LT(1);
@@ -4522,31 +4530,31 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token char_literal139=null;
-        AslParser.compas_return compas137 =null;
+        Token char_literal140=null;
+        AslParser.compas_return compas138 =null;
 
-        AslParser.repeticion_compases_return repeticion_compases138 =null;
+        AslParser.repeticion_compases_return repeticion_compases139 =null;
 
-        AslParser.compas_return compas140 =null;
+        AslParser.compas_return compas141 =null;
 
 
-        AslTree char_literal139_tree=null;
+        AslTree char_literal140_tree=null;
 
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:227:17: ( compas ( repeticion_compases | '|' ! compas )* )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:227:19: compas ( repeticion_compases | '|' ! compas )*
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:17: ( compas ( repeticion_compases | '|' ! compas )* )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:19: compas ( repeticion_compases | '|' ! compas )*
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_compas_in_dentro_repeticio1682);
-            compas137=compas();
+            pushFollow(FOLLOW_compas_in_dentro_repeticio1677);
+            compas138=compas();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, compas137.getTree());
+            adaptor.addChild(root_0, compas138.getTree());
 
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:227:26: ( repeticion_compases | '|' ! compas )*
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:26: ( repeticion_compases | '|' ! compas )*
             loop35:
             do {
                 int alt35=3;
@@ -4562,28 +4570,28 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt35) {
             	case 1 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:227:27: repeticion_compases
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:27: repeticion_compases
             	    {
-            	    pushFollow(FOLLOW_repeticion_compases_in_dentro_repeticio1685);
-            	    repeticion_compases138=repeticion_compases();
+            	    pushFollow(FOLLOW_repeticion_compases_in_dentro_repeticio1680);
+            	    repeticion_compases139=repeticion_compases();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, repeticion_compases138.getTree());
+            	    adaptor.addChild(root_0, repeticion_compases139.getTree());
 
             	    }
             	    break;
             	case 2 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:227:49: '|' ! compas
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:211:49: '|' ! compas
             	    {
-            	    char_literal139=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1689); 
+            	    char_literal140=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1684); 
 
-            	    pushFollow(FOLLOW_compas_in_dentro_repeticio1692);
-            	    compas140=compas();
+            	    pushFollow(FOLLOW_compas_in_dentro_repeticio1687);
+            	    compas141=compas();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, compas140.getTree());
+            	    adaptor.addChild(root_0, compas141.getTree());
 
             	    }
             	    break;
@@ -4625,7 +4633,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "rep_tancar"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:1: rep_tancar : ':' ! INT '|' !;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:213:1: rep_tancar : ':' ! INT '|' !;
     public final AslParser.rep_tancar_return rep_tancar() throws RecognitionException {
         AslParser.rep_tancar_return retval = new AslParser.rep_tancar_return();
         retval.start = input.LT(1);
@@ -4633,31 +4641,31 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token char_literal141=null;
-        Token INT142=null;
-        Token char_literal143=null;
+        Token char_literal142=null;
+        Token INT143=null;
+        Token char_literal144=null;
 
-        AslTree char_literal141_tree=null;
-        AslTree INT142_tree=null;
-        AslTree char_literal143_tree=null;
+        AslTree char_literal142_tree=null;
+        AslTree INT143_tree=null;
+        AslTree char_literal144_tree=null;
 
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:11: ( ':' ! INT '|' !)
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:13: ':' ! INT '|' !
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:213:11: ( ':' ! INT '|' !)
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:213:13: ':' ! INT '|' !
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            char_literal141=(Token)match(input,77,FOLLOW_77_in_rep_tancar1720); 
+            char_literal142=(Token)match(input,77,FOLLOW_77_in_rep_tancar1715); 
 
-            INT142=(Token)match(input,INT,FOLLOW_INT_in_rep_tancar1723); 
-            INT142_tree = 
-            (AslTree)adaptor.create(INT142)
+            INT143=(Token)match(input,INT,FOLLOW_INT_in_rep_tancar1718); 
+            INT143_tree = 
+            (AslTree)adaptor.create(INT143)
             ;
-            adaptor.addChild(root_0, INT142_tree);
+            adaptor.addChild(root_0, INT143_tree);
 
 
-            char_literal143=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_rep_tancar1725); 
+            char_literal144=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_rep_tancar1720); 
 
             }
 
@@ -4690,7 +4698,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "compas"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:1: compas : ( optionsCompas )? notes_o_acords -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:216:1: compas : ( optionsCompas )? notes_o_acords -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) ) ;
     public final AslParser.compas_return compas() throws RecognitionException {
         AslParser.compas_return retval = new AslParser.compas_return();
         retval.start = input.LT(1);
@@ -4698,18 +4706,18 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        AslParser.optionsCompas_return optionsCompas144 =null;
+        AslParser.optionsCompas_return optionsCompas145 =null;
 
-        AslParser.notes_o_acords_return notes_o_acords145 =null;
+        AslParser.notes_o_acords_return notes_o_acords146 =null;
 
 
         RewriteRuleSubtreeStream stream_optionsCompas=new RewriteRuleSubtreeStream(adaptor,"rule optionsCompas");
         RewriteRuleSubtreeStream stream_notes_o_acords=new RewriteRuleSubtreeStream(adaptor,"rule notes_o_acords");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:7: ( ( optionsCompas )? notes_o_acords -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:9: ( optionsCompas )? notes_o_acords
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:216:7: ( ( optionsCompas )? notes_o_acords -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:216:9: ( optionsCompas )? notes_o_acords
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:9: ( optionsCompas )?
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:216:9: ( optionsCompas )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -4718,14 +4726,14 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt36) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:9: optionsCompas
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:216:9: optionsCompas
                     {
-                    pushFollow(FOLLOW_optionsCompas_in_compas1744);
-                    optionsCompas144=optionsCompas();
+                    pushFollow(FOLLOW_optionsCompas_in_compas1739);
+                    optionsCompas145=optionsCompas();
 
                     state._fsp--;
 
-                    stream_optionsCompas.add(optionsCompas144.getTree());
+                    stream_optionsCompas.add(optionsCompas145.getTree());
 
                     }
                     break;
@@ -4733,12 +4741,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_notes_o_acords_in_compas1747);
-            notes_o_acords145=notes_o_acords();
+            pushFollow(FOLLOW_notes_o_acords_in_compas1742);
+            notes_o_acords146=notes_o_acords();
 
             state._fsp--;
 
-            stream_notes_o_acords.add(notes_o_acords145.getTree());
+            stream_notes_o_acords.add(notes_o_acords146.getTree());
 
             // AST REWRITE
             // elements: optionsCompas, notes_o_acords
@@ -4751,23 +4759,23 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 232:39: -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) )
+            // 216:39: -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) )
             {
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:42: ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) )
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:216:42: ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(COMPAS, "COMPAS")
                 , root_1);
 
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:51: ( optionsCompas )?
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:216:51: ( optionsCompas )?
                 if ( stream_optionsCompas.hasNext() ) {
                     adaptor.addChild(root_1, stream_optionsCompas.nextTree());
 
                 }
                 stream_optionsCompas.reset();
 
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:66: ^( NOTES_ACORDS notes_o_acords )
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:216:66: ^( NOTES_ACORDS notes_o_acords )
                 {
                 AslTree root_2 = (AslTree)adaptor.nil();
                 root_2 = (AslTree)adaptor.becomeRoot(
@@ -4818,7 +4826,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "notes_o_acords"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:1: notes_o_acords : ( nota | acord )+ ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:219:1: notes_o_acords : ( nota | acord )+ ;
     public final AslParser.notes_o_acords_return notes_o_acords() throws RecognitionException {
         AslParser.notes_o_acords_return retval = new AslParser.notes_o_acords_return();
         retval.start = input.LT(1);
@@ -4826,20 +4834,20 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        AslParser.nota_return nota146 =null;
+        AslParser.nota_return nota147 =null;
 
-        AslParser.acord_return acord147 =null;
+        AslParser.acord_return acord148 =null;
 
 
 
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:15: ( ( nota | acord )+ )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:17: ( nota | acord )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:219:15: ( ( nota | acord )+ )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:219:17: ( nota | acord )+
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:17: ( nota | acord )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:219:17: ( nota | acord )+
             int cnt37=0;
             loop37:
             do {
@@ -4856,26 +4864,26 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt37) {
             	case 1 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:18: nota
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:219:18: nota
             	    {
-            	    pushFollow(FOLLOW_nota_in_notes_o_acords1777);
-            	    nota146=nota();
+            	    pushFollow(FOLLOW_nota_in_notes_o_acords1772);
+            	    nota147=nota();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, nota146.getTree());
+            	    adaptor.addChild(root_0, nota147.getTree());
 
             	    }
             	    break;
             	case 2 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:25: acord
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:219:25: acord
             	    {
-            	    pushFollow(FOLLOW_acord_in_notes_o_acords1781);
-            	    acord147=acord();
+            	    pushFollow(FOLLOW_acord_in_notes_o_acords1776);
+            	    acord148=acord();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, acord147.getTree());
+            	    adaptor.addChild(root_0, acord148.getTree());
 
             	    }
             	    break;
@@ -4921,7 +4929,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "optionsCompas"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:238:1: optionsCompas : '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) ;
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:222:1: optionsCompas : '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) ;
     public final AslParser.optionsCompas_return optionsCompas() throws RecognitionException {
         AslParser.optionsCompas_return retval = new AslParser.optionsCompas_return();
         retval.start = input.LT(1);
@@ -4929,37 +4937,37 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token char_literal148=null;
-        Token char_literal150=null;
-        Token char_literal152=null;
-        AslParser.optionCompas_return optionCompas149 =null;
+        Token char_literal149=null;
+        Token char_literal151=null;
+        Token char_literal153=null;
+        AslParser.optionCompas_return optionCompas150 =null;
 
-        AslParser.optionCompas_return optionCompas151 =null;
+        AslParser.optionCompas_return optionCompas152 =null;
 
 
-        AslTree char_literal148_tree=null;
-        AslTree char_literal150_tree=null;
-        AslTree char_literal152_tree=null;
+        AslTree char_literal149_tree=null;
+        AslTree char_literal151_tree=null;
+        AslTree char_literal153_tree=null;
         RewriteRuleTokenStream stream_82=new RewriteRuleTokenStream(adaptor,"token 82");
         RewriteRuleTokenStream stream_83=new RewriteRuleTokenStream(adaptor,"token 83");
         RewriteRuleTokenStream stream_75=new RewriteRuleTokenStream(adaptor,"token 75");
         RewriteRuleSubtreeStream stream_optionCompas=new RewriteRuleSubtreeStream(adaptor,"rule optionCompas");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:238:14: ( '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:238:17: '{' optionCompas ( ',' optionCompas )* '}'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:222:14: ( '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:222:17: '{' optionCompas ( ',' optionCompas )* '}'
             {
-            char_literal148=(Token)match(input,82,FOLLOW_82_in_optionsCompas1806);  
-            stream_82.add(char_literal148);
+            char_literal149=(Token)match(input,82,FOLLOW_82_in_optionsCompas1801);  
+            stream_82.add(char_literal149);
 
 
-            pushFollow(FOLLOW_optionCompas_in_optionsCompas1808);
-            optionCompas149=optionCompas();
+            pushFollow(FOLLOW_optionCompas_in_optionsCompas1803);
+            optionCompas150=optionCompas();
 
             state._fsp--;
 
-            stream_optionCompas.add(optionCompas149.getTree());
+            stream_optionCompas.add(optionCompas150.getTree());
 
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:238:34: ( ',' optionCompas )*
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:222:34: ( ',' optionCompas )*
             loop38:
             do {
                 int alt38=2;
@@ -4972,18 +4980,18 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt38) {
             	case 1 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:238:35: ',' optionCompas
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:222:35: ',' optionCompas
             	    {
-            	    char_literal150=(Token)match(input,75,FOLLOW_75_in_optionsCompas1811);  
-            	    stream_75.add(char_literal150);
+            	    char_literal151=(Token)match(input,75,FOLLOW_75_in_optionsCompas1806);  
+            	    stream_75.add(char_literal151);
 
 
-            	    pushFollow(FOLLOW_optionCompas_in_optionsCompas1813);
-            	    optionCompas151=optionCompas();
+            	    pushFollow(FOLLOW_optionCompas_in_optionsCompas1808);
+            	    optionCompas152=optionCompas();
 
             	    state._fsp--;
 
-            	    stream_optionCompas.add(optionCompas151.getTree());
+            	    stream_optionCompas.add(optionCompas152.getTree());
 
             	    }
             	    break;
@@ -4994,8 +5002,8 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            char_literal152=(Token)match(input,83,FOLLOW_83_in_optionsCompas1817);  
-            stream_83.add(char_literal152);
+            char_literal153=(Token)match(input,83,FOLLOW_83_in_optionsCompas1812);  
+            stream_83.add(char_literal153);
 
 
             // AST REWRITE
@@ -5009,9 +5017,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 238:58: -> ^( MODS ( optionCompas )+ )
+            // 222:58: -> ^( MODS ( optionCompas )+ )
             {
-                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:238:61: ^( MODS ( optionCompas )+ )
+                // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:222:61: ^( MODS ( optionCompas )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -5066,7 +5074,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "optionCompas"
-    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:240:1: optionCompas : ( ( expr -> ^( EXPR_TIME expr ) ) | PARAULA_TEMPO | PARAULA_INTENSITAT );
+    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:1: optionCompas : ( ( expr -> ^( EXPR_TIME expr ) ) | PARAULA_TEMPO | PARAULA_INTENSITAT );
     public final AslParser.optionCompas_return optionCompas() throws RecognitionException {
         AslParser.optionCompas_return retval = new AslParser.optionCompas_return();
         retval.start = input.LT(1);
@@ -5074,16 +5082,16 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token PARAULA_TEMPO154=null;
-        Token PARAULA_INTENSITAT155=null;
-        AslParser.expr_return expr153 =null;
+        Token PARAULA_TEMPO155=null;
+        Token PARAULA_INTENSITAT156=null;
+        AslParser.expr_return expr154 =null;
 
 
-        AslTree PARAULA_TEMPO154_tree=null;
-        AslTree PARAULA_INTENSITAT155_tree=null;
+        AslTree PARAULA_TEMPO155_tree=null;
+        AslTree PARAULA_INTENSITAT156_tree=null;
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:240:13: ( ( expr -> ^( EXPR_TIME expr ) ) | PARAULA_TEMPO | PARAULA_INTENSITAT )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:13: ( ( expr -> ^( EXPR_TIME expr ) ) | PARAULA_TEMPO | PARAULA_INTENSITAT )
             int alt39=3;
             switch ( input.LA(1) ) {
             case FALSE:
@@ -5118,17 +5126,17 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt39) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:240:15: ( expr -> ^( EXPR_TIME expr ) )
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:15: ( expr -> ^( EXPR_TIME expr ) )
                     {
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:240:15: ( expr -> ^( EXPR_TIME expr ) )
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:240:16: expr
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:15: ( expr -> ^( EXPR_TIME expr ) )
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:16: expr
                     {
-                    pushFollow(FOLLOW_expr_in_optionCompas1847);
-                    expr153=expr();
+                    pushFollow(FOLLOW_expr_in_optionCompas1842);
+                    expr154=expr();
 
                     state._fsp--;
 
-                    stream_expr.add(expr153.getTree());
+                    stream_expr.add(expr154.getTree());
 
                     // AST REWRITE
                     // elements: expr
@@ -5141,9 +5149,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 240:21: -> ^( EXPR_TIME expr )
+                    // 224:21: -> ^( EXPR_TIME expr )
                     {
-                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:240:24: ^( EXPR_TIME expr )
+                        // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:24: ^( EXPR_TIME expr )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -5166,31 +5174,31 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:240:45: PARAULA_TEMPO
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:45: PARAULA_TEMPO
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    PARAULA_TEMPO154=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_optionCompas1860); 
-                    PARAULA_TEMPO154_tree = 
-                    (AslTree)adaptor.create(PARAULA_TEMPO154)
+                    PARAULA_TEMPO155=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_optionCompas1855); 
+                    PARAULA_TEMPO155_tree = 
+                    (AslTree)adaptor.create(PARAULA_TEMPO155)
                     ;
-                    adaptor.addChild(root_0, PARAULA_TEMPO154_tree);
+                    adaptor.addChild(root_0, PARAULA_TEMPO155_tree);
 
 
                     }
                     break;
                 case 3 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:240:61: PARAULA_INTENSITAT
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:224:61: PARAULA_INTENSITAT
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    PARAULA_INTENSITAT155=(Token)match(input,PARAULA_INTENSITAT,FOLLOW_PARAULA_INTENSITAT_in_optionCompas1864); 
-                    PARAULA_INTENSITAT155_tree = 
-                    (AslTree)adaptor.create(PARAULA_INTENSITAT155)
+                    PARAULA_INTENSITAT156=(Token)match(input,PARAULA_INTENSITAT,FOLLOW_PARAULA_INTENSITAT_in_optionCompas1859); 
+                    PARAULA_INTENSITAT156_tree = 
+                    (AslTree)adaptor.create(PARAULA_INTENSITAT156)
                     ;
-                    adaptor.addChild(root_0, PARAULA_INTENSITAT155_tree);
+                    adaptor.addChild(root_0, PARAULA_INTENSITAT156_tree);
 
 
                     }
@@ -5315,73 +5323,74 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_expr_in_expr_list1209 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000800L});
     public static final BitSet FOLLOW_75_in_expr_list1212 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
     public static final BitSet FOLLOW_expr_in_expr_list1215 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000800L});
-    public static final BitSet FOLLOW_PIEZZO_in_piezzo1239 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_ID_in_piezzo1242 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
-    public static final BitSet FOLLOW_params_in_piezzo1244 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_partitura_in_piezzo1246 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_ENDPIEZZO_in_piezzo1249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PREMOD_in_nota1276 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-    public static final BitSet FOLLOW_76_in_nota1277 = new BitSet(new long[]{0x0000040100000000L});
-    public static final BitSet FOLLOW_INT_in_nota1281 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_NOTA_MUSICAL_in_nota1284 = new BitSet(new long[]{0x0040000000000002L,0x0000000000001000L});
-    public static final BitSet FOLLOW_76_in_nota1289 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_FIGURA_in_nota1291 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_PUNTET_in_nota1295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SILENCI_in_nota1325 = new BitSet(new long[]{0x0040000000000002L,0x0000000000001000L});
-    public static final BitSet FOLLOW_76_in_nota1328 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_FIGURA_in_nota1329 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_PUNTET_in_nota1333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_acord1356 = new BitSet(new long[]{0x4020040100000000L});
-    public static final BitSet FOLLOW_nota_in_acord1358 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-    public static final BitSet FOLLOW_75_in_acord1361 = new BitSet(new long[]{0x4020040100000000L});
-    public static final BitSet FOLLOW_nota_in_acord1363 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_81_in_acord1367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARTITURA_in_partitura1391 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_82_in_partitura1394 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_optionsPart_in_partitura1397 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_veus_in_partitura1399 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_83_in_partitura1401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_tempo_in_optionsPart1418 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_compas_beat_in_optionsPart1420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_veu_in_veus1449 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
-    public static final BitSet FOLLOW_TEMPO_in_tempo1471 = new BitSet(new long[]{0x0001000001000000L});
-    public static final BitSet FOLLOW_PARAULA_TEMPO_in_tempo1476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FIGURA_in_tempo1503 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_EQUAL_in_tempo1505 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_INT_in_tempo1507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_compas_beat1547 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_77_in_compas_beat1549 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_INT_in_compas_beat1551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_veu1581 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_ID_in_veu1584 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1587 = new BitSet(new long[]{0x2800000000000000L});
-    public static final BitSet FOLLOW_grup_compases_in_veu1590 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1592 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_repeticion_compases_in_grup_compases1608 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_grup_compases1612 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
-    public static final BitSet FOLLOW_compas_in_grup_compases1615 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_REP_OBRIR_in_repeticion_compases1639 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
-    public static final BitSet FOLLOW_dentro_repeticio_in_repeticion_compases1642 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_rep_tancar_in_repeticion_compases1644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_compas_in_dentro_repeticio1682 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_repeticion_compases_in_dentro_repeticio1685 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1689 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
-    public static final BitSet FOLLOW_compas_in_dentro_repeticio1692 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_77_in_rep_tancar1720 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_INT_in_rep_tancar1723 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_rep_tancar1725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_optionsCompas_in_compas1744 = new BitSet(new long[]{0x4020040100000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_notes_o_acords_in_compas1747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nota_in_notes_o_acords1777 = new BitSet(new long[]{0x4020040100000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_acord_in_notes_o_acords1781 = new BitSet(new long[]{0x4020040100000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_82_in_optionsCompas1806 = new BitSet(new long[]{0x0009822140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_PIEZZO_in_piezzo1237 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_ID_in_piezzo1240 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
+    public static final BitSet FOLLOW_params_in_piezzo1242 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_partitura_in_piezzo1244 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_ENDPIEZZO_in_piezzo1246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PREMOD_in_nota1273 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+    public static final BitSet FOLLOW_76_in_nota1274 = new BitSet(new long[]{0x0000040100000000L});
+    public static final BitSet FOLLOW_INT_in_nota1278 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_NOTA_MUSICAL_in_nota1281 = new BitSet(new long[]{0x0040000000000002L,0x0000000000001000L});
+    public static final BitSet FOLLOW_76_in_nota1284 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_FIGURA_in_nota1286 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_PUNTET_in_nota1290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SILENCI_in_nota1320 = new BitSet(new long[]{0x0040000000000002L,0x0000000000001000L});
+    public static final BitSet FOLLOW_76_in_nota1323 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_FIGURA_in_nota1324 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_PUNTET_in_nota1328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_acord1351 = new BitSet(new long[]{0x4020040100000000L});
+    public static final BitSet FOLLOW_nota_in_acord1353 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_75_in_acord1356 = new BitSet(new long[]{0x4020040100000000L});
+    public static final BitSet FOLLOW_nota_in_acord1358 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_81_in_acord1362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARTITURA_in_partitura1386 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_82_in_partitura1389 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_optionsPart_in_partitura1392 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_veus_in_partitura1394 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_83_in_partitura1396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_tempo_in_optionsPart1413 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_compas_beat_in_optionsPart1415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_veu_in_veus1444 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
+    public static final BitSet FOLLOW_TEMPO_in_tempo1466 = new BitSet(new long[]{0x0001000001000000L});
+    public static final BitSet FOLLOW_PARAULA_TEMPO_in_tempo1471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FIGURA_in_tempo1498 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_EQUAL_in_tempo1500 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_num_expr_in_tempo1502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMPAS_in_compas_beat1542 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_num_expr_in_compas_beat1544 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_77_in_compas_beat1546 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_num_expr_in_compas_beat1548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_veu1577 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_ID_in_veu1580 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1583 = new BitSet(new long[]{0x2800000000000000L});
+    public static final BitSet FOLLOW_grup_compases_in_veu1586 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1588 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_repeticion_compases_in_grup_compases1604 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_grup_compases1608 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
+    public static final BitSet FOLLOW_compas_in_grup_compases1611 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_REP_OBRIR_in_repeticion_compases1634 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
+    public static final BitSet FOLLOW_dentro_repeticio_in_repeticion_compases1637 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_rep_tancar_in_repeticion_compases1639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_compas_in_dentro_repeticio1677 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_repeticion_compases_in_dentro_repeticio1680 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1684 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
+    public static final BitSet FOLLOW_compas_in_dentro_repeticio1687 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_77_in_rep_tancar1715 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_INT_in_rep_tancar1718 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_rep_tancar1720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_optionsCompas_in_compas1739 = new BitSet(new long[]{0x4020040100000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_notes_o_acords_in_compas1742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nota_in_notes_o_acords1772 = new BitSet(new long[]{0x4020040100000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_acord_in_notes_o_acords1776 = new BitSet(new long[]{0x4020040100000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_82_in_optionsCompas1801 = new BitSet(new long[]{0x0009822140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_optionCompas_in_optionsCompas1803 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080800L});
+    public static final BitSet FOLLOW_75_in_optionsCompas1806 = new BitSet(new long[]{0x0009822140800000L,0x0000000000000204L});
     public static final BitSet FOLLOW_optionCompas_in_optionsCompas1808 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080800L});
-    public static final BitSet FOLLOW_75_in_optionsCompas1811 = new BitSet(new long[]{0x0009822140800000L,0x0000000000000204L});
-    public static final BitSet FOLLOW_optionCompas_in_optionsCompas1813 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080800L});
-    public static final BitSet FOLLOW_83_in_optionsCompas1817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_optionCompas1847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARAULA_TEMPO_in_optionCompas1860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARAULA_INTENSITAT_in_optionCompas1864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_optionsCompas1812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_optionCompas1842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARAULA_TEMPO_in_optionCompas1855 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARAULA_INTENSITAT_in_optionCompas1859 = new BitSet(new long[]{0x0000000000000002L});
 
 }

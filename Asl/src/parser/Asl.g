@@ -192,11 +192,11 @@ veus: veu+ -> ^(VEUS veu+)
     ;
 
 tempo: TEMPO ( (PARAULA_TEMPO -> ^(PARAULA_TEMPO) )
-              | (FIGURA '=' INT -> ^(FIGURA_TEMPO FIGURA INT))
+              | (FIGURA '=' num_expr -> ^(FIGURA_TEMPO FIGURA num_expr))
               )
      ;
 
-compas_beat: INT ':' INT -> ^(BEAT INT INT)
+compas_beat: 'Compas' num_expr ':' num_expr -> ^(BEAT num_expr num_expr)
            ;
 
 veu: 'Voice'^ ID  SEPARADOR_COMPAS! grup_compases SEPARADOR_COMPAS! SEPARADOR_COMPAS!

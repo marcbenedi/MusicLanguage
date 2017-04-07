@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/marcbenedi/Programs/Asl/src/parser/Asl.g 2017-04-06 21:13:50
+// $ANTLR 3.4 /home/marcbenedi/Programs/Asl/src/parser/Asl.g 2017-04-07 17:35:24
 
 package parser;
 
@@ -366,10 +366,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOTA_MUSICAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:13: ( ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:15: ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:13: ( ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:15: ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' )
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:15: ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:15: ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' )
             int alt1=7;
             switch ( input.LA(1) ) {
             case 'D':
@@ -426,7 +426,7 @@ public class AslLexer extends Lexer {
 
             switch (alt1) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:16: 'Do'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:16: 'Do'
                     {
                     match("Do"); 
 
@@ -435,7 +435,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:21: 'Re'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:21: 'Re'
                     {
                     match("Re"); 
 
@@ -444,7 +444,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:26: 'Mi'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:26: 'Mi'
                     {
                     match("Mi"); 
 
@@ -453,7 +453,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:31: 'Fa'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:31: 'Fa'
                     {
                     match("Fa"); 
 
@@ -462,7 +462,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:36: 'Sol'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:36: 'Sol'
                     {
                     match("Sol"); 
 
@@ -471,7 +471,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:42: 'La'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:42: 'La'
                     {
                     match("La"); 
 
@@ -480,7 +480,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:47: 'Si'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:229:47: 'Si'
                     {
                     match("Si"); 
 
@@ -508,10 +508,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = PARAULA_TEMPO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:14: ( ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:16: ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:14: ( ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:16: ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' )
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:16: ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:16: ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' )
             int alt2=8;
             switch ( input.LA(1) ) {
             case 'L':
@@ -577,7 +577,7 @@ public class AslLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:17: 'Lento'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:17: 'Lento'
                     {
                     match("Lento"); 
 
@@ -586,7 +586,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:25: 'Adagio'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:25: 'Adagio'
                     {
                     match("Adagio"); 
 
@@ -595,7 +595,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:34: 'Moderato'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:34: 'Moderato'
                     {
                     match("Moderato"); 
 
@@ -604,7 +604,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:45: 'Allegro'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:45: 'Allegro'
                     {
                     match("Allegro"); 
 
@@ -613,7 +613,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:55: 'Presto'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:55: 'Presto'
                     {
                     match("Presto"); 
 
@@ -622,7 +622,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:64: 'Apasionatto'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:64: 'Apasionatto'
                     {
                     match("Apasionatto"); 
 
@@ -631,7 +631,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:78: 'Con caracter'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:78: 'Con caracter'
                     {
                     match("Con caracter"); 
 
@@ -640,7 +640,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:93: 'Giocoso'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:230:93: 'Giocoso'
                     {
                     match("Giocoso"); 
 
@@ -668,10 +668,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = PARAULA_INTENSITAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:19: ( ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:21: ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |)
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:19: ( ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:21: ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |)
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:21: ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |)
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:21: ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |)
             int alt3=8;
             switch ( input.LA(1) ) {
             case 'p':
@@ -730,7 +730,7 @@ public class AslLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:22: 'pp'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:22: 'pp'
                     {
                     match("pp"); 
 
@@ -739,14 +739,14 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:27: 'p'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:27: 'p'
                     {
                     match('p'); 
 
                     }
                     break;
                 case 3 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:31: 'mp'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:31: 'mp'
                     {
                     match("mp"); 
 
@@ -755,7 +755,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:36: 'mf'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:36: 'mf'
                     {
                     match("mf"); 
 
@@ -764,14 +764,14 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:41: 'f'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:41: 'f'
                     {
                     match('f'); 
 
                     }
                     break;
                 case 6 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:45: 'ff'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:45: 'ff'
                     {
                     match("ff"); 
 
@@ -780,7 +780,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:50: 'pf'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:50: 'pf'
                     {
                     match("pf"); 
 
@@ -789,7 +789,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:55: 
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:231:55: 
                     {
                     }
                     break;
@@ -813,8 +813,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PIEZZO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:248:7: ( 'Piezzo' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:248:9: 'Piezzo'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:7: ( 'Piezzo' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:232:9: 'Piezzo'
             {
             match("Piezzo"); 
 
@@ -836,8 +836,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = SILENCI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:249:8: ( 'Silenci' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:249:10: 'Silenci'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:233:8: ( 'Silenci' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:233:10: 'Silenci'
             {
             match("Silenci"); 
 
@@ -859,10 +859,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = PREMOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:251:7: ( ( '#' | 'bm' | 'bq' ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:251:9: ( '#' | 'bm' | 'bq' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:7: ( ( '#' | 'bm' | 'bq' ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:9: ( '#' | 'bm' | 'bq' )
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:251:9: ( '#' | 'bm' | 'bq' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:9: ( '#' | 'bm' | 'bq' )
             int alt4=3;
             int LA4_0 = input.LA(1);
 
@@ -895,14 +895,14 @@ public class AslLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:251:10: '#'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:10: '#'
                     {
                     match('#'); 
 
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:251:16: 'bm'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:16: 'bm'
                     {
                     match("bm"); 
 
@@ -911,7 +911,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:251:23: 'bq'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:235:23: 'bq'
                     {
                     match("bq"); 
 
@@ -939,8 +939,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PUNTET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:253:7: ( '·' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:253:9: '·'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:237:7: ( '·' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:237:9: '·'
             {
             match('\u00B7'); 
 
@@ -960,8 +960,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = SEPARADOR_COMPAS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:254:17: ( '|' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:254:19: '|'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:238:17: ( '|' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:238:19: '|'
             {
             match('|'); 
 
@@ -981,8 +981,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = REP_OBRIR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:255:10: ( '|:' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:255:12: '|:'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:239:10: ( '|:' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:239:12: '|:'
             {
             match("|:"); 
 
@@ -1004,10 +1004,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = FIGURA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:7: ( ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:9: ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:7: ( ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:9: ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' )
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:9: ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:9: ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' )
             int alt5=7;
             switch ( input.LA(1) ) {
             case 'n':
@@ -1064,28 +1064,28 @@ public class AslLexer extends Lexer {
 
             switch (alt5) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:10: 'n'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:10: 'n'
                     {
                     match('n'); 
 
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:14: 'b'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:14: 'b'
                     {
                     match('b'); 
 
                     }
                     break;
                 case 3 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:18: 'c'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:18: 'c'
                     {
                     match('c'); 
 
                     }
                     break;
                 case 4 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:22: 'sc'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:22: 'sc'
                     {
                     match("sc"); 
 
@@ -1094,14 +1094,14 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:27: 'f'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:27: 'f'
                     {
                     match('f'); 
 
                     }
                     break;
                 case 6 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:31: 'sf'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:31: 'sf'
                     {
                     match("sf"); 
 
@@ -1110,7 +1110,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:36: 'r'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:242:36: 'r'
                     {
                     match('r'); 
 
@@ -1136,8 +1136,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TEMPO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:260:6: ( 'Tempo' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:260:8: 'Tempo'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:244:6: ( 'Tempo' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:244:8: 'Tempo'
             {
             match("Tempo"); 
 
@@ -1159,8 +1159,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMPAS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:261:7: ( 'Compas' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:261:9: 'Compas'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:7: ( 'Compas' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:245:9: 'Compas'
             {
             match("Compas"); 
 
@@ -1182,8 +1182,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ARMADURA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:262:9: ( 'Armadura' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:262:11: 'Armadura'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:9: ( 'Armadura' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:246:11: 'Armadura'
             {
             match("Armadura"); 
 
@@ -1205,8 +1205,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = REPETICIO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:263:10: ( 'Repeticio' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:263:12: 'Repeticio'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:10: ( 'Repeticio' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:247:12: 'Repeticio'
             {
             match("Repeticio"); 
 
@@ -1228,8 +1228,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PARTITURA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:269:10: ( 'Partitura' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:269:12: 'Partitura'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:249:10: ( 'Partitura' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:249:12: 'Partitura'
             {
             match("Partitura"); 
 
@@ -1251,8 +1251,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = VEGADA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:271:7: ( 'Vegada' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:271:9: 'Vegada'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:251:7: ( 'Vegada' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:251:9: 'Vegada'
             {
             match("Vegada"); 
 
@@ -1274,8 +1274,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:274:7: ( '=' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:274:9: '='
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:254:7: ( '=' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:254:9: '='
             {
             match('='); 
 
@@ -1295,8 +1295,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:275:10: ( '!=' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:275:12: '!='
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:255:10: ( '!=' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:255:12: '!='
             {
             match("!="); 
 
@@ -1318,8 +1318,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:276:8: ( '<' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:276:10: '<'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:256:8: ( '<' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:256:10: '<'
             {
             match('<'); 
 
@@ -1339,8 +1339,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:277:8: ( '<=' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:277:10: '<='
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:257:8: ( '<=' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:257:10: '<='
             {
             match("<="); 
 
@@ -1362,8 +1362,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:278:8: ( '>' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:278:10: '>'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:8: ( '>' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:258:10: '>'
             {
             match('>'); 
 
@@ -1383,8 +1383,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:279:8: ( '>=' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:279:10: '>='
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:259:8: ( '>=' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:259:10: '>='
             {
             match(">="); 
 
@@ -1406,8 +1406,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:280:6: ( '+' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:280:8: '+'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:260:6: ( '+' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:260:8: '+'
             {
             match('+'); 
 
@@ -1427,8 +1427,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:281:7: ( '-' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:281:9: '-'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:261:7: ( '-' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:261:9: '-'
             {
             match('-'); 
 
@@ -1448,8 +1448,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MUL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:282:9: ( '*' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:282:11: '*'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:262:9: ( '*' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:262:11: '*'
             {
             match('*'); 
 
@@ -1469,8 +1469,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:283:9: ( '/' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:283:11: '/'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:263:9: ( '/' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:263:11: '/'
             {
             match('/'); 
 
@@ -1490,8 +1490,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:284:9: ( '%' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:284:11: '%'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:264:9: ( '%' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:264:11: '%'
             {
             match('%'); 
 
@@ -1511,8 +1511,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:285:9: ( 'not' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:285:11: 'not'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:265:9: ( 'not' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:265:11: 'not'
             {
             match("not"); 
 
@@ -1534,8 +1534,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:286:9: ( 'and' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:286:11: 'and'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:266:9: ( 'and' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:266:11: 'and'
             {
             match("and"); 
 
@@ -1557,8 +1557,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:287:8: ( 'or' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:287:10: 'or'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:267:8: ( 'or' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:267:10: 'or'
             {
             match("or"); 
 
@@ -1580,8 +1580,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:288:6: ( 'if' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:288:8: 'if'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:268:6: ( 'if' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:268:8: 'if'
             {
             match("if"); 
 
@@ -1603,8 +1603,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = THEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:289:6: ( 'then' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:289:8: 'then'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:269:6: ( 'then' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:269:8: 'then'
             {
             match("then"); 
 
@@ -1626,8 +1626,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:290:6: ( 'else' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:290:8: 'else'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:270:6: ( 'else' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:270:8: 'else'
             {
             match("else"); 
 
@@ -1649,8 +1649,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:291:7: ( 'endif' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:291:9: 'endif'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:271:7: ( 'endif' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:271:9: 'endif'
             {
             match("endif"); 
 
@@ -1672,8 +1672,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:292:7: ( 'while' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:292:9: 'while'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:272:7: ( 'while' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:272:9: 'while'
             {
             match("while"); 
 
@@ -1695,8 +1695,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:293:8: ( 'do' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:293:10: 'do'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:273:8: ( 'do' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:273:10: 'do'
             {
             match("do"); 
 
@@ -1718,8 +1718,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDWHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:294:9: ( 'endwhile' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:294:11: 'endwhile'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:274:9: ( 'endwhile' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:274:11: 'endwhile'
             {
             match("endwhile"); 
 
@@ -1741,8 +1741,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:295:6: ( 'func' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:295:8: 'func'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:275:6: ( 'func' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:275:8: 'func'
             {
             match("func"); 
 
@@ -1764,8 +1764,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDFUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:296:9: ( 'endfunc' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:296:11: 'endfunc'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:276:9: ( 'endfunc' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:276:11: 'endfunc'
             {
             match("endfunc"); 
 
@@ -1787,8 +1787,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDPIEZZO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:297:11: ( 'endPiezzo' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:297:13: 'endPiezzo'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:277:11: ( 'endPiezzo' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:277:13: 'endPiezzo'
             {
             match("endPiezzo"); 
 
@@ -1810,8 +1810,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:298:8: ( 'return' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:298:10: 'return'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:278:8: ( 'return' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:278:10: 'return'
             {
             match("return"); 
 
@@ -1833,8 +1833,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:299:6: ( 'read' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:299:8: 'read'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:279:6: ( 'read' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:279:8: 'read'
             {
             match("read"); 
 
@@ -1856,8 +1856,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WRITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:300:7: ( 'write' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:300:9: 'write'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:280:7: ( 'write' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:280:9: 'write'
             {
             match("write"); 
 
@@ -1879,8 +1879,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:301:9: ( 'true' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:301:11: 'true'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:281:9: ( 'true' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:281:11: 'true'
             {
             match("true"); 
 
@@ -1902,8 +1902,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:302:9: ( 'false' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:302:11: 'false'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:282:9: ( 'false' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:282:11: 'false'
             {
             match("false"); 
 
@@ -1925,8 +1925,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:303:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:303:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:283:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:283:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1938,7 +1938,7 @@ public class AslLexer extends Lexer {
             }
 
 
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:303:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:283:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop6:
             do {
                 int alt6=2;
@@ -1988,10 +1988,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:304:6: ( ( '0' .. '9' )+ )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:304:8: ( '0' .. '9' )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:284:6: ( ( '0' .. '9' )+ )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:284:8: ( '0' .. '9' )+
             {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:304:8: ( '0' .. '9' )+
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:284:8: ( '0' .. '9' )+
             int cnt7=0;
             loop7:
             do {
@@ -2046,7 +2046,7 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:307:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:287:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -2076,13 +2076,13 @@ public class AslLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:307:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:287:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:307:16: (~ ( '\\n' | '\\r' ) )*
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:287:16: (~ ( '\\n' | '\\r' ) )*
                     loop8:
                     do {
                         int alt8=2;
@@ -2116,7 +2116,7 @@ public class AslLexer extends Lexer {
                     } while (true);
 
 
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:307:30: ( '\\r' )?
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:287:30: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -2125,7 +2125,7 @@ public class AslLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:307:30: '\\r'
+                            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:287:30: '\\r'
                             {
                             match('\r'); 
 
@@ -2142,13 +2142,13 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:308:8: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:288:8: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:308:13: ( options {greedy=false; } : . )*
+                    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:288:13: ( options {greedy=false; } : . )*
                     loop10:
                     do {
                         int alt10=2;
@@ -2173,7 +2173,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:308:41: .
+                    	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:288:41: .
                     	    {
                     	    matchAny(); 
 
@@ -2210,12 +2210,12 @@ public class AslLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:312:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:312:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:292:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:292:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:312:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:292:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop12:
             do {
                 int alt12=3;
@@ -2231,7 +2231,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:312:18: ESC_SEQ
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:292:18: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -2239,7 +2239,7 @@ public class AslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:312:28: ~ ( '\\\\' | '\"' )
+            	    // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:292:28: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -2276,8 +2276,8 @@ public class AslLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:318:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:318:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:298:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:298:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
 
@@ -2306,8 +2306,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:321:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:321:8: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:301:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /home/marcbenedi/Programs/Asl/src/parser/Asl.g:301:8: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
