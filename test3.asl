@@ -4,7 +4,7 @@ func main()
   while a < 10 do
     sonata(vel);
     a = a + 1;
-  endwhile
+  endwhile;
   nocturne(a);
 endfunc
 
@@ -21,6 +21,6 @@ Piezzo sonata(a)
   Partitura {
     Tempo Adagio
     Compas a:4
-    Voice Hermes || 7La.n· Re [Re,Re]| La Si Do ||
+    Voice Hermes || [Do,Re,Mi] | Do #.7Re ||
   }
 endPiezzo
