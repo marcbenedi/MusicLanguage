@@ -27,9 +27,8 @@
 
 package interp;
 
+import MusicalComponents.Voice;
 import org.jfugue.pattern.Pattern;
-import org.jfugue.rhythm.Rhythm;
-import org.jfugue.theory.ChordProgression;
 import parser.*;
 
 import java.util.ArrayList;
@@ -37,7 +36,6 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.io.*;
 import org.jfugue.player.Player;
-import org.jfugue.pattern.Pattern;
 
 /** Class that implements the interpreter of the language. */
 
@@ -217,33 +215,72 @@ public class Interp {
         return res;
     }
 
-    private void tocarCompas(AslTree mods, AslTree notes_acords, int tempo){
+    private String tocarCompas(AslTree mods, AslTree notes_acords){
+
         int num_notes_o_acords = notes_acords.getChildCount();
-        Player p = new Player();
+        String res = "";
 
         for (int i = 0; i < num_notes_o_acords; ++i){
+            System.out.println("Una altra iteracio");
             AslTree nota_o_acord = notes_acords.getChild(i);
             String nota_o_acord_text = nota_o_acord.getText();
             Pattern pattern;
 
             if(nota_o_acord_text.equals("ACORD")){
+
+                System.out.println("Toquem un acord");
                 int num_notes = nota_o_acord.getChildCount();
                 String converted_acord = getStandard(nota_o_acord.getChild(0).getText());
+
                 for (int j = 1; j < num_notes; ++j){
-                    //converted_acord +=" V"+j+" "+"I[Piano] "+ getStandard(nota_o_acord.getChild(j).getText());
                     converted_acord+="+"+getStandard(nota_o_acord.getChild(j).getText());
                 }
-                pattern = new Pattern(converted_acord).setTempo(tempo);
-                p.play(pattern);
+
+                System.out.println(converted_acord);
+
+                res+=converted_acord;
             }
             else{
+                System.out.println("Toquem una nota");
                 String trans_nota = getStandard(nota_o_acord_text);
-                //p.play(trans_nota);
-                pattern = new Pattern(trans_nota).setTempo(tempo);
-                p.play(pattern);
+                res+=trans_nota;
 
             }
         }
+        System.out.println("Acabem de tocar el compas");
+        return res;
+    }
+
+    private Voice tocarVeu(AslTree veu){
+
+        Voice v = new Voice(Voice.avaiable_id);
+        int num_comp = veu.getChildCount();
+
+        for (int i= 1; i < num_comp; ++i) {
+            System.out.println("Estem tocant un compas");
+
+            AslTree comp = veu.getChild(i);
+            int son = comp.getChildCount();
+            AslTree mods_comp = null;
+            AslTree notes_acords = null;
+
+            if(son == 1) {
+                //No tenim mods
+                notes_acords = comp.getChild(0);
+            }
+            else {
+                //Tenim mods
+                mods_comp = comp.getChild(0);
+                notes_acords = comp.getChild(1);
+            }
+            System.out.println("Anem a tocarCompas");
+            String c= tocarCompas(mods_comp,notes_acords);
+            v.addCompas(c);
+            System.out.println("afegint el compas");
+
+        }
+        System.out.println("Hem acabat de tocar veu");
+        return v;
     }
 
     private void executePiezzo(AslTree partitura){
@@ -268,32 +305,21 @@ public class Interp {
             AslTree beat = mods.getChild(1);
         }
 
-        AslTree veu = veus.getChild(0);
-        //System.out.println(veu.getChild(0).getText());
-        int num_comp = veu.getChildCount();
+        Pattern pattern = new Pattern();
+        pattern.setTempo(tempo);
 
-        for (int i= 1; i < num_comp; ++i) {
-
-            AslTree comp = veu.getChild(i);
-            int son = comp.getChildCount();
-            AslTree mods_comp = null;
-            AslTree notes_acords = null;
-
-            if(son == 1) {
-                //No tenim mods
-                notes_acords = comp.getChild(0);
-            }
-            else {
-                //Tenim mods
-                mods_comp = comp.getChild(0);
-                notes_acords = comp.getChild(1);
-            }
-
-            //tocarCompas(mods_comp,notes_acords,tempo);
-            Pattern p = new Pattern();
-
-
+        int num_veus = veus.getChildCount();
+        for(int i = 0; i < num_veus; ++i){
+            System.out.println("Estem tocant la veu "+i);
+            AslTree veu = veus.getChild(i);
+            Voice v = tocarVeu(veu);
+            pattern.add(v.getString());
         }
+        System.out.println("Ja hem acabat de tocar totes les veus");
+        Player p = new Player();
+        p.play(pattern);
+
+
 
     }
 

@@ -7,6 +7,6 @@ Piezzo nocturne(a)
     Tempo Allegro
     Compas 4:4
     Voice Hermes || 7La.n· Re [Re,Fa] Silenci| La Si Do Silenci ||
-    //Voice Hermes || Do Do Do Do Do Do Do Do Do Do Do Do Do ||
+    Voice Pepet || Do Do Do Do Do Do Do Do Do Do Do Do Do ||
   }
 endPiezzo

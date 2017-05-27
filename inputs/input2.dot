@@ -62,6 +62,26 @@ digraph {
   n36 [label="Si"];
   n37 [label="Do"];
   n38 [label="Silenci"];
+  n39 [label="Voice"];
+  n39 [label="Voice"];
+  n40 [label="Pepet"];
+  n41 [label="COMPAS"];
+  n41 [label="COMPAS"];
+  n42 [label="NOTES_ACORDS"];
+  n42 [label="NOTES_ACORDS"];
+  n43 [label="Do"];
+  n44 [label="Do"];
+  n45 [label="Do"];
+  n46 [label="Do"];
+  n47 [label="Do"];
+  n48 [label="Do"];
+  n49 [label="Do"];
+  n50 [label="Do"];
+  n51 [label="Do"];
+  n52 [label="Do"];
+  n53 [label="Do"];
+  n54 [label="Do"];
+  n55 [label="Do"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -101,5 +121,22 @@ digraph {
   n34 -> n36 // "NOTES_ACORDS" -> "Si"
   n34 -> n37 // "NOTES_ACORDS" -> "Do"
   n34 -> n38 // "NOTES_ACORDS" -> "Silenci"
+  n19 -> n39 // "VEUS" -> "Voice"
+  n39 -> n40 // "Voice" -> "Pepet"
+  n39 -> n41 // "Voice" -> "COMPAS"
+  n41 -> n42 // "COMPAS" -> "NOTES_ACORDS"
+  n42 -> n43 // "NOTES_ACORDS" -> "Do"
+  n42 -> n44 // "NOTES_ACORDS" -> "Do"
+  n42 -> n45 // "NOTES_ACORDS" -> "Do"
+  n42 -> n46 // "NOTES_ACORDS" -> "Do"
+  n42 -> n47 // "NOTES_ACORDS" -> "Do"
+  n42 -> n48 // "NOTES_ACORDS" -> "Do"
+  n42 -> n49 // "NOTES_ACORDS" -> "Do"
+  n42 -> n50 // "NOTES_ACORDS" -> "Do"
+  n42 -> n51 // "NOTES_ACORDS" -> "Do"
+  n42 -> n52 // "NOTES_ACORDS" -> "Do"
+  n42 -> n53 // "NOTES_ACORDS" -> "Do"
+  n42 -> n54 // "NOTES_ACORDS" -> "Do"
+  n42 -> n55 // "NOTES_ACORDS" -> "Do"
 
 }

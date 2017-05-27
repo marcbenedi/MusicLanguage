@@ -8,6 +8,7 @@ CLASSDIR = 	$(ROOT)/classes
 MAIN =		$(SRCDIR)/$(TARGET)
 PARSER =	$(SRCDIR)/parser
 INTERP =	$(SRCDIR)/interp
+MUSICALCOMPONENTS = $(SRCDIR)/MusicalComponents
 JAVADOC =	$(ROOT)/javadoc
 BIN =		$(ROOT)/bin
 
@@ -49,7 +50,9 @@ INTERP_SRC =	$(INTERP)/Interp.java \
 				$(INTERP)/$(TARGET)Tree.java \
 				$(INTERP)/AslTreeAdaptor.java
 
-ALL_SRC =		$(MAIN_SRC) $(PARSER_SRC) $(INTERP_SRC)
+MUSICALCOMPONENTS_SRC = $(MUSICALCOMPONENTS)/Voice.java
+
+ALL_SRC =		$(MAIN_SRC) $(PARSER_SRC) $(INTERP_SRC) $(MUSICALCOMPONENTS_SRC)
 
 #all: compile exec docs
 all: compile exec
@@ -76,10 +79,10 @@ exec:
 	chmod a+x $(EXEC)
 
 clean:
-	rm -rf $(PARSER)/*.java $(PARSER)/*.tokens 
+	rm -rf $(PARSER)/*.java $(PARSER)/*.tokens
 	rm -rf $(CLASSDIR)
 	rm -rf $(JAVADOC)
 	rm -rf $(BIN)
 
 tar: clean
-	cd ..; tar cvzf $(DISTRIB) $(TARGET); mv $(DISTRIB) $(TARGET); cd $(TARGET) 
+	cd ..; tar cvzf $(DISTRIB) $(TARGET); mv $(DISTRIB) $(TARGET); cd $(TARGET)
