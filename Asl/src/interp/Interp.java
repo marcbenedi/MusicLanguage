@@ -216,6 +216,68 @@ public class Interp {
         return res;
     }
 
+    private String tocarNota(AslTree mods, AslTree nota){
+
+        //System.out.println("Entrant a tocar nota");
+
+        String premod = "";
+        String oct = "";
+        double figure = 0.25;
+
+        for (int i = 0; i < nota.getChildCount(); ++i){
+            //System.out.println("nova iteracio");
+            AslTree mod = nota.getChild(i);
+            //System.out.println(mod.getText());
+
+            switch (mod.getType()){
+                case AslLexer.PREMOD:
+                        premod = mod.getText().equals("bm") ? "b" : "#";
+                    break;
+                case AslLexer.INT:
+                        if (mod.getIntValue() < 0 | mod.getIntValue() > 10) throw new IllegalArgumentException("La octava no es correcte");
+                        oct = String.valueOf(mod.getIntValue());
+                    break;
+                case AslLexer.FIGURA:
+                        switch (mod.getText()){
+                            case "n":
+                                figure = 0.25;
+                                break;
+                            case "b":
+                                figure = 0.5;
+                                break;
+                            case "c":
+                                figure = 0.125;
+                                break;
+                            case "sc":
+                                figure = 0.0625;
+                                break;
+                            case "f":
+                                figure = 0.03125;
+                                break;
+                            case "sf":
+                                figure = 0.015625;
+                                break;
+                            case "r":
+                                figure = 1;
+                                break;
+                        }
+
+                    break;
+                case AslLexer.PUNTET:
+                    //System.out.println("puntet");
+                    figure*=1.5;
+                    break;
+            }
+
+        }
+        //System.out.println("Fin buble");
+
+        //System.out.println(getStandard(nota.getText())+premod+oct+"/"+String.valueOf(figure));
+
+        return getStandard(nota.getText())+premod+oct+"/"+String.valueOf(figure);
+
+    }
+
     private String tocarCompas(AslTree mods, AslTree notes_acords){
 
         int num_notes_o_acords = notes_acords.getChildCount();
@@ -225,25 +287,22 @@ public class Interp {
             //System.out.println("Una altra iteracio");
             AslTree nota_o_acord = notes_acords.getChild(i);
             String nota_o_acord_text = nota_o_acord.getText();
-            Pattern pattern;
 
             if(nota_o_acord_text.equals("ACORD")){
 
                 //System.out.println("Toquem un acord");
                 int num_notes = nota_o_acord.getChildCount();
-                String converted_acord = getStandard(nota_o_acord.getChild(0).getText());
+                String converted_acord = tocarNota(mods,nota_o_acord.getChild(0));
 
                 for (int j = 1; j < num_notes; ++j){
-                    converted_acord+="+"+getStandard(nota_o_acord.getChild(j).getText());
+                    converted_acord+="+"+tocarNota(mods,nota_o_acord.getChild(j));
                 }
-
-                //System.out.println(converted_acord);
 
                 res+=" "+converted_acord+" ";
             }
             else{
                 //System.out.println("Toquem una nota");
-                String trans_nota = getStandard(nota_o_acord_text);
+                String trans_nota = tocarNota(mods,nota_o_acord);
                 res+=" "+trans_nota+" ";
 
             }
@@ -297,7 +356,6 @@ public class Interp {
             AslTree tempo_tree = mods.getChild(0);
             switch (tempo_tree.getType()){
                 case AslLexer.FIGURA_TEMPO:
-                    //FIGURA: ('n'|'b'|'c'|'sc'|'f'|'sf'|'r');
                     tempo = 60;
                     String nota = tempo_tree.getChild(0).getText();
                     switch (nota){

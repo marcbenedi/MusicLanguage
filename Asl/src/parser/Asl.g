@@ -226,20 +226,21 @@ optionCompas: (expr -> ^(EXPR_TIME expr) )| PARAULA_TEMPO | PARAULA_INTENSITAT
 
 //Musical tokens
 
+
+FIGURA: ('n'|'b'|'c'|'sc'|'f'|'sf'|'r');
+
 NOTA_MUSICAL: ('Do'|'Re'|'Mi'|'Fa'|'Sol'|'La'|'Si');
 PARAULA_TEMPO: ('Lento'|'Adagio'|'Moderato'|'Allegro'|'Presto');
 PARAULA_INTENSITAT: ('pp'|'p'|'mp'|'mf'|'f'|'ff'|'pf'|);
 PIEZZO: 'Piezzo';
 SILENCI: 'Silenci';
 
-PREMOD: ('#' | 'bm' | 'bq');
+PREMOD: ('#' | 'bm');
 
 PUNTET: '·';
 SEPARADOR_COMPAS: '|';
 REP_OBRIR: '|:';
 //REP_TANCAR: ':' INT '|';
-
-FIGURA: ('n'|'b'|'c'|'sc'|'f'|'sf'|'r');
 
 TEMPO: 'Tempo';
 COMPAS: 'Compas';
