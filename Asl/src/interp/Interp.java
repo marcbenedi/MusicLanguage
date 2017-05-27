@@ -291,7 +291,7 @@ public class Interp {
 
             //tocarCompas(mods_comp,notes_acords,tempo);
             Pattern p = new Pattern();
-            Voice v = new Voice();
+
 
         }
 
