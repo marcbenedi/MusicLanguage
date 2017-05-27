@@ -319,24 +319,68 @@ public class Interp {
         for (int i= 1; i < num_comp; ++i) {
             //System.out.println("Estem tocant un compas");
 
-            AslTree comp = veu.getChild(i);
-            int son = comp.getChildCount();
-            AslTree mods_comp = null;
-            AslTree notes_acords = null;
+            AslTree comp_o_rep = veu.getChild(i);
+            String c = "";
 
-            if(son == 1) {
-                //No tenim mods
-                notes_acords = comp.getChild(0);
+            switch (comp_o_rep.getType()){
+                case AslLexer.COMPAS:
+
+                    int son = comp_o_rep.getChildCount();
+                    AslTree mods_comp = null;
+                    AslTree notes_acords = null;
+
+                    if(son == 1) {
+                        //No tenim mods
+                        notes_acords = comp_o_rep.getChild(0);
+                    }
+                    else {
+                        //Tenim mods
+                        mods_comp = comp_o_rep.getChild(0);
+                        notes_acords = comp_o_rep.getChild(1);
+                    }
+
+                    c= tocarCompas(mods_comp,notes_acords);
+                    v.addCompas(c);
+                    break;
+
+                case AslLexer.REP_COMPAS:
+
+                    int reps = comp_o_rep.getChild(0).getIntValue();
+                    //System.out.println(reps);
+                    //El 0 és el número de repeticions
+                    for (int j = 0; j < reps; ++j){
+
+                        //Per cada repetició tocarem els compassos
+                        int num_comps_en_repeticio = comp_o_rep.getChildCount();
+
+                        for (int k = 1; k < num_comps_en_repeticio; ++k){//-1 perque el primer fill es el num_reps
+                            System.out.println("estem a la repetició "+j+" tocant el compas "+k);
+                            AslTree comp_intern_repe = comp_o_rep.getChild(k);
+
+                            int son_comp_repe = comp_intern_repe.getChildCount();
+                            AslTree mods_comp_repe = null;
+                            AslTree notes_acords_comp_repe = null;
+
+                            if(son_comp_repe == 1) {
+                                //No tenim mods
+                                notes_acords_comp_repe = comp_intern_repe.getChild(0);
+                            }
+                            else {
+                                //Tenim mods
+                                mods_comp_repe = comp_intern_repe.getChild(0);
+                                notes_acords_comp_repe = comp_intern_repe.getChild(1);
+                            }
+                            System.out.println("Anem a tocar compas de repe");
+                            c= tocarCompas(mods_comp_repe,notes_acords_comp_repe);
+                            System.out.println(c);
+                            v.addCompas(c);
+
+
+                        }
+
+                    }
+                    break;
             }
-            else {
-                //Tenim mods
-                mods_comp = comp.getChild(0);
-                notes_acords = comp.getChild(1);
-            }
-            //System.out.println("Anem a tocarCompas");
-            String c= tocarCompas(mods_comp,notes_acords);
-            v.addCompas(c);
-            //System.out.println("afegint el compas");
 
         }
         //System.out.println("Hem acabat de tocar veu");
