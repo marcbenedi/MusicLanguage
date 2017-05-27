@@ -185,6 +185,7 @@ public class Interp {
                 break;
             case "Silenci":
                 res = "R";
+                break;
             default:
                 res = n;
         }
@@ -221,14 +222,14 @@ public class Interp {
         String res = "";
 
         for (int i = 0; i < num_notes_o_acords; ++i){
-            System.out.println("Una altra iteracio");
+            //System.out.println("Una altra iteracio");
             AslTree nota_o_acord = notes_acords.getChild(i);
             String nota_o_acord_text = nota_o_acord.getText();
             Pattern pattern;
 
             if(nota_o_acord_text.equals("ACORD")){
 
-                System.out.println("Toquem un acord");
+                //System.out.println("Toquem un acord");
                 int num_notes = nota_o_acord.getChildCount();
                 String converted_acord = getStandard(nota_o_acord.getChild(0).getText());
 
@@ -236,18 +237,18 @@ public class Interp {
                     converted_acord+="+"+getStandard(nota_o_acord.getChild(j).getText());
                 }
 
-                System.out.println(converted_acord);
+                //System.out.println(converted_acord);
 
-                res+=converted_acord;
+                res+=" "+converted_acord+" ";
             }
             else{
-                System.out.println("Toquem una nota");
+                //System.out.println("Toquem una nota");
                 String trans_nota = getStandard(nota_o_acord_text);
-                res+=trans_nota;
+                res+=" "+trans_nota+" ";
 
             }
         }
-        System.out.println("Acabem de tocar el compas");
+        //System.out.println("Acabem de tocar el compas");
         return res;
     }
 
@@ -257,7 +258,7 @@ public class Interp {
         int num_comp = veu.getChildCount();
 
         for (int i= 1; i < num_comp; ++i) {
-            System.out.println("Estem tocant un compas");
+            //System.out.println("Estem tocant un compas");
 
             AslTree comp = veu.getChild(i);
             int son = comp.getChildCount();
@@ -273,13 +274,14 @@ public class Interp {
                 mods_comp = comp.getChild(0);
                 notes_acords = comp.getChild(1);
             }
-            System.out.println("Anem a tocarCompas");
+            //System.out.println("Anem a tocarCompas");
             String c= tocarCompas(mods_comp,notes_acords);
             v.addCompas(c);
-            System.out.println("afegint el compas");
+            //System.out.println("afegint el compas");
 
         }
-        System.out.println("Hem acabat de tocar veu");
+        //System.out.println("Hem acabat de tocar veu");
+        v.addInstrument(veu.getChild(0).getText());
         return v;
     }
 
@@ -295,8 +297,32 @@ public class Interp {
             AslTree tempo_tree = mods.getChild(0);
             switch (tempo_tree.getType()){
                 case AslLexer.FIGURA_TEMPO:
-                    tempo = 10;
-                    //TODO: Obtenir tempo de figura tempo
+                    //FIGURA: ('n'|'b'|'c'|'sc'|'f'|'sf'|'r');
+                    tempo = 60;
+                    String nota = tempo_tree.getChild(0).getText();
+                    switch (nota){
+                        case "n":
+                            tempo = evaluateExpression(tempo_tree.getChild(1)).getIntegerValue();
+                            break;
+                        case "b":
+                            tempo = evaluateExpression(tempo_tree.getChild(1)).getIntegerValue()*2;
+                            break;
+                        case "c":
+                            tempo = evaluateExpression(tempo_tree.getChild(1)).getIntegerValue()/2;
+                            break;
+                        case "sc":
+                            tempo = evaluateExpression(tempo_tree.getChild(1)).getIntegerValue()/4;
+                            break;
+                        case "f":
+                            tempo = evaluateExpression(tempo_tree.getChild(1)).getIntegerValue()/8;
+                            break;
+                        case "sf":
+                            tempo = evaluateExpression(tempo_tree.getChild(1)).getIntegerValue()/16;
+                            break;
+                        case "r":
+                            tempo = evaluateExpression(tempo_tree.getChild(1)).getIntegerValue()*4;
+                            break;
+                    }
                     break;
                 case AslLexer.PARAULA_TEMPO:
                     tempo = getTempo(tempo_tree.getText());
@@ -310,12 +336,13 @@ public class Interp {
 
         int num_veus = veus.getChildCount();
         for(int i = 0; i < num_veus; ++i){
-            System.out.println("Estem tocant la veu "+i);
+            //System.out.println("Estem tocant la veu "+i);
             AslTree veu = veus.getChild(i);
             Voice v = tocarVeu(veu);
+            //System.out.println(v.getString());
             pattern.add(v.getString());
         }
-        System.out.println("Ja hem acabat de tocar totes les veus");
+        //System.out.println("Ja hem acabat de tocar totes les veus");
         Player p = new Player();
         p.play(pattern);
 

@@ -1,0 +1,150 @@
+digraph {
+
+	ordering=out;
+	ranksep=.4;
+	bgcolor="lightgrey"; node [shape=box, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
+	edge [arrowsize=.5, color="black", style="bold"]
+
+  n0 [label="LIST_FUNCTIONS"];
+  n1 [label="func"];
+  n1 [label="func"];
+  n2 [label="main"];
+  n3 [label="PARAMS"];
+  n4 [label="LIST_INSTR"];
+  n4 [label="LIST_INSTR"];
+  n5 [label="FUNCALL"];
+  n5 [label="FUNCALL"];
+  n6 [label="nocturne"];
+  n7 [label="ARGLIST"];
+  n7 [label="ARGLIST"];
+  n8 [label="2"];
+  n9 [label="Piezzo"];
+  n9 [label="Piezzo"];
+  n10 [label="nocturne"];
+  n11 [label="PARAMS"];
+  n11 [label="PARAMS"];
+  n12 [label="a"];
+  n13 [label="Partitura"];
+  n13 [label="Partitura"];
+  n14 [label="MODS"];
+  n14 [label="MODS"];
+  n15 [label="FIGURA_TEMPO"];
+  n15 [label="FIGURA_TEMPO"];
+  n16 [label="b"];
+  n17 [label="*"];
+  n17 [label="*"];
+  n18 [label="2"];
+  n19 [label="30"];
+  n20 [label="BEAT"];
+  n20 [label="BEAT"];
+  n21 [label="4"];
+  n22 [label="4"];
+  n23 [label="VEUS"];
+  n23 [label="VEUS"];
+  n24 [label="Voice"];
+  n24 [label="Voice"];
+  n25 [label="Piano"];
+  n26 [label="COMPAS"];
+  n26 [label="COMPAS"];
+  n27 [label="NOTES_ACORDS"];
+  n27 [label="NOTES_ACORDS"];
+  n28 [label="La"];
+  n28 [label="La"];
+  n29 [label="7"];
+  n30 [label="n"];
+  n31 [label="·"];
+  n32 [label="Re"];
+  n33 [label="ACORD"];
+  n33 [label="ACORD"];
+  n34 [label="Re"];
+  n35 [label="Fa"];
+  n36 [label="Silenci"];
+  n37 [label="COMPAS"];
+  n37 [label="COMPAS"];
+  n38 [label="NOTES_ACORDS"];
+  n38 [label="NOTES_ACORDS"];
+  n39 [label="La"];
+  n40 [label="Si"];
+  n41 [label="Do"];
+  n42 [label="Silenci"];
+  n43 [label="Voice"];
+  n43 [label="Voice"];
+  n44 [label="Flute"];
+  n45 [label="COMPAS"];
+  n45 [label="COMPAS"];
+  n46 [label="NOTES_ACORDS"];
+  n46 [label="NOTES_ACORDS"];
+  n47 [label="Do"];
+  n48 [label="Do"];
+  n49 [label="Do"];
+  n50 [label="Silenci"];
+  n51 [label="Do"];
+  n52 [label="Do"];
+  n53 [label="Do"];
+  n54 [label="Do"];
+  n55 [label="Do"];
+  n56 [label="Do"];
+  n57 [label="Do"];
+  n58 [label="Do"];
+
+  n0 -> n1 // "LIST_FUNCTIONS" -> "func"
+  n1 -> n2 // "func" -> "main"
+  n1 -> n3 // "func" -> "PARAMS"
+  n1 -> n4 // "func" -> "LIST_INSTR"
+  n4 -> n5 // "LIST_INSTR" -> "FUNCALL"
+  n5 -> n6 // "FUNCALL" -> "nocturne"
+  n5 -> n7 // "FUNCALL" -> "ARGLIST"
+  n7 -> n8 // "ARGLIST" -> "2"
+  n0 -> n9 // "LIST_FUNCTIONS" -> "Piezzo"
+  n9 -> n10 // "Piezzo" -> "nocturne"
+  n9 -> n11 // "Piezzo" -> "PARAMS"
+  n11 -> n12 // "PARAMS" -> "a"
+  n9 -> n13 // "Piezzo" -> "Partitura"
+  n13 -> n14 // "Partitura" -> "MODS"
+  n14 -> n15 // "MODS" -> "FIGURA_TEMPO"
+  n15 -> n16 // "FIGURA_TEMPO" -> "b"
+  n15 -> n17 // "FIGURA_TEMPO" -> "*"
+  n17 -> n18 // "*" -> "2"
+  n17 -> n19 // "*" -> "30"
+  n14 -> n20 // "MODS" -> "BEAT"
+  n20 -> n21 // "BEAT" -> "4"
+  n20 -> n22 // "BEAT" -> "4"
+  n13 -> n23 // "Partitura" -> "VEUS"
+  n23 -> n24 // "VEUS" -> "Voice"
+  n24 -> n25 // "Voice" -> "Piano"
+  n24 -> n26 // "Voice" -> "COMPAS"
+  n26 -> n27 // "COMPAS" -> "NOTES_ACORDS"
+  n27 -> n28 // "NOTES_ACORDS" -> "La"
+  n28 -> n29 // "La" -> "7"
+  n28 -> n30 // "La" -> "n"
+  n28 -> n31 // "La" -> "·"
+  n27 -> n32 // "NOTES_ACORDS" -> "Re"
+  n27 -> n33 // "NOTES_ACORDS" -> "ACORD"
+  n33 -> n34 // "ACORD" -> "Re"
+  n33 -> n35 // "ACORD" -> "Fa"
+  n27 -> n36 // "NOTES_ACORDS" -> "Silenci"
+  n24 -> n37 // "Voice" -> "COMPAS"
+  n37 -> n38 // "COMPAS" -> "NOTES_ACORDS"
+  n38 -> n39 // "NOTES_ACORDS" -> "La"
+  n38 -> n40 // "NOTES_ACORDS" -> "Si"
+  n38 -> n41 // "NOTES_ACORDS" -> "Do"
+  n38 -> n42 // "NOTES_ACORDS" -> "Silenci"
+  n23 -> n43 // "VEUS" -> "Voice"
+  n43 -> n44 // "Voice" -> "Flute"
+  n43 -> n45 // "Voice" -> "COMPAS"
+  n45 -> n46 // "COMPAS" -> "NOTES_ACORDS"
+  n46 -> n47 // "NOTES_ACORDS" -> "Do"
+  n46 -> n48 // "NOTES_ACORDS" -> "Do"
+  n46 -> n49 // "NOTES_ACORDS" -> "Do"
+  n46 -> n50 // "NOTES_ACORDS" -> "Silenci"
+  n46 -> n51 // "NOTES_ACORDS" -> "Do"
+  n46 -> n52 // "NOTES_ACORDS" -> "Do"
+  n46 -> n53 // "NOTES_ACORDS" -> "Do"
+  n46 -> n54 // "NOTES_ACORDS" -> "Do"
+  n46 -> n55 // "NOTES_ACORDS" -> "Do"
+  n46 -> n56 // "NOTES_ACORDS" -> "Do"
+  n46 -> n57 // "NOTES_ACORDS" -> "Do"
+  n46 -> n58 // "NOTES_ACORDS" -> "Do"
+
+}
