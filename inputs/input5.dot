@@ -63,10 +63,35 @@ digraph {
   n38 [label="="];
   n38 [label="="];
   n39 [label="TIME"];
-  n40 [label="2"];
+  n40 [label="0"];
   n41 [label="NOTES_ACORDS"];
   n41 [label="NOTES_ACORDS"];
   n42 [label="Do"];
+  n43 [label="Re"];
+  n44 [label="COMPAS"];
+  n44 [label="COMPAS"];
+  n45 [label="NOTES_ACORDS"];
+  n45 [label="NOTES_ACORDS"];
+  n46 [label="Mi"];
+  n47 [label="Fa"];
+  n48 [label="Sol"];
+  n49 [label="La"];
+  n50 [label="COMPAS"];
+  n50 [label="COMPAS"];
+  n51 [label="MODS"];
+  n51 [label="MODS"];
+  n52 [label="EXPR_TIME"];
+  n52 [label="EXPR_TIME"];
+  n53 [label="="];
+  n53 [label="="];
+  n54 [label="TIME"];
+  n55 [label="2"];
+  n56 [label="NOTES_ACORDS"];
+  n56 [label="NOTES_ACORDS"];
+  n57 [label="Si"];
+  n58 [label="Si"];
+  n59 [label="Si"];
+  n60 [label="Si"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -107,8 +132,26 @@ digraph {
   n36 -> n37 // "MODS" -> "EXPR_TIME"
   n37 -> n38 // "EXPR_TIME" -> "="
   n38 -> n39 // "=" -> "TIME"
-  n38 -> n40 // "=" -> "2"
+  n38 -> n40 // "=" -> "0"
   n35 -> n41 // "COMPAS" -> "NOTES_ACORDS"
   n41 -> n42 // "NOTES_ACORDS" -> "Do"
+  n41 -> n43 // "NOTES_ACORDS" -> "Re"
+  n33 -> n44 // "REP_COMPAS" -> "COMPAS"
+  n44 -> n45 // "COMPAS" -> "NOTES_ACORDS"
+  n45 -> n46 // "NOTES_ACORDS" -> "Mi"
+  n45 -> n47 // "NOTES_ACORDS" -> "Fa"
+  n45 -> n48 // "NOTES_ACORDS" -> "Sol"
+  n45 -> n49 // "NOTES_ACORDS" -> "La"
+  n33 -> n50 // "REP_COMPAS" -> "COMPAS"
+  n50 -> n51 // "COMPAS" -> "MODS"
+  n51 -> n52 // "MODS" -> "EXPR_TIME"
+  n52 -> n53 // "EXPR_TIME" -> "="
+  n53 -> n54 // "=" -> "TIME"
+  n53 -> n55 // "=" -> "2"
+  n50 -> n56 // "COMPAS" -> "NOTES_ACORDS"
+  n56 -> n57 // "NOTES_ACORDS" -> "Si"
+  n56 -> n58 // "NOTES_ACORDS" -> "Si"
+  n56 -> n59 // "NOTES_ACORDS" -> "Si"
+  n56 -> n60 // "NOTES_ACORDS" -> "Si"
 
 }

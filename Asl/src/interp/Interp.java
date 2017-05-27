@@ -354,12 +354,14 @@ public class Interp {
                         int num_comps_en_repeticio = comp_o_rep.getChildCount();
 
                         for (int k = 1; k < num_comps_en_repeticio; ++k){//-1 perque el primer fill es el num_reps
-                            System.out.println("estem a la repetició "+j+" tocant el compas "+k);
+                            //System.out.println("estem a la repetició "+j+" tocant el compas "+k);
                             AslTree comp_intern_repe = comp_o_rep.getChild(k);
 
                             int son_comp_repe = comp_intern_repe.getChildCount();
                             AslTree mods_comp_repe = null;
                             AslTree notes_acords_comp_repe = null;
+
+                            int repe_time = j; //Aixi ens assegurem de que si no hi ha restricció ens tocaran
 
                             if(son_comp_repe == 1) {
                                 //No tenim mods
@@ -369,11 +371,38 @@ public class Interp {
                                 //Tenim mods
                                 mods_comp_repe = comp_intern_repe.getChild(0);
                                 notes_acords_comp_repe = comp_intern_repe.getChild(1);
+
+
+
+                                for (int n = 0; n < mods_comp_repe.getChildCount(); ++n){
+
+                                    AslTree mod = mods_comp_repe.getChild(n);
+
+                                    switch (mod.getType()){
+
+                                        case AslLexer.EXPR_TIME:
+                                            int expr_value = evaluateExpression(mod.getChild(0).getChild(1)).getIntegerValue();
+                                            repe_time = expr_value;
+                                            System.out.println(expr_value);
+                                            break;
+                                        case AslLexer.PARAULA_TEMPO:
+                                            break;
+                                        case AslLexer.PARAULA_INTENSITAT:
+                                            break;
+
+                                    }
+
+                                }
                             }
-                            System.out.println("Anem a tocar compas de repe");
-                            c= tocarCompas(mods_comp_repe,notes_acords_comp_repe);
-                            System.out.println(c);
-                            v.addCompas(c);
+                            if(repe_time == j){
+                                c= tocarCompas(mods_comp_repe,notes_acords_comp_repe);
+                                System.out.println("Tocant el compas "+k);
+                                v.addCompas(c);
+                            }
+                            //System.out.println("Anem a tocar compas de repe");
+
+                            //System.out.println(c);
+
 
 
                         }
