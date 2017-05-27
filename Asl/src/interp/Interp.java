@@ -27,12 +27,16 @@
 
 package interp;
 
+import org.jfugue.pattern.Pattern;
+import org.jfugue.rhythm.Rhythm;
+import org.jfugue.theory.ChordProgression;
 import parser.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.io.*;
+import org.jfugue.player.Player;
 
 /** Class that implements the interpreter of the language. */
 
@@ -156,6 +160,119 @@ public class Interp {
     /** Defines the current line number with a specific value */
     private void setLineNumber(int l) { linenumber = l;}
 
+    private String getStandard(String n){
+        String res = null;
+        switch (n){
+            case "Do":
+                res = "C";
+                break;
+            case "Re":
+                res = "D";
+                break;
+            case "Mi":
+                res = "E";
+                break;
+            case "Fa":
+                res = "F";
+                break;
+            case "Sol":
+                res = "G";
+                break;
+            case "La":
+                res = "A";
+                break;
+            case "Si":
+                res = "B";
+                break;
+            default:
+                res = n;
+        }
+        return res;
+    }
+
+    private int getTempo(String n){
+        int res = 0;
+        switch (n){
+            case "Lento":
+                res = 50;
+                break;
+            case "Adagio":
+                res = 71;
+                break;
+            case "Moderato":
+                res = 91;
+                break;
+            case "Allegro":
+                res = 130;
+                break;
+            case "Presto":
+                res = 185;
+                break;
+            default:
+                res = 60;
+        }
+        return res;
+    }
+
+    private void tocarCompas(AslTree mods, AslTree notes_acords){
+        int num_notes_o_acords = notes_acords.getChildCount();
+        Player p = new Player();
+        for (int i = 0; i < num_notes_o_acords; ++i){
+            AslTree nota_o_acord = notes_acords.getChild(i);
+            String nota_o_acord_text = nota_o_acord.getText();
+
+            if(nota_o_acord_text.equals("ACORD")){
+                int num_notes = nota_o_acord.getChildCount();
+                System.out.println(num_notes);
+                String converted_acord = "";
+                for (int j = 0; j < num_notes; ++j){
+                    //System.out.println(nota_o_acord.getChild(j).getText());
+                    //System.out.println(getStandard(nota_o_acord.getChild(j).getText()));
+                    converted_acord +=" V"+j+" "+"I[Piano] "+ getStandard(nota_o_acord.getChild(j).getText());
+                    //System.out.println(converted_acord);
+                }
+                System.out.println(converted_acord);
+                p.play(converted_acord);
+            }
+            else{
+                String trans_nota = getStandard(nota_o_acord_text);
+                p.play(trans_nota);
+            }
+        }
+    }
+
+    private void executePiezzo(AslTree partitura){
+
+        AslTree mods = partitura.getChild(0);
+        AslTree veus = partitura.getChild(1);
+
+        AslTree veu = veus.getChild(0);
+        System.out.println(veu.getChild(0).getText());
+        int num_comp = veu.getChildCount();
+
+        for (int i= 1; i < num_comp; ++i) {
+
+            AslTree comp = veu.getChild(i);
+            int son = comp.getChildCount();
+            AslTree mods_comp = null;
+            AslTree notes_acords = null;
+
+            if(son == 1) {
+                //No tenim mods
+                notes_acords = comp.getChild(0);
+            }
+            else {
+                //Tenim mods
+                mods_comp = comp.getChild(0);
+                notes_acords = comp.getChild(1);
+            }
+
+            //tocarCompas(mods_comp,notes_acords);
+
+        }
+
+    }
+
     /**
      * Executes a function.
      * @param funcname The name of the function.
@@ -163,6 +280,7 @@ public class Interp {
      * @return The data returned by the function.
      */
     private Data executeFunction (String funcname, AslTree args) {
+        Boolean piezzo = false;
         // Get the AST of the function
         AslTree f = FuncName2Tree.get(funcname);
         if (f == null) {
@@ -171,8 +289,7 @@ public class Interp {
             throw new RuntimeException(" function/piezzo  " + funcname + " not declared");
           }
           else {
-            executePiezzo(f,args);
-            return;
+            piezzo = true;
           }
         }
         // Gather the list of arguments of the caller. This function
@@ -199,8 +316,16 @@ public class Interp {
             Stack.defineVariable(param_name, Arg_values.get(i));
         }
 
-        // Execute the instructions
-        Data result = executeListInstructions (f.getChild(2));
+        Data result = null;
+        if(piezzo){
+            executePiezzo(f.getChild(2));
+
+        }
+        else{
+            // Execute the instructions
+            result = executeListInstructions (f.getChild(2));
+        }
+
 
         // If the result is null, then the function returns void
         if (result == null) result = new Data();

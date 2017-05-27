@@ -1,2 +1,2 @@
 Main-Class: Asl.Asl
-Class-Path: /Users/hermes/Proyectos/MusicLanguage/Asl/libs/antlr-3.4-complete.jar /Users/hermes/Proyectos/MusicLanguage/Asl/libs/commons-cli-1.2.jar
+Class-Path: /home/marcbenedi/Desktop/MusicLanguage/Asl/libs/antlr-3.4-complete.jar /home/marcbenedi/Desktop/MusicLanguage/Asl/libs/commons-cli-1.2.jar /home/marcbenedi/Desktop/MusicLanguage/Asl/libs/jfugue-5.0.9.jar

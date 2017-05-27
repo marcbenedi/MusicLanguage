@@ -227,7 +227,7 @@ optionCompas: (expr -> ^(EXPR_TIME expr) )| PARAULA_TEMPO | PARAULA_INTENSITAT
 //Musical tokens
 
 NOTA_MUSICAL: ('Do'|'Re'|'Mi'|'Fa'|'Sol'|'La'|'Si');
-PARAULA_TEMPO: ('Lento'|'Adagio'|'Moderato'|'Allegro'|'Presto'|'Apasionatto'|'Con caracter'|'Giocoso');
+PARAULA_TEMPO: ('Lento'|'Adagio'|'Moderato'|'Allegro'|'Presto');
 PARAULA_INTENSITAT: ('pp'|'p'|'mp'|'mf'|'f'|'ff'|'pf'|);
 PIEZZO: 'Piezzo';
 SILENCI: 'Silenci';

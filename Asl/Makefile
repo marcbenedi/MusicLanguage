@@ -19,8 +19,9 @@ MANIFEST=	$(BIN)/$(TARGET)_Manifest.txt
 # Libraries and Classpath
 LIB_ANTLR =	$(LIBDIR)/antlr-3.4-complete.jar
 LIB_CLI =	$(LIBDIR)/commons-cli-1.2.jar
-CLASSPATH=	$(LIB_ANTLR):$(LIB_CLI)
-JARPATH=	"$(LIB_ANTLR) $(LIB_CLI)"
+LIB_JFUGE =     $(LIBDIR)/jfugue-5.0.9.jar
+CLASSPATH=	$(LIB_ANTLR):$(LIB_CLI):$(LIB_JFUGE)
+JARPATH=	"$(LIB_ANTLR) $(LIB_CLI) $(LIB_JFUGE)"
 
 
 # Distribution (tar) file

@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g 2017-05-09 19:20:09
+// $ANTLR 3.4 /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g 2017-05-27 13:50:53
 
 package parser;
 import interp.AslTree;
@@ -150,7 +150,7 @@ public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
     public String[] getTokenNames() { return AslParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g"; }
+    public String getGrammarFileName() { return "/home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g"; }
 
 
     public static class prog_return extends ParserRuleReturnScope {
@@ -160,7 +160,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "prog"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:69:1: prog : ( func_o_piezzo )+ EOF -> ^( LIST_FUNCTIONS ( func_o_piezzo )+ ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:69:1: prog : ( func_o_piezzo )+ EOF -> ^( LIST_FUNCTIONS ( func_o_piezzo )+ ) ;
     public final AslParser.prog_return prog() throws RecognitionException {
         AslParser.prog_return retval = new AslParser.prog_return();
         retval.start = input.LT(1);
@@ -176,10 +176,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_EOF=new RewriteRuleTokenStream(adaptor,"token EOF");
         RewriteRuleSubtreeStream stream_func_o_piezzo=new RewriteRuleSubtreeStream(adaptor,"rule func_o_piezzo");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:69:6: ( ( func_o_piezzo )+ EOF -> ^( LIST_FUNCTIONS ( func_o_piezzo )+ ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:69:9: ( func_o_piezzo )+ EOF
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:69:6: ( ( func_o_piezzo )+ EOF -> ^( LIST_FUNCTIONS ( func_o_piezzo )+ ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:69:9: ( func_o_piezzo )+ EOF
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:69:9: ( func_o_piezzo )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:69:9: ( func_o_piezzo )+
             int cnt1=0;
             loop1:
             do {
@@ -193,7 +193,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:69:9: func_o_piezzo
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:69:9: func_o_piezzo
             	    {
             	    pushFollow(FOLLOW_func_o_piezzo_in_prog227);
             	    func_o_piezzo1=func_o_piezzo();
@@ -232,7 +232,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 69:28: -> ^( LIST_FUNCTIONS ( func_o_piezzo )+ )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:69:31: ^( LIST_FUNCTIONS ( func_o_piezzo )+ )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:69:31: ^( LIST_FUNCTIONS ( func_o_piezzo )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -287,7 +287,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "func_o_piezzo"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:72:1: func_o_piezzo : ( func | piezzo );
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:72:1: func_o_piezzo : ( func | piezzo );
     public final AslParser.func_o_piezzo_return func_o_piezzo() throws RecognitionException {
         AslParser.func_o_piezzo_return retval = new AslParser.func_o_piezzo_return();
         retval.start = input.LT(1);
@@ -302,7 +302,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:72:14: ( func | piezzo )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:72:14: ( func | piezzo )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -321,7 +321,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:72:16: func
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:72:16: func
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -336,7 +336,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:72:23: piezzo
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:72:23: piezzo
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -381,7 +381,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "func"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:75:1: func : FUNC ^ ID params block_instructions ENDFUNC !;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:75:1: func : FUNC ^ ID params block_instructions ENDFUNC !;
     public final AslParser.func_return func() throws RecognitionException {
         AslParser.func_return retval = new AslParser.func_return();
         retval.start = input.LT(1);
@@ -402,8 +402,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDFUNC9_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:75:6: ( FUNC ^ ID params block_instructions ENDFUNC !)
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:75:8: FUNC ^ ID params block_instructions ENDFUNC !
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:75:6: ( FUNC ^ ID params block_instructions ENDFUNC !)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:75:8: FUNC ^ ID params block_instructions ENDFUNC !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -469,7 +469,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "params"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:79:1: params : '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:79:1: params : '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) ;
     public final AslParser.params_return params() throws RecognitionException {
         AslParser.params_return retval = new AslParser.params_return();
         retval.start = input.LT(1);
@@ -488,14 +488,14 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_74=new RewriteRuleTokenStream(adaptor,"token 74");
         RewriteRuleSubtreeStream stream_paramlist=new RewriteRuleSubtreeStream(adaptor,"rule paramlist");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:79:8: ( '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:79:10: '(' ( paramlist )? ')'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:79:8: ( '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:79:10: '(' ( paramlist )? ')'
             {
             char_literal10=(Token)match(input,73,FOLLOW_73_in_params297);  
             stream_73.add(char_literal10);
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:79:14: ( paramlist )?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:79:14: ( paramlist )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -504,7 +504,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt3) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:79:14: paramlist
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:79:14: paramlist
                     {
                     pushFollow(FOLLOW_paramlist_in_params299);
                     paramlist11=paramlist();
@@ -536,14 +536,14 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 79:29: -> ^( PARAMS ( paramlist )? )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:79:32: ^( PARAMS ( paramlist )? )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:79:32: ^( PARAMS ( paramlist )? )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(PARAMS, "PARAMS")
                 , root_1);
 
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:79:41: ( paramlist )?
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:79:41: ( paramlist )?
                 if ( stream_paramlist.hasNext() ) {
                     adaptor.addChild(root_1, stream_paramlist.nextTree());
 
@@ -589,7 +589,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "paramlist"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:83:1: paramlist : param ( ',' ! param )* ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:83:1: paramlist : param ( ',' ! param )* ;
     public final AslParser.paramlist_return paramlist() throws RecognitionException {
         AslParser.paramlist_return retval = new AslParser.paramlist_return();
         retval.start = input.LT(1);
@@ -606,8 +606,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal14_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:83:10: ( param ( ',' ! param )* )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:83:12: param ( ',' ! param )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:83:10: ( param ( ',' ! param )* )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:83:12: param ( ',' ! param )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -619,7 +619,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, param13.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:83:18: ( ',' ! param )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:83:18: ( ',' ! param )*
             loop4:
             do {
                 int alt4=2;
@@ -632,7 +632,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:83:19: ',' ! param
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:83:19: ',' ! param
             	    {
             	    char_literal14=(Token)match(input,75,FOLLOW_75_in_paramlist331); 
 
@@ -683,7 +683,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "param"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:88:1: param : ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) );
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:88:1: param : ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) );
     public final AslParser.param_return param() throws RecognitionException {
         AslParser.param_return retval = new AslParser.param_return();
         retval.start = input.LT(1);
@@ -700,7 +700,7 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:88:9: ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:88:9: ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -719,7 +719,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt5) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:88:13: '&' id= ID
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:88:13: '&' id= ID
                     {
                     char_literal16=(Token)match(input,72,FOLLOW_72_in_param359);  
                     stream_72.add(char_literal16);
@@ -742,7 +742,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 88:23: -> ^( PREF[$id,$id.text] )
                     {
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:88:26: ^( PREF[$id,$id.text] )
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:88:26: ^( PREF[$id,$id.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -760,7 +760,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:89:13: id= ID
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:89:13: id= ID
                     {
                     id=(Token)match(input,ID,FOLLOW_ID_in_param386);  
                     stream_ID.add(id);
@@ -779,7 +779,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 89:19: -> ^( PVALUE[$id,$id.text] )
                     {
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:89:22: ^( PVALUE[$id,$id.text] )
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:89:22: ^( PVALUE[$id,$id.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -827,7 +827,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "block_instructions"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:93:1: block_instructions : instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:93:1: block_instructions : instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) ;
     public final AslParser.block_instructions_return block_instructions() throws RecognitionException {
         AslParser.block_instructions_return retval = new AslParser.block_instructions_return();
         retval.start = input.LT(1);
@@ -845,8 +845,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_78=new RewriteRuleTokenStream(adaptor,"token 78");
         RewriteRuleSubtreeStream stream_instruction=new RewriteRuleSubtreeStream(adaptor,"rule instruction");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:94:9: ( instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:94:12: instruction ( ';' instruction )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:94:9: ( instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:94:12: instruction ( ';' instruction )*
             {
             pushFollow(FOLLOW_instruction_in_block_instructions420);
             instruction17=instruction();
@@ -855,7 +855,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             stream_instruction.add(instruction17.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:94:24: ( ';' instruction )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:94:24: ( ';' instruction )*
             loop6:
             do {
                 int alt6=2;
@@ -868,7 +868,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt6) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:94:25: ';' instruction
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:94:25: ';' instruction
             	    {
             	    char_literal18=(Token)match(input,78,FOLLOW_78_in_block_instructions423);  
             	    stream_78.add(char_literal18);
@@ -903,7 +903,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 95:13: -> ^( LIST_INSTR ( instruction )+ )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:95:16: ^( LIST_INSTR ( instruction )+ )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:95:16: ^( LIST_INSTR ( instruction )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -958,7 +958,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "instruction"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:99:1: instruction : ( assign | ite_stmt | while_stmt | funcall | return_stmt | read | write |);
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:99:1: instruction : ( assign | ite_stmt | while_stmt | funcall | return_stmt | read | write |);
     public final AslParser.instruction_return instruction() throws RecognitionException {
         AslParser.instruction_return retval = new AslParser.instruction_return();
         retval.start = input.LT(1);
@@ -983,7 +983,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:100:9: ( assign | ite_stmt | while_stmt | funcall | return_stmt | read | write |)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:100:9: ( assign | ite_stmt | while_stmt | funcall | return_stmt | read | write |)
             int alt7=8;
             switch ( input.LA(1) ) {
             case ID:
@@ -1049,7 +1049,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt7) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:100:11: assign
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:100:11: assign
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1064,7 +1064,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:101:11: ite_stmt
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:101:11: ite_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1079,7 +1079,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:102:11: while_stmt
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:102:11: while_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1094,7 +1094,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:103:13: funcall
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:103:13: funcall
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1109,7 +1109,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:104:11: return_stmt
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:104:11: return_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1124,7 +1124,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:105:11: read
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:105:11: read
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1139,7 +1139,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:106:12: write
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:106:12: write
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1154,7 +1154,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 8 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:108:9: 
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:108:9: 
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1192,7 +1192,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "assign"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:111:1: assign : ID eq= EQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:111:1: assign : ID eq= EQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) ;
     public final AslParser.assign_return assign() throws RecognitionException {
         AslParser.assign_return retval = new AslParser.assign_return();
         retval.start = input.LT(1);
@@ -1211,8 +1211,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:111:8: ( ID eq= EQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:111:10: ID eq= EQUAL expr
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:111:8: ( ID eq= EQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:111:10: ID eq= EQUAL expr
             {
             ID27=(Token)match(input,ID,FOLLOW_ID_in_assign657);  
             stream_ID.add(ID27);
@@ -1242,7 +1242,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 111:27: -> ^( ASSIGN[$eq,\":=\"] ID expr )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:111:30: ^( ASSIGN[$eq,\":=\"] ID expr )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:111:30: ^( ASSIGN[$eq,\":=\"] ID expr )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -1294,7 +1294,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "ite_stmt"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:115:1: ite_stmt : IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:115:1: ite_stmt : IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !;
     public final AslParser.ite_stmt_return ite_stmt() throws RecognitionException {
         AslParser.ite_stmt_return retval = new AslParser.ite_stmt_return();
         retval.start = input.LT(1);
@@ -1319,8 +1319,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDIF35_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:115:10: ( IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !)
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:115:12: IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:115:10: ( IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:115:12: IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1348,7 +1348,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, block_instructions32.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:115:46: ( ELSE ! block_instructions )?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:115:46: ( ELSE ! block_instructions )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1357,7 +1357,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt8) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:115:47: ELSE ! block_instructions
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:115:47: ELSE ! block_instructions
                     {
                     ELSE33=(Token)match(input,ELSE,FOLLOW_ELSE_in_ite_stmt703); 
 
@@ -1407,7 +1407,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "while_stmt"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:119:1: while_stmt : WHILE ^ expr DO ! block_instructions ENDWHILE !;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:119:1: while_stmt : WHILE ^ expr DO ! block_instructions ENDWHILE !;
     public final AslParser.while_stmt_return while_stmt() throws RecognitionException {
         AslParser.while_stmt_return retval = new AslParser.while_stmt_return();
         retval.start = input.LT(1);
@@ -1428,8 +1428,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDWHILE40_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:119:12: ( WHILE ^ expr DO ! block_instructions ENDWHILE !)
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:119:14: WHILE ^ expr DO ! block_instructions ENDWHILE !
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:119:12: ( WHILE ^ expr DO ! block_instructions ENDWHILE !)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:119:14: WHILE ^ expr DO ! block_instructions ENDWHILE !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1490,7 +1490,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "return_stmt"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:123:1: return_stmt : RETURN ^ ( expr )? ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:123:1: return_stmt : RETURN ^ ( expr )? ;
     public final AslParser.return_stmt_return return_stmt() throws RecognitionException {
         AslParser.return_stmt_return retval = new AslParser.return_stmt_return();
         retval.start = input.LT(1);
@@ -1505,8 +1505,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree RETURN41_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:123:13: ( RETURN ^ ( expr )? )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:123:15: RETURN ^ ( expr )?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:123:13: ( RETURN ^ ( expr )? )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:123:15: RETURN ^ ( expr )?
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1518,7 +1518,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(RETURN41_tree, root_0);
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:123:23: ( expr )?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:123:23: ( expr )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1527,7 +1527,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt9) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:123:23: expr
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:123:23: expr
                     {
                     pushFollow(FOLLOW_expr_in_return_stmt769);
                     expr42=expr();
@@ -1573,7 +1573,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "read"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:127:1: read : READ ^ ID ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:127:1: read : READ ^ ID ;
     public final AslParser.read_return read() throws RecognitionException {
         AslParser.read_return retval = new AslParser.read_return();
         retval.start = input.LT(1);
@@ -1588,8 +1588,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ID44_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:127:6: ( READ ^ ID )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:127:8: READ ^ ID
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:127:6: ( READ ^ ID )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:127:8: READ ^ ID
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1639,7 +1639,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "write"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:131:1: write : WRITE ^ ( expr | STRING ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:131:1: write : WRITE ^ ( expr | STRING ) ;
     public final AslParser.write_return write() throws RecognitionException {
         AslParser.write_return retval = new AslParser.write_return();
         retval.start = input.LT(1);
@@ -1656,8 +1656,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree STRING47_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:131:7: ( WRITE ^ ( expr | STRING ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:131:11: WRITE ^ ( expr | STRING )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:131:7: ( WRITE ^ ( expr | STRING ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:131:11: WRITE ^ ( expr | STRING )
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1669,7 +1669,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(WRITE45_tree, root_0);
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:131:18: ( expr | STRING )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:131:18: ( expr | STRING )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1688,7 +1688,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt10) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:131:19: expr
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:131:19: expr
                     {
                     pushFollow(FOLLOW_expr_in_write815);
                     expr46=expr();
@@ -1700,7 +1700,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:131:26: STRING
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:131:26: STRING
                     {
                     STRING47=(Token)match(input,STRING,FOLLOW_STRING_in_write819); 
                     STRING47_tree = 
@@ -1746,7 +1746,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:135:1: expr : boolterm ( OR ^ boolterm )* ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:135:1: expr : boolterm ( OR ^ boolterm )* ;
     public final AslParser.expr_return expr() throws RecognitionException {
         AslParser.expr_return retval = new AslParser.expr_return();
         retval.start = input.LT(1);
@@ -1763,8 +1763,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree OR49_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:135:9: ( boolterm ( OR ^ boolterm )* )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:135:13: boolterm ( OR ^ boolterm )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:135:9: ( boolterm ( OR ^ boolterm )* )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:135:13: boolterm ( OR ^ boolterm )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1776,7 +1776,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, boolterm48.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:135:22: ( OR ^ boolterm )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:135:22: ( OR ^ boolterm )*
             loop11:
             do {
                 int alt11=2;
@@ -1789,7 +1789,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt11) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:135:23: OR ^ boolterm
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:135:23: OR ^ boolterm
             	    {
             	    OR49=(Token)match(input,OR,FOLLOW_OR_in_expr847); 
             	    OR49_tree = 
@@ -1845,7 +1845,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "boolterm"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:138:1: boolterm : boolfact ( AND ^ boolfact )* ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:138:1: boolterm : boolfact ( AND ^ boolfact )* ;
     public final AslParser.boolterm_return boolterm() throws RecognitionException {
         AslParser.boolterm_return retval = new AslParser.boolterm_return();
         retval.start = input.LT(1);
@@ -1862,8 +1862,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree AND52_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:138:9: ( boolfact ( AND ^ boolfact )* )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:138:13: boolfact ( AND ^ boolfact )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:138:9: ( boolfact ( AND ^ boolfact )* )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:138:13: boolfact ( AND ^ boolfact )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1875,7 +1875,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, boolfact51.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:138:22: ( AND ^ boolfact )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:138:22: ( AND ^ boolfact )*
             loop12:
             do {
                 int alt12=2;
@@ -1888,7 +1888,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt12) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:138:23: AND ^ boolfact
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:138:23: AND ^ boolfact
             	    {
             	    AND52=(Token)match(input,AND,FOLLOW_AND_in_boolterm873); 
             	    AND52_tree = 
@@ -1944,7 +1944,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "boolfact"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:1: boolfact : num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:1: boolfact : num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? ;
     public final AslParser.boolfact_return boolfact() throws RecognitionException {
         AslParser.boolfact_return retval = new AslParser.boolfact_return();
         retval.start = input.LT(1);
@@ -1971,8 +1971,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree GE60_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:9: ( num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:13: num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:9: ( num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:13: num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1984,7 +1984,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, num_expr54.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:22: ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:22: ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1993,9 +1993,9 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt14) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr
                     {
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^)
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^)
                     int alt13=6;
                     switch ( input.LA(1) ) {
                     case EQUAL:
@@ -2038,7 +2038,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                     switch (alt13) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:24: EQUAL ^
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:24: EQUAL ^
                             {
                             EQUAL55=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_boolfact900); 
                             EQUAL55_tree = 
@@ -2050,7 +2050,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 2 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:33: NOT_EQUAL ^
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:33: NOT_EQUAL ^
                             {
                             NOT_EQUAL56=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_boolfact905); 
                             NOT_EQUAL56_tree = 
@@ -2062,7 +2062,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 3 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:46: LT ^
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:46: LT ^
                             {
                             LT57=(Token)match(input,LT,FOLLOW_LT_in_boolfact910); 
                             LT57_tree = 
@@ -2074,7 +2074,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 4 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:52: LE ^
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:52: LE ^
                             {
                             LE58=(Token)match(input,LE,FOLLOW_LE_in_boolfact915); 
                             LE58_tree = 
@@ -2086,7 +2086,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 5 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:58: GT ^
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:58: GT ^
                             {
                             GT59=(Token)match(input,GT,FOLLOW_GT_in_boolfact920); 
                             GT59_tree = 
@@ -2098,7 +2098,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 6 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:141:64: GE ^
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:141:64: GE ^
                             {
                             GE60=(Token)match(input,GE,FOLLOW_GE_in_boolfact925); 
                             GE60_tree = 
@@ -2157,7 +2157,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "num_expr"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:144:1: num_expr : term ( ( PLUS ^| MINUS ^) term )* ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:144:1: num_expr : term ( ( PLUS ^| MINUS ^) term )* ;
     public final AslParser.num_expr_return num_expr() throws RecognitionException {
         AslParser.num_expr_return retval = new AslParser.num_expr_return();
         retval.start = input.LT(1);
@@ -2176,8 +2176,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree MINUS64_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:144:9: ( term ( ( PLUS ^| MINUS ^) term )* )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:144:13: term ( ( PLUS ^| MINUS ^) term )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:144:9: ( term ( ( PLUS ^| MINUS ^) term )* )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:144:13: term ( ( PLUS ^| MINUS ^) term )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2189,7 +2189,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, term62.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:144:18: ( ( PLUS ^| MINUS ^) term )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:144:18: ( ( PLUS ^| MINUS ^) term )*
             loop16:
             do {
                 int alt16=2;
@@ -2202,9 +2202,9 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt16) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:144:20: ( PLUS ^| MINUS ^) term
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:144:20: ( PLUS ^| MINUS ^) term
             	    {
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:144:20: ( PLUS ^| MINUS ^)
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:144:20: ( PLUS ^| MINUS ^)
             	    int alt15=2;
             	    int LA15_0 = input.LA(1);
 
@@ -2223,7 +2223,7 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    switch (alt15) {
             	        case 1 :
-            	            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:144:21: PLUS ^
+            	            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:144:21: PLUS ^
             	            {
             	            PLUS63=(Token)match(input,PLUS,FOLLOW_PLUS_in_num_expr954); 
             	            PLUS63_tree = 
@@ -2235,7 +2235,7 @@ public TreeAdaptor getTreeAdaptor() {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:144:29: MINUS ^
+            	            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:144:29: MINUS ^
             	            {
             	            MINUS64=(Token)match(input,MINUS,FOLLOW_MINUS_in_num_expr959); 
             	            MINUS64_tree = 
@@ -2297,7 +2297,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "term"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:1: term : factor ( ( MUL ^| DIV ^| MOD ^) factor )* ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:1: term : factor ( ( MUL ^| DIV ^| MOD ^) factor )* ;
     public final AslParser.term_return term() throws RecognitionException {
         AslParser.term_return retval = new AslParser.term_return();
         retval.start = input.LT(1);
@@ -2318,8 +2318,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree MOD69_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:9: ( factor ( ( MUL ^| DIV ^| MOD ^) factor )* )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:13: factor ( ( MUL ^| DIV ^| MOD ^) factor )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:9: ( factor ( ( MUL ^| DIV ^| MOD ^) factor )* )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:13: factor ( ( MUL ^| DIV ^| MOD ^) factor )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2331,7 +2331,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, factor66.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:20: ( ( MUL ^| DIV ^| MOD ^) factor )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:20: ( ( MUL ^| DIV ^| MOD ^) factor )*
             loop18:
             do {
                 int alt18=2;
@@ -2344,9 +2344,9 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt18) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:22: ( MUL ^| DIV ^| MOD ^) factor
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:22: ( MUL ^| DIV ^| MOD ^) factor
             	    {
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:22: ( MUL ^| DIV ^| MOD ^)
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:22: ( MUL ^| DIV ^| MOD ^)
             	    int alt17=3;
             	    switch ( input.LA(1) ) {
             	    case MUL:
@@ -2374,7 +2374,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             	    switch (alt17) {
             	        case 1 :
-            	            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:23: MUL ^
+            	            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:23: MUL ^
             	            {
             	            MUL67=(Token)match(input,MUL,FOLLOW_MUL_in_term992); 
             	            MUL67_tree = 
@@ -2386,7 +2386,7 @@ public TreeAdaptor getTreeAdaptor() {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:30: DIV ^
+            	            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:30: DIV ^
             	            {
             	            DIV68=(Token)match(input,DIV,FOLLOW_DIV_in_term997); 
             	            DIV68_tree = 
@@ -2398,7 +2398,7 @@ public TreeAdaptor getTreeAdaptor() {
             	            }
             	            break;
             	        case 3 :
-            	            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:147:37: MOD ^
+            	            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:147:37: MOD ^
             	            {
             	            MOD69=(Token)match(input,MOD,FOLLOW_MOD_in_term1002); 
             	            MOD69_tree = 
@@ -2460,7 +2460,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "factor"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:150:1: factor : ( NOT ^| PLUS ^| MINUS ^)? atom ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:150:1: factor : ( NOT ^| PLUS ^| MINUS ^)? atom ;
     public final AslParser.factor_return factor() throws RecognitionException {
         AslParser.factor_return retval = new AslParser.factor_return();
         retval.start = input.LT(1);
@@ -2479,13 +2479,13 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree MINUS73_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:150:9: ( ( NOT ^| PLUS ^| MINUS ^)? atom )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:150:13: ( NOT ^| PLUS ^| MINUS ^)? atom
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:150:9: ( ( NOT ^| PLUS ^| MINUS ^)? atom )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:150:13: ( NOT ^| PLUS ^| MINUS ^)? atom
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:150:13: ( NOT ^| PLUS ^| MINUS ^)?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:150:13: ( NOT ^| PLUS ^| MINUS ^)?
             int alt19=4;
             switch ( input.LA(1) ) {
                 case NOT:
@@ -2507,7 +2507,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt19) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:150:14: NOT ^
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:150:14: NOT ^
                     {
                     NOT71=(Token)match(input,NOT,FOLLOW_NOT_in_factor1029); 
                     NOT71_tree = 
@@ -2519,7 +2519,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:150:21: PLUS ^
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:150:21: PLUS ^
                     {
                     PLUS72=(Token)match(input,PLUS,FOLLOW_PLUS_in_factor1034); 
                     PLUS72_tree = 
@@ -2531,7 +2531,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:150:29: MINUS ^
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:150:29: MINUS ^
                     {
                     MINUS73=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor1039); 
                     MINUS73_tree = 
@@ -2584,7 +2584,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "atom"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:156:1: atom : ( ID | INT | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !);
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:156:1: atom : ( ID | INT | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !);
     public final AslParser.atom_return atom() throws RecognitionException {
         AslParser.atom_return retval = new AslParser.atom_return();
         retval.start = input.LT(1);
@@ -2611,7 +2611,7 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_FALSE=new RewriteRuleTokenStream(adaptor,"token FALSE");
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:156:9: ( ID | INT | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:156:9: ( ID | INT | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
             int alt21=5;
             switch ( input.LA(1) ) {
             case ID:
@@ -2659,7 +2659,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt21) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:156:13: ID
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:156:13: ID
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2674,7 +2674,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:157:13: INT
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:157:13: INT
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2689,9 +2689,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:158:13: (b= TRUE |b= FALSE )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:158:13: (b= TRUE |b= FALSE )
                     {
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:158:13: (b= TRUE |b= FALSE )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:158:13: (b= TRUE |b= FALSE )
                     int alt20=2;
                     int LA20_0 = input.LA(1);
 
@@ -2710,7 +2710,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt20) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:158:14: b= TRUE
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:158:14: b= TRUE
                             {
                             b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom1100);  
                             stream_TRUE.add(b);
@@ -2719,7 +2719,7 @@ public TreeAdaptor getTreeAdaptor() {
                             }
                             break;
                         case 2 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:158:23: b= FALSE
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:158:23: b= FALSE
                             {
                             b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom1106);  
                             stream_FALSE.add(b);
@@ -2744,7 +2744,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 158:33: -> ^( BOOLEAN[$b,$b.text] )
                     {
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:158:36: ^( BOOLEAN[$b,$b.text] )
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:158:36: ^( BOOLEAN[$b,$b.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -2762,7 +2762,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:159:13: funcall
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:159:13: funcall
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2777,7 +2777,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:160:13: '(' ! expr ')' !
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:160:13: '(' ! expr ')' !
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2826,7 +2826,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "funcall"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:164:1: funcall : ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:164:1: funcall : ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) ;
     public final AslParser.funcall_return funcall() throws RecognitionException {
         AslParser.funcall_return retval = new AslParser.funcall_return();
         retval.start = input.LT(1);
@@ -2848,8 +2848,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_74=new RewriteRuleTokenStream(adaptor,"token 74");
         RewriteRuleSubtreeStream stream_expr_list=new RewriteRuleSubtreeStream(adaptor,"rule expr_list");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:164:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:164:13: ID '(' ( expr_list )? ')'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:164:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:164:13: ID '(' ( expr_list )? ')'
             {
             ID81=(Token)match(input,ID,FOLLOW_ID_in_funcall1169);  
             stream_ID.add(ID81);
@@ -2859,7 +2859,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_73.add(char_literal82);
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:164:20: ( expr_list )?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:164:20: ( expr_list )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2868,7 +2868,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt22) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:164:20: expr_list
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:164:20: expr_list
                     {
                     pushFollow(FOLLOW_expr_list_in_funcall1173);
                     expr_list83=expr_list();
@@ -2900,7 +2900,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 164:35: -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:164:38: ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:164:38: ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -2911,14 +2911,14 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_ID.nextNode()
                 );
 
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:164:51: ^( ARGLIST ( expr_list )? )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:164:51: ^( ARGLIST ( expr_list )? )
                 {
                 AslTree root_2 = (AslTree)adaptor.nil();
                 root_2 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(ARGLIST, "ARGLIST")
                 , root_2);
 
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:164:61: ( expr_list )?
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:164:61: ( expr_list )?
                 if ( stream_expr_list.hasNext() ) {
                     adaptor.addChild(root_2, stream_expr_list.nextTree());
 
@@ -2967,7 +2967,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr_list"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:168:1: expr_list : expr ( ',' ! expr )* ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:168:1: expr_list : expr ( ',' ! expr )* ;
     public final AslParser.expr_list_return expr_list() throws RecognitionException {
         AslParser.expr_list_return retval = new AslParser.expr_list_return();
         retval.start = input.LT(1);
@@ -2984,8 +2984,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal86_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:168:10: ( expr ( ',' ! expr )* )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:168:13: expr ( ',' ! expr )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:168:10: ( expr ( ',' ! expr )* )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:168:13: expr ( ',' ! expr )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2997,7 +2997,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, expr85.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:168:18: ( ',' ! expr )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:168:18: ( ',' ! expr )*
             loop23:
             do {
                 int alt23=2;
@@ -3010,7 +3010,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt23) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:168:19: ',' ! expr
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:168:19: ',' ! expr
             	    {
             	    char_literal86=(Token)match(input,75,FOLLOW_75_in_expr_list1212); 
 
@@ -3061,7 +3061,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "piezzo"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:174:1: piezzo : PIEZZO ^ ID params partitura ENDPIEZZO !;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:174:1: piezzo : PIEZZO ^ ID params partitura ENDPIEZZO !;
     public final AslParser.piezzo_return piezzo() throws RecognitionException {
         AslParser.piezzo_return retval = new AslParser.piezzo_return();
         retval.start = input.LT(1);
@@ -3082,8 +3082,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDPIEZZO92_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:174:8: ( PIEZZO ^ ID params partitura ENDPIEZZO !)
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:174:10: PIEZZO ^ ID params partitura ENDPIEZZO !
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:174:8: ( PIEZZO ^ ID params partitura ENDPIEZZO !)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:174:10: PIEZZO ^ ID params partitura ENDPIEZZO !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -3149,7 +3149,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "nota"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:177:1: nota : ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:1: nota : ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) ;
     public final AslParser.nota_return nota() throws RecognitionException {
         AslParser.nota_return retval = new AslParser.nota_return();
         retval.start = input.LT(1);
@@ -3189,10 +3189,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_76=new RewriteRuleTokenStream(adaptor,"token 76");
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:177:5: ( ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:5: ( ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -3211,12 +3211,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt30) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:7: ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:7: ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? )
                     {
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:7: ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? )
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:8: ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:7: ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:8: ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )?
                     {
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:8: ( PREMOD '.' )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:8: ( PREMOD '.' )?
                     int alt24=2;
                     int LA24_0 = input.LA(1);
 
@@ -3225,7 +3225,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt24) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:9: PREMOD '.'
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:9: PREMOD '.'
                             {
                             PREMOD93=(Token)match(input,PREMOD,FOLLOW_PREMOD_in_nota1273);  
                             stream_PREMOD.add(PREMOD93);
@@ -3241,7 +3241,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:21: ( INT )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:21: ( INT )?
                     int alt25=2;
                     int LA25_0 = input.LA(1);
 
@@ -3250,7 +3250,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt25) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:21: INT
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:21: INT
                             {
                             INT95=(Token)match(input,INT,FOLLOW_INT_in_nota1278);  
                             stream_INT.add(INT95);
@@ -3266,7 +3266,7 @@ public TreeAdaptor getTreeAdaptor() {
                     stream_NOTA_MUSICAL.add(NOTA_MUSICAL96);
 
 
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:39: ( '.' FIGURA )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:39: ( '.' FIGURA )?
                     int alt26=2;
                     int LA26_0 = input.LA(1);
 
@@ -3275,7 +3275,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt26) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:40: '.' FIGURA
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:40: '.' FIGURA
                             {
                             char_literal97=(Token)match(input,76,FOLLOW_76_in_nota1284);  
                             stream_76.add(char_literal97);
@@ -3291,7 +3291,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:53: ( PUNTET )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:53: ( PUNTET )?
                     int alt27=2;
                     int LA27_0 = input.LA(1);
 
@@ -3300,7 +3300,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt27) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:53: PUNTET
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:53: PUNTET
                             {
                             PUNTET99=(Token)match(input,PUNTET,FOLLOW_PUNTET_in_nota1290);  
                             stream_PUNTET.add(PUNTET99);
@@ -3316,7 +3316,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
                     // AST REWRITE
-                    // elements: INT, PUNTET, NOTA_MUSICAL, FIGURA, PREMOD
+                    // elements: FIGURA, PREMOD, INT, PUNTET, NOTA_MUSICAL
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -3328,14 +3328,14 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 178:62: -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? )
                     {
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:65: ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? )
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:65: ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
                         stream_NOTA_MUSICAL.nextNode()
                         , root_1);
 
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:80: ( PREMOD )?
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:80: ( PREMOD )?
                         if ( stream_PREMOD.hasNext() ) {
                             adaptor.addChild(root_1, 
                             stream_PREMOD.nextNode()
@@ -3344,7 +3344,7 @@ public TreeAdaptor getTreeAdaptor() {
                         }
                         stream_PREMOD.reset();
 
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:88: ( INT )?
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:88: ( INT )?
                         if ( stream_INT.hasNext() ) {
                             adaptor.addChild(root_1, 
                             stream_INT.nextNode()
@@ -3353,7 +3353,7 @@ public TreeAdaptor getTreeAdaptor() {
                         }
                         stream_INT.reset();
 
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:93: ( FIGURA )?
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:93: ( FIGURA )?
                         if ( stream_FIGURA.hasNext() ) {
                             adaptor.addChild(root_1, 
                             stream_FIGURA.nextNode()
@@ -3362,7 +3362,7 @@ public TreeAdaptor getTreeAdaptor() {
                         }
                         stream_FIGURA.reset();
 
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:178:101: ( PUNTET )?
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:178:101: ( PUNTET )?
                         if ( stream_PUNTET.hasNext() ) {
                             adaptor.addChild(root_1, 
                             stream_PUNTET.nextNode()
@@ -3382,13 +3382,13 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:179:9: SILENCI ( '.' FIGURA )? ( PUNTET )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:179:9: SILENCI ( '.' FIGURA )? ( PUNTET )?
                     {
                     SILENCI100=(Token)match(input,SILENCI,FOLLOW_SILENCI_in_nota1320);  
                     stream_SILENCI.add(SILENCI100);
 
 
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:179:17: ( '.' FIGURA )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:179:17: ( '.' FIGURA )?
                     int alt28=2;
                     int LA28_0 = input.LA(1);
 
@@ -3397,7 +3397,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt28) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:179:18: '.' FIGURA
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:179:18: '.' FIGURA
                             {
                             char_literal101=(Token)match(input,76,FOLLOW_76_in_nota1323);  
                             stream_76.add(char_literal101);
@@ -3413,7 +3413,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:179:30: ( PUNTET )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:179:30: ( PUNTET )?
                     int alt29=2;
                     int LA29_0 = input.LA(1);
 
@@ -3422,7 +3422,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     switch (alt29) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:179:30: PUNTET
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:179:30: PUNTET
                             {
                             PUNTET103=(Token)match(input,PUNTET,FOLLOW_PUNTET_in_nota1328);  
                             stream_PUNTET.add(PUNTET103);
@@ -3471,7 +3471,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "acord"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:183:1: acord : '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:1: acord : '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) ;
     public final AslParser.acord_return acord() throws RecognitionException {
         AslParser.acord_return retval = new AslParser.acord_return();
         retval.start = input.LT(1);
@@ -3495,8 +3495,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_75=new RewriteRuleTokenStream(adaptor,"token 75");
         RewriteRuleSubtreeStream stream_nota=new RewriteRuleSubtreeStream(adaptor,"rule nota");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:183:6: ( '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:183:8: '[' nota ( ',' nota )+ ']'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:6: ( '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:8: '[' nota ( ',' nota )+ ']'
             {
             char_literal104=(Token)match(input,80,FOLLOW_80_in_acord1351);  
             stream_80.add(char_literal104);
@@ -3509,7 +3509,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             stream_nota.add(nota105.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:183:17: ( ',' nota )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:17: ( ',' nota )+
             int cnt31=0;
             loop31:
             do {
@@ -3523,7 +3523,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt31) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:183:18: ',' nota
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:18: ',' nota
             	    {
             	    char_literal106=(Token)match(input,75,FOLLOW_75_in_acord1356);  
             	    stream_75.add(char_literal106);
@@ -3566,7 +3566,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 183:33: -> ^( ACORD nota ( nota )+ )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:183:36: ^( ACORD nota ( nota )+ )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:36: ^( ACORD nota ( nota )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3623,7 +3623,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "partitura"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:186:1: partitura : PARTITURA ^ '{' ! optionsPart veus '}' !;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:186:1: partitura : PARTITURA ^ '{' ! optionsPart veus '}' !;
     public final AslParser.partitura_return partitura() throws RecognitionException {
         AslParser.partitura_return retval = new AslParser.partitura_return();
         retval.start = input.LT(1);
@@ -3644,8 +3644,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal113_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:186:10: ( PARTITURA ^ '{' ! optionsPart veus '}' !)
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:186:12: PARTITURA ^ '{' ! optionsPart veus '}' !
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:186:10: ( PARTITURA ^ '{' ! optionsPart veus '}' !)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:186:12: PARTITURA ^ '{' ! optionsPart veus '}' !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -3706,7 +3706,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "optionsPart"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:188:1: optionsPart : tempo compas_beat -> ^( MODS tempo compas_beat ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:188:1: optionsPart : tempo compas_beat -> ^( MODS tempo compas_beat ) ;
     public final AslParser.optionsPart_return optionsPart() throws RecognitionException {
         AslParser.optionsPart_return retval = new AslParser.optionsPart_return();
         retval.start = input.LT(1);
@@ -3722,8 +3722,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_compas_beat=new RewriteRuleSubtreeStream(adaptor,"rule compas_beat");
         RewriteRuleSubtreeStream stream_tempo=new RewriteRuleSubtreeStream(adaptor,"rule tempo");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:188:12: ( tempo compas_beat -> ^( MODS tempo compas_beat ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:188:14: tempo compas_beat
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:188:12: ( tempo compas_beat -> ^( MODS tempo compas_beat ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:188:14: tempo compas_beat
             {
             pushFollow(FOLLOW_tempo_in_optionsPart1413);
             tempo114=tempo();
@@ -3752,7 +3752,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 188:32: -> ^( MODS tempo compas_beat )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:188:35: ^( MODS tempo compas_beat )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:188:35: ^( MODS tempo compas_beat )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3802,7 +3802,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "veus"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:191:1: veus : ( veu )+ -> ^( VEUS ( veu )+ ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:191:1: veus : ( veu )+ -> ^( VEUS ( veu )+ ) ;
     public final AslParser.veus_return veus() throws RecognitionException {
         AslParser.veus_return retval = new AslParser.veus_return();
         retval.start = input.LT(1);
@@ -3815,10 +3815,10 @@ public TreeAdaptor getTreeAdaptor() {
 
         RewriteRuleSubtreeStream stream_veu=new RewriteRuleSubtreeStream(adaptor,"rule veu");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:191:5: ( ( veu )+ -> ^( VEUS ( veu )+ ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:191:7: ( veu )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:191:5: ( ( veu )+ -> ^( VEUS ( veu )+ ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:191:7: ( veu )+
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:191:7: ( veu )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:191:7: ( veu )+
             int cnt32=0;
             loop32:
             do {
@@ -3832,7 +3832,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt32) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:191:7: veu
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:191:7: veu
             	    {
             	    pushFollow(FOLLOW_veu_in_veus1444);
             	    veu116=veu();
@@ -3867,7 +3867,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 191:12: -> ^( VEUS ( veu )+ )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:191:15: ^( VEUS ( veu )+ )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:191:15: ^( VEUS ( veu )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3922,7 +3922,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "tempo"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:194:1: tempo : TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:1: tempo : TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) ) ;
     public final AslParser.tempo_return tempo() throws RecognitionException {
         AslParser.tempo_return retval = new AslParser.tempo_return();
         retval.start = input.LT(1);
@@ -3947,14 +3947,14 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_TEMPO=new RewriteRuleTokenStream(adaptor,"token TEMPO");
         RewriteRuleSubtreeStream stream_num_expr=new RewriteRuleSubtreeStream(adaptor,"rule num_expr");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:194:6: ( TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:194:8: TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:6: ( TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:8: TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) )
             {
             TEMPO117=(Token)match(input,TEMPO,FOLLOW_TEMPO_in_tempo1466);  
             stream_TEMPO.add(TEMPO117);
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:194:14: ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:14: ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) )
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -3973,10 +3973,10 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt33) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:194:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
                     {
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:194:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:194:17: PARAULA_TEMPO
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:17: PARAULA_TEMPO
                     {
                     PARAULA_TEMPO118=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_tempo1471);  
                     stream_PARAULA_TEMPO.add(PARAULA_TEMPO118);
@@ -3995,7 +3995,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 194:31: -> ^( PARAULA_TEMPO )
                     {
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:194:34: ^( PARAULA_TEMPO )
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:34: ^( PARAULA_TEMPO )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -4016,10 +4016,10 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:195:17: ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:195:17: ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) )
                     {
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:195:17: ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) )
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:195:18: FIGURA '=' num_expr
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:195:17: ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:195:18: FIGURA '=' num_expr
                     {
                     FIGURA119=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_tempo1498);  
                     stream_FIGURA.add(FIGURA119);
@@ -4049,7 +4049,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 195:38: -> ^( FIGURA_TEMPO FIGURA num_expr )
                     {
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:195:41: ^( FIGURA_TEMPO FIGURA num_expr )
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:195:41: ^( FIGURA_TEMPO FIGURA num_expr )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -4110,7 +4110,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "compas_beat"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:199:1: compas_beat : 'Compas' num_expr ':' num_expr -> ^( BEAT num_expr num_expr ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:199:1: compas_beat : 'Compas' num_expr ':' num_expr -> ^( BEAT num_expr num_expr ) ;
     public final AslParser.compas_beat_return compas_beat() throws RecognitionException {
         AslParser.compas_beat_return retval = new AslParser.compas_beat_return();
         retval.start = input.LT(1);
@@ -4131,8 +4131,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_COMPAS=new RewriteRuleTokenStream(adaptor,"token COMPAS");
         RewriteRuleSubtreeStream stream_num_expr=new RewriteRuleSubtreeStream(adaptor,"rule num_expr");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:199:12: ( 'Compas' num_expr ':' num_expr -> ^( BEAT num_expr num_expr ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:199:14: 'Compas' num_expr ':' num_expr
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:199:12: ( 'Compas' num_expr ':' num_expr -> ^( BEAT num_expr num_expr ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:199:14: 'Compas' num_expr ':' num_expr
             {
             string_literal122=(Token)match(input,COMPAS,FOLLOW_COMPAS_in_compas_beat1542);  
             stream_COMPAS.add(string_literal122);
@@ -4169,7 +4169,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 199:45: -> ^( BEAT num_expr num_expr )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:199:48: ^( BEAT num_expr num_expr )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:199:48: ^( BEAT num_expr num_expr )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -4219,7 +4219,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "veu"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:202:1: veu : 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:202:1: veu : 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !;
     public final AslParser.veu_return veu() throws RecognitionException {
         AslParser.veu_return retval = new AslParser.veu_return();
         retval.start = input.LT(1);
@@ -4242,8 +4242,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree SEPARADOR_COMPAS131_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:202:4: ( 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !)
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:202:6: 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:202:4: ( 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:202:6: 'Voice' ^ ID SEPARADOR_COMPAS ! grup_compases SEPARADOR_COMPAS ! SEPARADOR_COMPAS !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -4306,7 +4306,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "grup_compases"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:205:1: grup_compases : ( repeticion_compases | '|' ! compas )+ ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:205:1: grup_compases : ( repeticion_compases | '|' ! compas )+ ;
     public final AslParser.grup_compases_return grup_compases() throws RecognitionException {
         AslParser.grup_compases_return retval = new AslParser.grup_compases_return();
         retval.start = input.LT(1);
@@ -4323,13 +4323,13 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal133_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:205:14: ( ( repeticion_compases | '|' ! compas )+ )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:205:16: ( repeticion_compases | '|' ! compas )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:205:14: ( ( repeticion_compases | '|' ! compas )+ )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:205:16: ( repeticion_compases | '|' ! compas )+
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:205:16: ( repeticion_compases | '|' ! compas )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:205:16: ( repeticion_compases | '|' ! compas )+
             int cnt34=0;
             loop34:
             do {
@@ -4352,7 +4352,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt34) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:205:17: repeticion_compases
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:205:17: repeticion_compases
             	    {
             	    pushFollow(FOLLOW_repeticion_compases_in_grup_compases1604);
             	    repeticion_compases132=repeticion_compases();
@@ -4364,7 +4364,7 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:205:39: '|' ! compas
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:205:39: '|' ! compas
             	    {
             	    char_literal133=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_grup_compases1608); 
 
@@ -4419,7 +4419,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "repeticion_compases"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:208:1: repeticion_compases : REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:208:1: repeticion_compases : REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) ;
     public final AslParser.repeticion_compases_return repeticion_compases() throws RecognitionException {
         AslParser.repeticion_compases_return retval = new AslParser.repeticion_compases_return();
         retval.start = input.LT(1);
@@ -4438,8 +4438,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_rep_tancar=new RewriteRuleSubtreeStream(adaptor,"rule rep_tancar");
         RewriteRuleSubtreeStream stream_dentro_repeticio=new RewriteRuleSubtreeStream(adaptor,"rule dentro_repeticio");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:208:20: ( REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:208:22: REP_OBRIR dentro_repeticio rep_tancar
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:208:20: ( REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:208:22: REP_OBRIR dentro_repeticio rep_tancar
             {
             REP_OBRIR135=(Token)match(input,REP_OBRIR,FOLLOW_REP_OBRIR_in_repeticion_compases1634);  
             stream_REP_OBRIR.add(REP_OBRIR135);
@@ -4460,7 +4460,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_rep_tancar.add(rep_tancar137.getTree());
 
             // AST REWRITE
-            // elements: dentro_repeticio, rep_tancar
+            // elements: rep_tancar, dentro_repeticio
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4472,7 +4472,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 208:61: -> ^( REP_COMPAS rep_tancar dentro_repeticio )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:208:64: ^( REP_COMPAS rep_tancar dentro_repeticio )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:208:64: ^( REP_COMPAS rep_tancar dentro_repeticio )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -4522,7 +4522,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "dentro_repeticio"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:211:1: dentro_repeticio : compas ( repeticion_compases | '|' ! compas )* ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:211:1: dentro_repeticio : compas ( repeticion_compases | '|' ! compas )* ;
     public final AslParser.dentro_repeticio_return dentro_repeticio() throws RecognitionException {
         AslParser.dentro_repeticio_return retval = new AslParser.dentro_repeticio_return();
         retval.start = input.LT(1);
@@ -4541,8 +4541,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal140_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:211:17: ( compas ( repeticion_compases | '|' ! compas )* )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:211:19: compas ( repeticion_compases | '|' ! compas )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:211:17: ( compas ( repeticion_compases | '|' ! compas )* )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:211:19: compas ( repeticion_compases | '|' ! compas )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -4554,7 +4554,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, compas138.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:211:26: ( repeticion_compases | '|' ! compas )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:211:26: ( repeticion_compases | '|' ! compas )*
             loop35:
             do {
                 int alt35=3;
@@ -4570,7 +4570,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt35) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:211:27: repeticion_compases
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:211:27: repeticion_compases
             	    {
             	    pushFollow(FOLLOW_repeticion_compases_in_dentro_repeticio1680);
             	    repeticion_compases139=repeticion_compases();
@@ -4582,7 +4582,7 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:211:49: '|' ! compas
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:211:49: '|' ! compas
             	    {
             	    char_literal140=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1684); 
 
@@ -4633,7 +4633,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "rep_tancar"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:213:1: rep_tancar : ':' ! INT '|' !;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:213:1: rep_tancar : ':' ! INT '|' !;
     public final AslParser.rep_tancar_return rep_tancar() throws RecognitionException {
         AslParser.rep_tancar_return retval = new AslParser.rep_tancar_return();
         retval.start = input.LT(1);
@@ -4650,8 +4650,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal144_tree=null;
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:213:11: ( ':' ! INT '|' !)
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:213:13: ':' ! INT '|' !
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:213:11: ( ':' ! INT '|' !)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:213:13: ':' ! INT '|' !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -4698,7 +4698,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "compas"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:216:1: compas : ( optionsCompas )? notes_o_acords -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:1: compas : ( optionsCompas )? notes_o_acords -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) ) ;
     public final AslParser.compas_return compas() throws RecognitionException {
         AslParser.compas_return retval = new AslParser.compas_return();
         retval.start = input.LT(1);
@@ -4714,10 +4714,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_optionsCompas=new RewriteRuleSubtreeStream(adaptor,"rule optionsCompas");
         RewriteRuleSubtreeStream stream_notes_o_acords=new RewriteRuleSubtreeStream(adaptor,"rule notes_o_acords");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:216:7: ( ( optionsCompas )? notes_o_acords -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:216:9: ( optionsCompas )? notes_o_acords
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:7: ( ( optionsCompas )? notes_o_acords -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:9: ( optionsCompas )? notes_o_acords
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:216:9: ( optionsCompas )?
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:9: ( optionsCompas )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -4726,7 +4726,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt36) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:216:9: optionsCompas
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:9: optionsCompas
                     {
                     pushFollow(FOLLOW_optionsCompas_in_compas1739);
                     optionsCompas145=optionsCompas();
@@ -4749,7 +4749,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_notes_o_acords.add(notes_o_acords146.getTree());
 
             // AST REWRITE
-            // elements: notes_o_acords, optionsCompas
+            // elements: optionsCompas, notes_o_acords
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4761,21 +4761,21 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 216:39: -> ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:216:42: ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:42: ^( COMPAS ( optionsCompas )? ^( NOTES_ACORDS notes_o_acords ) )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(COMPAS, "COMPAS")
                 , root_1);
 
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:216:51: ( optionsCompas )?
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:51: ( optionsCompas )?
                 if ( stream_optionsCompas.hasNext() ) {
                     adaptor.addChild(root_1, stream_optionsCompas.nextTree());
 
                 }
                 stream_optionsCompas.reset();
 
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:216:66: ^( NOTES_ACORDS notes_o_acords )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:66: ^( NOTES_ACORDS notes_o_acords )
                 {
                 AslTree root_2 = (AslTree)adaptor.nil();
                 root_2 = (AslTree)adaptor.becomeRoot(
@@ -4826,7 +4826,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "notes_o_acords"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:219:1: notes_o_acords : ( nota | acord )+ ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:219:1: notes_o_acords : ( nota | acord )+ ;
     public final AslParser.notes_o_acords_return notes_o_acords() throws RecognitionException {
         AslParser.notes_o_acords_return retval = new AslParser.notes_o_acords_return();
         retval.start = input.LT(1);
@@ -4841,13 +4841,13 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:219:15: ( ( nota | acord )+ )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:219:17: ( nota | acord )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:219:15: ( ( nota | acord )+ )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:219:17: ( nota | acord )+
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:219:17: ( nota | acord )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:219:17: ( nota | acord )+
             int cnt37=0;
             loop37:
             do {
@@ -4864,7 +4864,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt37) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:219:18: nota
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:219:18: nota
             	    {
             	    pushFollow(FOLLOW_nota_in_notes_o_acords1772);
             	    nota147=nota();
@@ -4876,7 +4876,7 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:219:25: acord
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:219:25: acord
             	    {
             	    pushFollow(FOLLOW_acord_in_notes_o_acords1776);
             	    acord148=acord();
@@ -4929,7 +4929,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "optionsCompas"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:222:1: optionsCompas : '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:1: optionsCompas : '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) ;
     public final AslParser.optionsCompas_return optionsCompas() throws RecognitionException {
         AslParser.optionsCompas_return retval = new AslParser.optionsCompas_return();
         retval.start = input.LT(1);
@@ -4953,8 +4953,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_75=new RewriteRuleTokenStream(adaptor,"token 75");
         RewriteRuleSubtreeStream stream_optionCompas=new RewriteRuleSubtreeStream(adaptor,"rule optionCompas");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:222:14: ( '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:222:17: '{' optionCompas ( ',' optionCompas )* '}'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:14: ( '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:17: '{' optionCompas ( ',' optionCompas )* '}'
             {
             char_literal149=(Token)match(input,82,FOLLOW_82_in_optionsCompas1801);  
             stream_82.add(char_literal149);
@@ -4967,7 +4967,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             stream_optionCompas.add(optionCompas150.getTree());
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:222:34: ( ',' optionCompas )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:34: ( ',' optionCompas )*
             loop38:
             do {
                 int alt38=2;
@@ -4980,7 +4980,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt38) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:222:35: ',' optionCompas
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:35: ',' optionCompas
             	    {
             	    char_literal151=(Token)match(input,75,FOLLOW_75_in_optionsCompas1806);  
             	    stream_75.add(char_literal151);
@@ -5019,7 +5019,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 222:58: -> ^( MODS ( optionCompas )+ )
             {
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:222:61: ^( MODS ( optionCompas )+ )
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:61: ^( MODS ( optionCompas )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -5074,7 +5074,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "optionCompas"
-    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:224:1: optionCompas : ( ( expr -> ^( EXPR_TIME expr ) ) | PARAULA_TEMPO | PARAULA_INTENSITAT );
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:1: optionCompas : ( ( expr -> ^( EXPR_TIME expr ) ) | PARAULA_TEMPO | PARAULA_INTENSITAT );
     public final AslParser.optionCompas_return optionCompas() throws RecognitionException {
         AslParser.optionCompas_return retval = new AslParser.optionCompas_return();
         retval.start = input.LT(1);
@@ -5091,7 +5091,7 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree PARAULA_INTENSITAT156_tree=null;
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:224:13: ( ( expr -> ^( EXPR_TIME expr ) ) | PARAULA_TEMPO | PARAULA_INTENSITAT )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:13: ( ( expr -> ^( EXPR_TIME expr ) ) | PARAULA_TEMPO | PARAULA_INTENSITAT )
             int alt39=3;
             switch ( input.LA(1) ) {
             case FALSE:
@@ -5126,10 +5126,10 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt39) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:224:15: ( expr -> ^( EXPR_TIME expr ) )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:15: ( expr -> ^( EXPR_TIME expr ) )
                     {
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:224:15: ( expr -> ^( EXPR_TIME expr ) )
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:224:16: expr
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:15: ( expr -> ^( EXPR_TIME expr ) )
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:16: expr
                     {
                     pushFollow(FOLLOW_expr_in_optionCompas1842);
                     expr154=expr();
@@ -5151,7 +5151,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 224:21: -> ^( EXPR_TIME expr )
                     {
-                        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:224:24: ^( EXPR_TIME expr )
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:24: ^( EXPR_TIME expr )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -5174,7 +5174,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:224:45: PARAULA_TEMPO
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:45: PARAULA_TEMPO
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -5189,7 +5189,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:224:61: PARAULA_INTENSITAT
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:61: PARAULA_INTENSITAT
                     {
                     root_0 = (AslTree)adaptor.nil();
 

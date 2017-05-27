@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g 2017-05-09 19:20:10
+// $ANTLR 3.4 /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g 2017-05-27 13:50:53
 
 package parser;
 
@@ -105,15 +105,15 @@ public class AslLexer extends Lexer {
     public AslLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "/Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g"; }
+    public String getGrammarFileName() { return "/home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g"; }
 
     // $ANTLR start "T__72"
     public final void mT__72() throws RecognitionException {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:6:7: ( '&' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:6:9: '&'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:6:7: ( '&' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:6:9: '&'
             {
             match('&'); 
 
@@ -133,8 +133,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:7:7: ( '(' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:7:9: '('
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:7:7: ( '(' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:7:9: '('
             {
             match('('); 
 
@@ -154,8 +154,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:8:7: ( ')' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:8:9: ')'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:8:7: ( ')' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:8:9: ')'
             {
             match(')'); 
 
@@ -175,8 +175,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:9:7: ( ',' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:9:9: ','
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:9:7: ( ',' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:9:9: ','
             {
             match(','); 
 
@@ -196,8 +196,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:10:7: ( '.' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:10:9: '.'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:10:7: ( '.' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:10:9: '.'
             {
             match('.'); 
 
@@ -217,8 +217,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:11:7: ( ':' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:11:9: ':'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:11:7: ( ':' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:11:9: ':'
             {
             match(':'); 
 
@@ -238,8 +238,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:12:7: ( ';' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:12:9: ';'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:12:7: ( ';' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:12:9: ';'
             {
             match(';'); 
 
@@ -259,8 +259,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:13:7: ( 'Voice' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:13:9: 'Voice'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:13:7: ( 'Voice' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:13:9: 'Voice'
             {
             match("Voice"); 
 
@@ -282,8 +282,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:14:7: ( '[' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:14:9: '['
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:14:7: ( '[' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:14:9: '['
             {
             match('['); 
 
@@ -303,8 +303,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:15:7: ( ']' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:15:9: ']'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:15:7: ( ']' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:15:9: ']'
             {
             match(']'); 
 
@@ -324,8 +324,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:16:7: ( '{' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:16:9: '{'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:16:7: ( '{' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:16:9: '{'
             {
             match('{'); 
 
@@ -345,8 +345,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:17:7: ( '}' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:17:9: '}'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:17:7: ( '}' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:17:9: '}'
             {
             match('}'); 
 
@@ -366,10 +366,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOTA_MUSICAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:13: ( ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:15: ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:13: ( ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:15: ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' )
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:15: ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:15: ( 'Do' | 'Re' | 'Mi' | 'Fa' | 'Sol' | 'La' | 'Si' )
             int alt1=7;
             switch ( input.LA(1) ) {
             case 'D':
@@ -426,7 +426,7 @@ public class AslLexer extends Lexer {
 
             switch (alt1) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:16: 'Do'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:16: 'Do'
                     {
                     match("Do"); 
 
@@ -435,7 +435,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:21: 'Re'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:21: 'Re'
                     {
                     match("Re"); 
 
@@ -444,7 +444,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:26: 'Mi'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:26: 'Mi'
                     {
                     match("Mi"); 
 
@@ -453,7 +453,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:31: 'Fa'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:31: 'Fa'
                     {
                     match("Fa"); 
 
@@ -462,7 +462,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:36: 'Sol'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:36: 'Sol'
                     {
                     match("Sol"); 
 
@@ -471,7 +471,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:42: 'La'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:42: 'La'
                     {
                     match("La"); 
 
@@ -480,7 +480,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:229:47: 'Si'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:229:47: 'Si'
                     {
                     match("Si"); 
 
@@ -508,10 +508,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = PARAULA_TEMPO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:14: ( ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:16: ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:14: ( ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:16: ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' )
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:16: ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:16: ( 'Lento' | 'Adagio' | 'Moderato' | 'Allegro' | 'Presto' | 'Apasionatto' | 'Con caracter' | 'Giocoso' )
             int alt2=8;
             switch ( input.LA(1) ) {
             case 'L':
@@ -577,7 +577,7 @@ public class AslLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:17: 'Lento'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:17: 'Lento'
                     {
                     match("Lento"); 
 
@@ -586,7 +586,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:25: 'Adagio'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:25: 'Adagio'
                     {
                     match("Adagio"); 
 
@@ -595,7 +595,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:34: 'Moderato'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:34: 'Moderato'
                     {
                     match("Moderato"); 
 
@@ -604,7 +604,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:45: 'Allegro'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:45: 'Allegro'
                     {
                     match("Allegro"); 
 
@@ -613,7 +613,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:55: 'Presto'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:55: 'Presto'
                     {
                     match("Presto"); 
 
@@ -622,7 +622,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:64: 'Apasionatto'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:64: 'Apasionatto'
                     {
                     match("Apasionatto"); 
 
@@ -631,7 +631,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:78: 'Con caracter'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:78: 'Con caracter'
                     {
                     match("Con caracter"); 
 
@@ -640,7 +640,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:230:93: 'Giocoso'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:230:93: 'Giocoso'
                     {
                     match("Giocoso"); 
 
@@ -668,10 +668,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = PARAULA_INTENSITAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:19: ( ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:21: ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:19: ( ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:21: ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |)
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:21: ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |)
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:21: ( 'pp' | 'p' | 'mp' | 'mf' | 'f' | 'ff' | 'pf' |)
             int alt3=8;
             switch ( input.LA(1) ) {
             case 'p':
@@ -730,7 +730,7 @@ public class AslLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:22: 'pp'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:22: 'pp'
                     {
                     match("pp"); 
 
@@ -739,14 +739,14 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:27: 'p'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:27: 'p'
                     {
                     match('p'); 
 
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:31: 'mp'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:31: 'mp'
                     {
                     match("mp"); 
 
@@ -755,7 +755,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:36: 'mf'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:36: 'mf'
                     {
                     match("mf"); 
 
@@ -764,14 +764,14 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:41: 'f'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:41: 'f'
                     {
                     match('f'); 
 
                     }
                     break;
                 case 6 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:45: 'ff'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:45: 'ff'
                     {
                     match("ff"); 
 
@@ -780,7 +780,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:50: 'pf'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:50: 'pf'
                     {
                     match("pf"); 
 
@@ -789,7 +789,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:231:55: 
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:231:55: 
                     {
                     }
                     break;
@@ -813,8 +813,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PIEZZO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:232:7: ( 'Piezzo' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:232:9: 'Piezzo'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:232:7: ( 'Piezzo' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:232:9: 'Piezzo'
             {
             match("Piezzo"); 
 
@@ -836,8 +836,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = SILENCI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:233:8: ( 'Silenci' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:233:10: 'Silenci'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:233:8: ( 'Silenci' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:233:10: 'Silenci'
             {
             match("Silenci"); 
 
@@ -859,10 +859,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = PREMOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:235:7: ( ( '#' | 'bm' | 'bq' ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:235:9: ( '#' | 'bm' | 'bq' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:235:7: ( ( '#' | 'bm' | 'bq' ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:235:9: ( '#' | 'bm' | 'bq' )
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:235:9: ( '#' | 'bm' | 'bq' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:235:9: ( '#' | 'bm' | 'bq' )
             int alt4=3;
             int LA4_0 = input.LA(1);
 
@@ -895,14 +895,14 @@ public class AslLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:235:10: '#'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:235:10: '#'
                     {
                     match('#'); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:235:16: 'bm'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:235:16: 'bm'
                     {
                     match("bm"); 
 
@@ -911,7 +911,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:235:23: 'bq'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:235:23: 'bq'
                     {
                     match("bq"); 
 
@@ -939,8 +939,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PUNTET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:237:7: ( '·' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:237:9: '·'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:237:7: ( '·' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:237:9: '·'
             {
             match('\u00B7'); 
 
@@ -960,8 +960,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = SEPARADOR_COMPAS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:238:17: ( '|' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:238:19: '|'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:238:17: ( '|' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:238:19: '|'
             {
             match('|'); 
 
@@ -981,8 +981,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = REP_OBRIR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:239:10: ( '|:' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:239:12: '|:'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:239:10: ( '|:' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:239:12: '|:'
             {
             match("|:"); 
 
@@ -1004,10 +1004,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = FIGURA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:7: ( ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:9: ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:7: ( ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:9: ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' )
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:9: ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:9: ( 'n' | 'b' | 'c' | 'sc' | 'f' | 'sf' | 'r' )
             int alt5=7;
             switch ( input.LA(1) ) {
             case 'n':
@@ -1064,28 +1064,28 @@ public class AslLexer extends Lexer {
 
             switch (alt5) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:10: 'n'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:10: 'n'
                     {
                     match('n'); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:14: 'b'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:14: 'b'
                     {
                     match('b'); 
 
                     }
                     break;
                 case 3 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:18: 'c'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:18: 'c'
                     {
                     match('c'); 
 
                     }
                     break;
                 case 4 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:22: 'sc'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:22: 'sc'
                     {
                     match("sc"); 
 
@@ -1094,14 +1094,14 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:27: 'f'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:27: 'f'
                     {
                     match('f'); 
 
                     }
                     break;
                 case 6 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:31: 'sf'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:31: 'sf'
                     {
                     match("sf"); 
 
@@ -1110,7 +1110,7 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:242:36: 'r'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:242:36: 'r'
                     {
                     match('r'); 
 
@@ -1136,8 +1136,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TEMPO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:244:6: ( 'Tempo' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:244:8: 'Tempo'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:244:6: ( 'Tempo' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:244:8: 'Tempo'
             {
             match("Tempo"); 
 
@@ -1159,8 +1159,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMPAS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:245:7: ( 'Compas' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:245:9: 'Compas'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:245:7: ( 'Compas' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:245:9: 'Compas'
             {
             match("Compas"); 
 
@@ -1182,8 +1182,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ARMADURA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:246:9: ( 'Armadura' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:246:11: 'Armadura'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:246:9: ( 'Armadura' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:246:11: 'Armadura'
             {
             match("Armadura"); 
 
@@ -1205,8 +1205,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = REPETICIO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:247:10: ( 'Repeticio' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:247:12: 'Repeticio'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:247:10: ( 'Repeticio' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:247:12: 'Repeticio'
             {
             match("Repeticio"); 
 
@@ -1228,8 +1228,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PARTITURA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:249:10: ( 'Partitura' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:249:12: 'Partitura'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:249:10: ( 'Partitura' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:249:12: 'Partitura'
             {
             match("Partitura"); 
 
@@ -1251,8 +1251,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = VEGADA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:251:7: ( 'Vegada' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:251:9: 'Vegada'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:251:7: ( 'Vegada' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:251:9: 'Vegada'
             {
             match("Vegada"); 
 
@@ -1274,8 +1274,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:254:7: ( '=' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:254:9: '='
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:254:7: ( '=' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:254:9: '='
             {
             match('='); 
 
@@ -1295,8 +1295,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:255:10: ( '!=' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:255:12: '!='
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:255:10: ( '!=' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:255:12: '!='
             {
             match("!="); 
 
@@ -1318,8 +1318,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:256:8: ( '<' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:256:10: '<'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:256:8: ( '<' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:256:10: '<'
             {
             match('<'); 
 
@@ -1339,8 +1339,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:257:8: ( '<=' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:257:10: '<='
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:257:8: ( '<=' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:257:10: '<='
             {
             match("<="); 
 
@@ -1362,8 +1362,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:258:8: ( '>' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:258:10: '>'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:258:8: ( '>' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:258:10: '>'
             {
             match('>'); 
 
@@ -1383,8 +1383,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:259:8: ( '>=' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:259:10: '>='
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:259:8: ( '>=' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:259:10: '>='
             {
             match(">="); 
 
@@ -1406,8 +1406,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:260:6: ( '+' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:260:8: '+'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:260:6: ( '+' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:260:8: '+'
             {
             match('+'); 
 
@@ -1427,8 +1427,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:261:7: ( '-' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:261:9: '-'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:261:7: ( '-' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:261:9: '-'
             {
             match('-'); 
 
@@ -1448,8 +1448,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MUL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:262:9: ( '*' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:262:11: '*'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:262:9: ( '*' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:262:11: '*'
             {
             match('*'); 
 
@@ -1469,8 +1469,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:263:9: ( '/' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:263:11: '/'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:263:9: ( '/' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:263:11: '/'
             {
             match('/'); 
 
@@ -1490,8 +1490,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:264:9: ( '%' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:264:11: '%'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:264:9: ( '%' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:264:11: '%'
             {
             match('%'); 
 
@@ -1511,8 +1511,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:265:9: ( 'not' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:265:11: 'not'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:265:9: ( 'not' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:265:11: 'not'
             {
             match("not"); 
 
@@ -1534,8 +1534,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:266:9: ( 'and' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:266:11: 'and'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:266:9: ( 'and' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:266:11: 'and'
             {
             match("and"); 
 
@@ -1557,8 +1557,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:267:8: ( 'or' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:267:10: 'or'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:267:8: ( 'or' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:267:10: 'or'
             {
             match("or"); 
 
@@ -1580,8 +1580,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:268:6: ( 'if' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:268:8: 'if'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:268:6: ( 'if' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:268:8: 'if'
             {
             match("if"); 
 
@@ -1603,8 +1603,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = THEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:269:6: ( 'then' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:269:8: 'then'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:269:6: ( 'then' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:269:8: 'then'
             {
             match("then"); 
 
@@ -1626,8 +1626,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:270:6: ( 'else' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:270:8: 'else'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:270:6: ( 'else' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:270:8: 'else'
             {
             match("else"); 
 
@@ -1649,8 +1649,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:271:7: ( 'endif' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:271:9: 'endif'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:271:7: ( 'endif' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:271:9: 'endif'
             {
             match("endif"); 
 
@@ -1672,8 +1672,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:272:7: ( 'while' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:272:9: 'while'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:272:7: ( 'while' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:272:9: 'while'
             {
             match("while"); 
 
@@ -1695,8 +1695,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:273:8: ( 'do' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:273:10: 'do'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:273:8: ( 'do' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:273:10: 'do'
             {
             match("do"); 
 
@@ -1718,8 +1718,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDWHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:274:9: ( 'endwhile' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:274:11: 'endwhile'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:274:9: ( 'endwhile' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:274:11: 'endwhile'
             {
             match("endwhile"); 
 
@@ -1741,8 +1741,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:275:6: ( 'func' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:275:8: 'func'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:275:6: ( 'func' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:275:8: 'func'
             {
             match("func"); 
 
@@ -1764,8 +1764,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDFUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:276:9: ( 'endfunc' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:276:11: 'endfunc'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:276:9: ( 'endfunc' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:276:11: 'endfunc'
             {
             match("endfunc"); 
 
@@ -1787,8 +1787,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDPIEZZO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:277:11: ( 'endPiezzo' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:277:13: 'endPiezzo'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:277:11: ( 'endPiezzo' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:277:13: 'endPiezzo'
             {
             match("endPiezzo"); 
 
@@ -1810,8 +1810,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:278:8: ( 'return' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:278:10: 'return'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:278:8: ( 'return' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:278:10: 'return'
             {
             match("return"); 
 
@@ -1833,8 +1833,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:279:6: ( 'read' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:279:8: 'read'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:279:6: ( 'read' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:279:8: 'read'
             {
             match("read"); 
 
@@ -1856,8 +1856,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WRITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:280:7: ( 'write' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:280:9: 'write'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:280:7: ( 'write' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:280:9: 'write'
             {
             match("write"); 
 
@@ -1879,8 +1879,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:281:9: ( 'true' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:281:11: 'true'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:281:9: ( 'true' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:281:11: 'true'
             {
             match("true"); 
 
@@ -1902,8 +1902,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:282:9: ( 'false' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:282:11: 'false'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:282:9: ( 'false' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:282:11: 'false'
             {
             match("false"); 
 
@@ -1925,8 +1925,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:283:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:283:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:283:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:283:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1938,7 +1938,7 @@ public class AslLexer extends Lexer {
             }
 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:283:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:283:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop6:
             do {
                 int alt6=2;
@@ -1951,7 +1951,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -1988,10 +1988,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:284:6: ( ( '0' .. '9' )+ )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:284:8: ( '0' .. '9' )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:284:6: ( ( '0' .. '9' )+ )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:284:8: ( '0' .. '9' )+
             {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:284:8: ( '0' .. '9' )+
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:284:8: ( '0' .. '9' )+
             int cnt7=0;
             loop7:
             do {
@@ -2005,7 +2005,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -2046,7 +2046,7 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:287:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:287:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -2076,13 +2076,13 @@ public class AslLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:287:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:287:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:287:16: (~ ( '\\n' | '\\r' ) )*
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:287:16: (~ ( '\\n' | '\\r' ) )*
                     loop8:
                     do {
                         int alt8=2;
@@ -2095,7 +2095,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:
+                    	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:
                     	    {
                     	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
                     	        input.consume();
@@ -2116,7 +2116,7 @@ public class AslLexer extends Lexer {
                     } while (true);
 
 
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:287:30: ( '\\r' )?
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:287:30: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -2125,7 +2125,7 @@ public class AslLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:287:30: '\\r'
+                            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:287:30: '\\r'
                             {
                             match('\r'); 
 
@@ -2142,13 +2142,13 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:288:8: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:288:8: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:288:13: ( options {greedy=false; } : . )*
+                    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:288:13: ( options {greedy=false; } : . )*
                     loop10:
                     do {
                         int alt10=2;
@@ -2173,7 +2173,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:288:41: .
+                    	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:288:41: .
                     	    {
                     	    matchAny(); 
 
@@ -2210,12 +2210,12 @@ public class AslLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:292:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:292:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:292:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:292:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:292:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:292:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop12:
             do {
                 int alt12=3;
@@ -2231,7 +2231,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:292:18: ESC_SEQ
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:292:18: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -2239,7 +2239,7 @@ public class AslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:292:28: ~ ( '\\\\' | '\"' )
+            	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:292:28: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -2276,8 +2276,8 @@ public class AslLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:298:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:298:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:298:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:298:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
 
@@ -2306,8 +2306,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:301:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:301:8: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:301:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:301:8: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -2333,12 +2333,12 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:8: ( T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | NOTA_MUSICAL | PARAULA_TEMPO | PARAULA_INTENSITAT | PIEZZO | SILENCI | PREMOD | PUNTET | SEPARADOR_COMPAS | REP_OBRIR | FIGURA | TEMPO | COMPAS | ARMADURA | REPETICIO | PARTITURA | VEGADA | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | ENDPIEZZO | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | COMMENT | STRING | WS )
+        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:8: ( T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | NOTA_MUSICAL | PARAULA_TEMPO | PARAULA_INTENSITAT | PIEZZO | SILENCI | PREMOD | PUNTET | SEPARADOR_COMPAS | REP_OBRIR | FIGURA | TEMPO | COMPAS | ARMADURA | REPETICIO | PARTITURA | VEGADA | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | ENDPIEZZO | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | COMMENT | STRING | WS )
         int alt13=62;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:10: T__72
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:10: T__72
                 {
                 mT__72(); 
 
@@ -2346,7 +2346,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:16: T__73
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:16: T__73
                 {
                 mT__73(); 
 
@@ -2354,7 +2354,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:22: T__74
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:22: T__74
                 {
                 mT__74(); 
 
@@ -2362,7 +2362,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:28: T__75
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:28: T__75
                 {
                 mT__75(); 
 
@@ -2370,7 +2370,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:34: T__76
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:34: T__76
                 {
                 mT__76(); 
 
@@ -2378,7 +2378,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:40: T__77
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:40: T__77
                 {
                 mT__77(); 
 
@@ -2386,7 +2386,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:46: T__78
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:46: T__78
                 {
                 mT__78(); 
 
@@ -2394,7 +2394,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:52: T__79
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:52: T__79
                 {
                 mT__79(); 
 
@@ -2402,7 +2402,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:58: T__80
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:58: T__80
                 {
                 mT__80(); 
 
@@ -2410,7 +2410,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:64: T__81
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:64: T__81
                 {
                 mT__81(); 
 
@@ -2418,7 +2418,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:70: T__82
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:70: T__82
                 {
                 mT__82(); 
 
@@ -2426,7 +2426,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:76: T__83
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:76: T__83
                 {
                 mT__83(); 
 
@@ -2434,7 +2434,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:82: NOTA_MUSICAL
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:82: NOTA_MUSICAL
                 {
                 mNOTA_MUSICAL(); 
 
@@ -2442,7 +2442,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:95: PARAULA_TEMPO
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:95: PARAULA_TEMPO
                 {
                 mPARAULA_TEMPO(); 
 
@@ -2450,7 +2450,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:109: PARAULA_INTENSITAT
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:109: PARAULA_INTENSITAT
                 {
                 mPARAULA_INTENSITAT(); 
 
@@ -2458,7 +2458,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:128: PIEZZO
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:128: PIEZZO
                 {
                 mPIEZZO(); 
 
@@ -2466,7 +2466,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:135: SILENCI
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:135: SILENCI
                 {
                 mSILENCI(); 
 
@@ -2474,7 +2474,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:143: PREMOD
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:143: PREMOD
                 {
                 mPREMOD(); 
 
@@ -2482,7 +2482,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:150: PUNTET
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:150: PUNTET
                 {
                 mPUNTET(); 
 
@@ -2490,7 +2490,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:157: SEPARADOR_COMPAS
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:157: SEPARADOR_COMPAS
                 {
                 mSEPARADOR_COMPAS(); 
 
@@ -2498,7 +2498,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:174: REP_OBRIR
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:174: REP_OBRIR
                 {
                 mREP_OBRIR(); 
 
@@ -2506,7 +2506,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:184: FIGURA
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:184: FIGURA
                 {
                 mFIGURA(); 
 
@@ -2514,7 +2514,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:191: TEMPO
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:191: TEMPO
                 {
                 mTEMPO(); 
 
@@ -2522,7 +2522,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:197: COMPAS
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:197: COMPAS
                 {
                 mCOMPAS(); 
 
@@ -2530,7 +2530,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:204: ARMADURA
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:204: ARMADURA
                 {
                 mARMADURA(); 
 
@@ -2538,7 +2538,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:213: REPETICIO
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:213: REPETICIO
                 {
                 mREPETICIO(); 
 
@@ -2546,7 +2546,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:223: PARTITURA
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:223: PARTITURA
                 {
                 mPARTITURA(); 
 
@@ -2554,7 +2554,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:233: VEGADA
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:233: VEGADA
                 {
                 mVEGADA(); 
 
@@ -2562,7 +2562,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:240: EQUAL
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:240: EQUAL
                 {
                 mEQUAL(); 
 
@@ -2570,7 +2570,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:246: NOT_EQUAL
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:246: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
@@ -2578,7 +2578,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:256: LT
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:256: LT
                 {
                 mLT(); 
 
@@ -2586,7 +2586,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:259: LE
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:259: LE
                 {
                 mLE(); 
 
@@ -2594,7 +2594,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:262: GT
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:262: GT
                 {
                 mGT(); 
 
@@ -2602,7 +2602,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:265: GE
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:265: GE
                 {
                 mGE(); 
 
@@ -2610,7 +2610,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 35 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:268: PLUS
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:268: PLUS
                 {
                 mPLUS(); 
 
@@ -2618,7 +2618,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 36 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:273: MINUS
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:273: MINUS
                 {
                 mMINUS(); 
 
@@ -2626,7 +2626,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 37 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:279: MUL
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:279: MUL
                 {
                 mMUL(); 
 
@@ -2634,7 +2634,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 38 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:283: DIV
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:283: DIV
                 {
                 mDIV(); 
 
@@ -2642,7 +2642,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 39 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:287: MOD
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:287: MOD
                 {
                 mMOD(); 
 
@@ -2650,7 +2650,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 40 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:291: NOT
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:291: NOT
                 {
                 mNOT(); 
 
@@ -2658,7 +2658,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 41 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:295: AND
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:295: AND
                 {
                 mAND(); 
 
@@ -2666,7 +2666,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 42 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:299: OR
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:299: OR
                 {
                 mOR(); 
 
@@ -2674,7 +2674,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 43 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:302: IF
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:302: IF
                 {
                 mIF(); 
 
@@ -2682,7 +2682,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 44 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:305: THEN
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:305: THEN
                 {
                 mTHEN(); 
 
@@ -2690,7 +2690,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 45 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:310: ELSE
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:310: ELSE
                 {
                 mELSE(); 
 
@@ -2698,7 +2698,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 46 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:315: ENDIF
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:315: ENDIF
                 {
                 mENDIF(); 
 
@@ -2706,7 +2706,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 47 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:321: WHILE
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:321: WHILE
                 {
                 mWHILE(); 
 
@@ -2714,7 +2714,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 48 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:327: DO
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:327: DO
                 {
                 mDO(); 
 
@@ -2722,7 +2722,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 49 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:330: ENDWHILE
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:330: ENDWHILE
                 {
                 mENDWHILE(); 
 
@@ -2730,7 +2730,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 50 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:339: FUNC
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:339: FUNC
                 {
                 mFUNC(); 
 
@@ -2738,7 +2738,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 51 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:344: ENDFUNC
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:344: ENDFUNC
                 {
                 mENDFUNC(); 
 
@@ -2746,7 +2746,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 52 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:352: ENDPIEZZO
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:352: ENDPIEZZO
                 {
                 mENDPIEZZO(); 
 
@@ -2754,7 +2754,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 53 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:362: RETURN
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:362: RETURN
                 {
                 mRETURN(); 
 
@@ -2762,7 +2762,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 54 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:369: READ
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:369: READ
                 {
                 mREAD(); 
 
@@ -2770,7 +2770,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 55 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:374: WRITE
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:374: WRITE
                 {
                 mWRITE(); 
 
@@ -2778,7 +2778,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 56 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:380: TRUE
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:380: TRUE
                 {
                 mTRUE(); 
 
@@ -2786,7 +2786,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 57 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:385: FALSE
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:385: FALSE
                 {
                 mFALSE(); 
 
@@ -2794,7 +2794,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 58 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:391: ID
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:391: ID
                 {
                 mID(); 
 
@@ -2802,7 +2802,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 59 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:394: INT
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:394: INT
                 {
                 mINT(); 
 
@@ -2810,7 +2810,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 60 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:398: COMMENT
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:398: COMMENT
                 {
                 mCOMMENT(); 
 
@@ -2818,7 +2818,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 61 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:406: STRING
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:406: STRING
                 {
                 mSTRING(); 
 
@@ -2826,7 +2826,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 62 :
-                // /Users/hermes/Proyectos/MusicLanguage/Asl/src/parser/Asl.g:1:413: WS
+                // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:1:413: WS
                 {
                 mWS(); 
 
