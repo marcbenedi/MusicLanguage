@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g 2017-05-27 13:50:53
+// $ANTLR 3.4 /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g 2017-05-27 16:45:29
 
 package parser;
 import interp.AslTree;
@@ -3149,7 +3149,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "nota"
-    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:1: nota : ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) ;
+    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:1: nota : ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? -> ^( SILENCI ( FIGURA )? ( PUNTET )? ) ) ;
     public final AslParser.nota_return nota() throws RecognitionException {
         AslParser.nota_return retval = new AslParser.nota_return();
         retval.start = input.LT(1);
@@ -3189,10 +3189,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_76=new RewriteRuleTokenStream(adaptor,"token 76");
 
         try {
-            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:5: ( ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? ) )
-            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:5: ( ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? -> ^( SILENCI ( FIGURA )? ( PUNTET )? ) ) )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? -> ^( SILENCI ( FIGURA )? ( PUNTET )? ) )
             {
-            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? )
+            // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:177:7: ( ( ( PREMOD '.' )? ( INT )? NOTA_MUSICAL ( '.' FIGURA )? ( PUNTET )? ) -> ^( NOTA_MUSICAL ( PREMOD )? ( INT )? ( FIGURA )? ( PUNTET )? ) | SILENCI ( '.' FIGURA )? ( PUNTET )? -> ^( SILENCI ( FIGURA )? ( PUNTET )? ) )
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -3434,6 +3434,52 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
+                    // AST REWRITE
+                    // elements: SILENCI, FIGURA, PUNTET
+                    // token labels: 
+                    // rule labels: retval
+                    // token list labels: 
+                    // rule list labels: 
+                    // wildcard labels: 
+                    retval.tree = root_0;
+                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+                    root_0 = (AslTree)adaptor.nil();
+                    // 179:38: -> ^( SILENCI ( FIGURA )? ( PUNTET )? )
+                    {
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:179:41: ^( SILENCI ( FIGURA )? ( PUNTET )? )
+                        {
+                        AslTree root_1 = (AslTree)adaptor.nil();
+                        root_1 = (AslTree)adaptor.becomeRoot(
+                        stream_SILENCI.nextNode()
+                        , root_1);
+
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:179:51: ( FIGURA )?
+                        if ( stream_FIGURA.hasNext() ) {
+                            adaptor.addChild(root_1, 
+                            stream_FIGURA.nextNode()
+                            );
+
+                        }
+                        stream_FIGURA.reset();
+
+                        // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:179:59: ( PUNTET )?
+                        if ( stream_PUNTET.hasNext() ) {
+                            adaptor.addChild(root_1, 
+                            stream_PUNTET.nextNode()
+                            );
+
+                        }
+                        stream_PUNTET.reset();
+
+                        adaptor.addChild(root_0, root_1);
+                        }
+
+                    }
+
+
+                    retval.tree = root_0;
+
                     }
                     break;
 
@@ -3498,11 +3544,11 @@ public TreeAdaptor getTreeAdaptor() {
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:6: ( '[' nota ( ',' nota )+ ']' -> ^( ACORD nota ( nota )+ ) )
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:8: '[' nota ( ',' nota )+ ']'
             {
-            char_literal104=(Token)match(input,80,FOLLOW_80_in_acord1351);  
+            char_literal104=(Token)match(input,80,FOLLOW_80_in_acord1363);  
             stream_80.add(char_literal104);
 
 
-            pushFollow(FOLLOW_nota_in_acord1353);
+            pushFollow(FOLLOW_nota_in_acord1365);
             nota105=nota();
 
             state._fsp--;
@@ -3525,11 +3571,11 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:183:18: ',' nota
             	    {
-            	    char_literal106=(Token)match(input,75,FOLLOW_75_in_acord1356);  
+            	    char_literal106=(Token)match(input,75,FOLLOW_75_in_acord1368);  
             	    stream_75.add(char_literal106);
 
 
-            	    pushFollow(FOLLOW_nota_in_acord1358);
+            	    pushFollow(FOLLOW_nota_in_acord1370);
             	    nota107=nota();
 
             	    state._fsp--;
@@ -3549,7 +3595,7 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            char_literal108=(Token)match(input,81,FOLLOW_81_in_acord1362);  
+            char_literal108=(Token)match(input,81,FOLLOW_81_in_acord1374);  
             stream_81.add(char_literal108);
 
 
@@ -3650,30 +3696,30 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            PARTITURA109=(Token)match(input,PARTITURA,FOLLOW_PARTITURA_in_partitura1386); 
+            PARTITURA109=(Token)match(input,PARTITURA,FOLLOW_PARTITURA_in_partitura1398); 
             PARTITURA109_tree = 
             (AslTree)adaptor.create(PARTITURA109)
             ;
             root_0 = (AslTree)adaptor.becomeRoot(PARTITURA109_tree, root_0);
 
 
-            char_literal110=(Token)match(input,82,FOLLOW_82_in_partitura1389); 
+            char_literal110=(Token)match(input,82,FOLLOW_82_in_partitura1401); 
 
-            pushFollow(FOLLOW_optionsPart_in_partitura1392);
+            pushFollow(FOLLOW_optionsPart_in_partitura1404);
             optionsPart111=optionsPart();
 
             state._fsp--;
 
             adaptor.addChild(root_0, optionsPart111.getTree());
 
-            pushFollow(FOLLOW_veus_in_partitura1394);
+            pushFollow(FOLLOW_veus_in_partitura1406);
             veus112=veus();
 
             state._fsp--;
 
             adaptor.addChild(root_0, veus112.getTree());
 
-            char_literal113=(Token)match(input,83,FOLLOW_83_in_partitura1396); 
+            char_literal113=(Token)match(input,83,FOLLOW_83_in_partitura1408); 
 
             }
 
@@ -3725,14 +3771,14 @@ public TreeAdaptor getTreeAdaptor() {
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:188:12: ( tempo compas_beat -> ^( MODS tempo compas_beat ) )
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:188:14: tempo compas_beat
             {
-            pushFollow(FOLLOW_tempo_in_optionsPart1413);
+            pushFollow(FOLLOW_tempo_in_optionsPart1425);
             tempo114=tempo();
 
             state._fsp--;
 
             stream_tempo.add(tempo114.getTree());
 
-            pushFollow(FOLLOW_compas_beat_in_optionsPart1415);
+            pushFollow(FOLLOW_compas_beat_in_optionsPart1427);
             compas_beat115=compas_beat();
 
             state._fsp--;
@@ -3834,7 +3880,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:191:7: veu
             	    {
-            	    pushFollow(FOLLOW_veu_in_veus1444);
+            	    pushFollow(FOLLOW_veu_in_veus1456);
             	    veu116=veu();
 
             	    state._fsp--;
@@ -3950,7 +3996,7 @@ public TreeAdaptor getTreeAdaptor() {
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:6: ( TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) ) )
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:8: TEMPO ( ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) ) | ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) ) )
             {
-            TEMPO117=(Token)match(input,TEMPO,FOLLOW_TEMPO_in_tempo1466);  
+            TEMPO117=(Token)match(input,TEMPO,FOLLOW_TEMPO_in_tempo1478);  
             stream_TEMPO.add(TEMPO117);
 
 
@@ -3978,7 +4024,7 @@ public TreeAdaptor getTreeAdaptor() {
                     // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:16: ( PARAULA_TEMPO -> ^( PARAULA_TEMPO ) )
                     // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:194:17: PARAULA_TEMPO
                     {
-                    PARAULA_TEMPO118=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_tempo1471);  
+                    PARAULA_TEMPO118=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_tempo1483);  
                     stream_PARAULA_TEMPO.add(PARAULA_TEMPO118);
 
 
@@ -4021,15 +4067,15 @@ public TreeAdaptor getTreeAdaptor() {
                     // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:195:17: ( FIGURA '=' num_expr -> ^( FIGURA_TEMPO FIGURA num_expr ) )
                     // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:195:18: FIGURA '=' num_expr
                     {
-                    FIGURA119=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_tempo1498);  
+                    FIGURA119=(Token)match(input,FIGURA,FOLLOW_FIGURA_in_tempo1510);  
                     stream_FIGURA.add(FIGURA119);
 
 
-                    char_literal120=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_tempo1500);  
+                    char_literal120=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_tempo1512);  
                     stream_EQUAL.add(char_literal120);
 
 
-                    pushFollow(FOLLOW_num_expr_in_tempo1502);
+                    pushFollow(FOLLOW_num_expr_in_tempo1514);
                     num_expr121=num_expr();
 
                     state._fsp--;
@@ -4037,7 +4083,7 @@ public TreeAdaptor getTreeAdaptor() {
                     stream_num_expr.add(num_expr121.getTree());
 
                     // AST REWRITE
-                    // elements: FIGURA, num_expr
+                    // elements: num_expr, FIGURA
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4134,22 +4180,22 @@ public TreeAdaptor getTreeAdaptor() {
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:199:12: ( 'Compas' num_expr ':' num_expr -> ^( BEAT num_expr num_expr ) )
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:199:14: 'Compas' num_expr ':' num_expr
             {
-            string_literal122=(Token)match(input,COMPAS,FOLLOW_COMPAS_in_compas_beat1542);  
+            string_literal122=(Token)match(input,COMPAS,FOLLOW_COMPAS_in_compas_beat1554);  
             stream_COMPAS.add(string_literal122);
 
 
-            pushFollow(FOLLOW_num_expr_in_compas_beat1544);
+            pushFollow(FOLLOW_num_expr_in_compas_beat1556);
             num_expr123=num_expr();
 
             state._fsp--;
 
             stream_num_expr.add(num_expr123.getTree());
 
-            char_literal124=(Token)match(input,77,FOLLOW_77_in_compas_beat1546);  
+            char_literal124=(Token)match(input,77,FOLLOW_77_in_compas_beat1558);  
             stream_77.add(char_literal124);
 
 
-            pushFollow(FOLLOW_num_expr_in_compas_beat1548);
+            pushFollow(FOLLOW_num_expr_in_compas_beat1560);
             num_expr125=num_expr();
 
             state._fsp--;
@@ -4248,32 +4294,32 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            string_literal126=(Token)match(input,79,FOLLOW_79_in_veu1577); 
+            string_literal126=(Token)match(input,79,FOLLOW_79_in_veu1589); 
             string_literal126_tree = 
             (AslTree)adaptor.create(string_literal126)
             ;
             root_0 = (AslTree)adaptor.becomeRoot(string_literal126_tree, root_0);
 
 
-            ID127=(Token)match(input,ID,FOLLOW_ID_in_veu1580); 
+            ID127=(Token)match(input,ID,FOLLOW_ID_in_veu1592); 
             ID127_tree = 
             (AslTree)adaptor.create(ID127)
             ;
             adaptor.addChild(root_0, ID127_tree);
 
 
-            SEPARADOR_COMPAS128=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1583); 
+            SEPARADOR_COMPAS128=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1595); 
 
-            pushFollow(FOLLOW_grup_compases_in_veu1586);
+            pushFollow(FOLLOW_grup_compases_in_veu1598);
             grup_compases129=grup_compases();
 
             state._fsp--;
 
             adaptor.addChild(root_0, grup_compases129.getTree());
 
-            SEPARADOR_COMPAS130=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1588); 
+            SEPARADOR_COMPAS130=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1600); 
 
-            SEPARADOR_COMPAS131=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1591); 
+            SEPARADOR_COMPAS131=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_veu1603); 
 
             }
 
@@ -4354,7 +4400,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:205:17: repeticion_compases
             	    {
-            	    pushFollow(FOLLOW_repeticion_compases_in_grup_compases1604);
+            	    pushFollow(FOLLOW_repeticion_compases_in_grup_compases1616);
             	    repeticion_compases132=repeticion_compases();
 
             	    state._fsp--;
@@ -4366,9 +4412,9 @@ public TreeAdaptor getTreeAdaptor() {
             	case 2 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:205:39: '|' ! compas
             	    {
-            	    char_literal133=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_grup_compases1608); 
+            	    char_literal133=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_grup_compases1620); 
 
-            	    pushFollow(FOLLOW_compas_in_grup_compases1611);
+            	    pushFollow(FOLLOW_compas_in_grup_compases1623);
             	    compas134=compas();
 
             	    state._fsp--;
@@ -4441,18 +4487,18 @@ public TreeAdaptor getTreeAdaptor() {
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:208:20: ( REP_OBRIR dentro_repeticio rep_tancar -> ^( REP_COMPAS rep_tancar dentro_repeticio ) )
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:208:22: REP_OBRIR dentro_repeticio rep_tancar
             {
-            REP_OBRIR135=(Token)match(input,REP_OBRIR,FOLLOW_REP_OBRIR_in_repeticion_compases1634);  
+            REP_OBRIR135=(Token)match(input,REP_OBRIR,FOLLOW_REP_OBRIR_in_repeticion_compases1646);  
             stream_REP_OBRIR.add(REP_OBRIR135);
 
 
-            pushFollow(FOLLOW_dentro_repeticio_in_repeticion_compases1637);
+            pushFollow(FOLLOW_dentro_repeticio_in_repeticion_compases1649);
             dentro_repeticio136=dentro_repeticio();
 
             state._fsp--;
 
             stream_dentro_repeticio.add(dentro_repeticio136.getTree());
 
-            pushFollow(FOLLOW_rep_tancar_in_repeticion_compases1639);
+            pushFollow(FOLLOW_rep_tancar_in_repeticion_compases1651);
             rep_tancar137=rep_tancar();
 
             state._fsp--;
@@ -4460,7 +4506,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_rep_tancar.add(rep_tancar137.getTree());
 
             // AST REWRITE
-            // elements: rep_tancar, dentro_repeticio
+            // elements: dentro_repeticio, rep_tancar
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4547,7 +4593,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_compas_in_dentro_repeticio1677);
+            pushFollow(FOLLOW_compas_in_dentro_repeticio1689);
             compas138=compas();
 
             state._fsp--;
@@ -4572,7 +4618,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:211:27: repeticion_compases
             	    {
-            	    pushFollow(FOLLOW_repeticion_compases_in_dentro_repeticio1680);
+            	    pushFollow(FOLLOW_repeticion_compases_in_dentro_repeticio1692);
             	    repeticion_compases139=repeticion_compases();
 
             	    state._fsp--;
@@ -4584,9 +4630,9 @@ public TreeAdaptor getTreeAdaptor() {
             	case 2 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:211:49: '|' ! compas
             	    {
-            	    char_literal140=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1684); 
+            	    char_literal140=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1696); 
 
-            	    pushFollow(FOLLOW_compas_in_dentro_repeticio1687);
+            	    pushFollow(FOLLOW_compas_in_dentro_repeticio1699);
             	    compas141=compas();
 
             	    state._fsp--;
@@ -4656,16 +4702,16 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            char_literal142=(Token)match(input,77,FOLLOW_77_in_rep_tancar1715); 
+            char_literal142=(Token)match(input,77,FOLLOW_77_in_rep_tancar1727); 
 
-            INT143=(Token)match(input,INT,FOLLOW_INT_in_rep_tancar1718); 
+            INT143=(Token)match(input,INT,FOLLOW_INT_in_rep_tancar1730); 
             INT143_tree = 
             (AslTree)adaptor.create(INT143)
             ;
             adaptor.addChild(root_0, INT143_tree);
 
 
-            char_literal144=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_rep_tancar1720); 
+            char_literal144=(Token)match(input,SEPARADOR_COMPAS,FOLLOW_SEPARADOR_COMPAS_in_rep_tancar1732); 
 
             }
 
@@ -4728,7 +4774,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:216:9: optionsCompas
                     {
-                    pushFollow(FOLLOW_optionsCompas_in_compas1739);
+                    pushFollow(FOLLOW_optionsCompas_in_compas1751);
                     optionsCompas145=optionsCompas();
 
                     state._fsp--;
@@ -4741,7 +4787,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_notes_o_acords_in_compas1742);
+            pushFollow(FOLLOW_notes_o_acords_in_compas1754);
             notes_o_acords146=notes_o_acords();
 
             state._fsp--;
@@ -4749,7 +4795,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_notes_o_acords.add(notes_o_acords146.getTree());
 
             // AST REWRITE
-            // elements: optionsCompas, notes_o_acords
+            // elements: notes_o_acords, optionsCompas
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4866,7 +4912,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:219:18: nota
             	    {
-            	    pushFollow(FOLLOW_nota_in_notes_o_acords1772);
+            	    pushFollow(FOLLOW_nota_in_notes_o_acords1784);
             	    nota147=nota();
 
             	    state._fsp--;
@@ -4878,7 +4924,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 2 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:219:25: acord
             	    {
-            	    pushFollow(FOLLOW_acord_in_notes_o_acords1776);
+            	    pushFollow(FOLLOW_acord_in_notes_o_acords1788);
             	    acord148=acord();
 
             	    state._fsp--;
@@ -4956,11 +5002,11 @@ public TreeAdaptor getTreeAdaptor() {
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:14: ( '{' optionCompas ( ',' optionCompas )* '}' -> ^( MODS ( optionCompas )+ ) )
             // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:17: '{' optionCompas ( ',' optionCompas )* '}'
             {
-            char_literal149=(Token)match(input,82,FOLLOW_82_in_optionsCompas1801);  
+            char_literal149=(Token)match(input,82,FOLLOW_82_in_optionsCompas1813);  
             stream_82.add(char_literal149);
 
 
-            pushFollow(FOLLOW_optionCompas_in_optionsCompas1803);
+            pushFollow(FOLLOW_optionCompas_in_optionsCompas1815);
             optionCompas150=optionCompas();
 
             state._fsp--;
@@ -4982,11 +5028,11 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:222:35: ',' optionCompas
             	    {
-            	    char_literal151=(Token)match(input,75,FOLLOW_75_in_optionsCompas1806);  
+            	    char_literal151=(Token)match(input,75,FOLLOW_75_in_optionsCompas1818);  
             	    stream_75.add(char_literal151);
 
 
-            	    pushFollow(FOLLOW_optionCompas_in_optionsCompas1808);
+            	    pushFollow(FOLLOW_optionCompas_in_optionsCompas1820);
             	    optionCompas152=optionCompas();
 
             	    state._fsp--;
@@ -5002,7 +5048,7 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            char_literal153=(Token)match(input,83,FOLLOW_83_in_optionsCompas1812);  
+            char_literal153=(Token)match(input,83,FOLLOW_83_in_optionsCompas1824);  
             stream_83.add(char_literal153);
 
 
@@ -5131,7 +5177,7 @@ public TreeAdaptor getTreeAdaptor() {
                     // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:15: ( expr -> ^( EXPR_TIME expr ) )
                     // /home/marcbenedi/Desktop/MusicLanguage/Asl/src/parser/Asl.g:224:16: expr
                     {
-                    pushFollow(FOLLOW_expr_in_optionCompas1842);
+                    pushFollow(FOLLOW_expr_in_optionCompas1854);
                     expr154=expr();
 
                     state._fsp--;
@@ -5179,7 +5225,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    PARAULA_TEMPO155=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_optionCompas1855); 
+                    PARAULA_TEMPO155=(Token)match(input,PARAULA_TEMPO,FOLLOW_PARAULA_TEMPO_in_optionCompas1867); 
                     PARAULA_TEMPO155_tree = 
                     (AslTree)adaptor.create(PARAULA_TEMPO155)
                     ;
@@ -5194,7 +5240,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    PARAULA_INTENSITAT156=(Token)match(input,PARAULA_INTENSITAT,FOLLOW_PARAULA_INTENSITAT_in_optionCompas1859); 
+                    PARAULA_INTENSITAT156=(Token)match(input,PARAULA_INTENSITAT,FOLLOW_PARAULA_INTENSITAT_in_optionCompas1871); 
                     PARAULA_INTENSITAT156_tree = 
                     (AslTree)adaptor.create(PARAULA_INTENSITAT156)
                     ;
@@ -5339,58 +5385,58 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_76_in_nota1323 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_FIGURA_in_nota1324 = new BitSet(new long[]{0x0040000000000002L});
     public static final BitSet FOLLOW_PUNTET_in_nota1328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_acord1351 = new BitSet(new long[]{0x4020040100000000L});
-    public static final BitSet FOLLOW_nota_in_acord1353 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-    public static final BitSet FOLLOW_75_in_acord1356 = new BitSet(new long[]{0x4020040100000000L});
-    public static final BitSet FOLLOW_nota_in_acord1358 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_81_in_acord1362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARTITURA_in_partitura1386 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_82_in_partitura1389 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_optionsPart_in_partitura1392 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_veus_in_partitura1394 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_83_in_partitura1396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_tempo_in_optionsPart1413 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_compas_beat_in_optionsPart1415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_veu_in_veus1444 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
-    public static final BitSet FOLLOW_TEMPO_in_tempo1466 = new BitSet(new long[]{0x0001000001000000L});
-    public static final BitSet FOLLOW_PARAULA_TEMPO_in_tempo1471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FIGURA_in_tempo1498 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_EQUAL_in_tempo1500 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
-    public static final BitSet FOLLOW_num_expr_in_tempo1502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMPAS_in_compas_beat1542 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
-    public static final BitSet FOLLOW_num_expr_in_compas_beat1544 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_77_in_compas_beat1546 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
-    public static final BitSet FOLLOW_num_expr_in_compas_beat1548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_veu1577 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_ID_in_veu1580 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1583 = new BitSet(new long[]{0x2800000000000000L});
-    public static final BitSet FOLLOW_grup_compases_in_veu1586 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1588 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_repeticion_compases_in_grup_compases1604 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_grup_compases1608 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
-    public static final BitSet FOLLOW_compas_in_grup_compases1611 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_REP_OBRIR_in_repeticion_compases1634 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
-    public static final BitSet FOLLOW_dentro_repeticio_in_repeticion_compases1637 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_rep_tancar_in_repeticion_compases1639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_compas_in_dentro_repeticio1677 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_repeticion_compases_in_dentro_repeticio1680 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1684 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
-    public static final BitSet FOLLOW_compas_in_dentro_repeticio1687 = new BitSet(new long[]{0x2800000000000002L});
-    public static final BitSet FOLLOW_77_in_rep_tancar1715 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_INT_in_rep_tancar1718 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_rep_tancar1720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_optionsCompas_in_compas1739 = new BitSet(new long[]{0x4020040100000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_notes_o_acords_in_compas1742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nota_in_notes_o_acords1772 = new BitSet(new long[]{0x4020040100000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_acord_in_notes_o_acords1776 = new BitSet(new long[]{0x4020040100000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_82_in_optionsCompas1801 = new BitSet(new long[]{0x0009822140800000L,0x0000000000000204L});
-    public static final BitSet FOLLOW_optionCompas_in_optionsCompas1803 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080800L});
-    public static final BitSet FOLLOW_75_in_optionsCompas1806 = new BitSet(new long[]{0x0009822140800000L,0x0000000000000204L});
-    public static final BitSet FOLLOW_optionCompas_in_optionsCompas1808 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080800L});
-    public static final BitSet FOLLOW_83_in_optionsCompas1812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_optionCompas1842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARAULA_TEMPO_in_optionCompas1855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PARAULA_INTENSITAT_in_optionCompas1859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_acord1363 = new BitSet(new long[]{0x4020040100000000L});
+    public static final BitSet FOLLOW_nota_in_acord1365 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_75_in_acord1368 = new BitSet(new long[]{0x4020040100000000L});
+    public static final BitSet FOLLOW_nota_in_acord1370 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_81_in_acord1374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARTITURA_in_partitura1398 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_82_in_partitura1401 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_optionsPart_in_partitura1404 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_veus_in_partitura1406 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_83_in_partitura1408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_tempo_in_optionsPart1425 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_compas_beat_in_optionsPart1427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_veu_in_veus1456 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
+    public static final BitSet FOLLOW_TEMPO_in_tempo1478 = new BitSet(new long[]{0x0001000001000000L});
+    public static final BitSet FOLLOW_PARAULA_TEMPO_in_tempo1483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FIGURA_in_tempo1510 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_EQUAL_in_tempo1512 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_num_expr_in_tempo1514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMPAS_in_compas_beat1554 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_num_expr_in_compas_beat1556 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_77_in_compas_beat1558 = new BitSet(new long[]{0x0008022140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_num_expr_in_compas_beat1560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_veu1589 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_ID_in_veu1592 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1595 = new BitSet(new long[]{0x2800000000000000L});
+    public static final BitSet FOLLOW_grup_compases_in_veu1598 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1600 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_veu1603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_repeticion_compases_in_grup_compases1616 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_grup_compases1620 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
+    public static final BitSet FOLLOW_compas_in_grup_compases1623 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_REP_OBRIR_in_repeticion_compases1646 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
+    public static final BitSet FOLLOW_dentro_repeticio_in_repeticion_compases1649 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_rep_tancar_in_repeticion_compases1651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_compas_in_dentro_repeticio1689 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_repeticion_compases_in_dentro_repeticio1692 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_dentro_repeticio1696 = new BitSet(new long[]{0x4020040100000000L,0x0000000000050000L});
+    public static final BitSet FOLLOW_compas_in_dentro_repeticio1699 = new BitSet(new long[]{0x2800000000000002L});
+    public static final BitSet FOLLOW_77_in_rep_tancar1727 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_INT_in_rep_tancar1730 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_SEPARADOR_COMPAS_in_rep_tancar1732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_optionsCompas_in_compas1751 = new BitSet(new long[]{0x4020040100000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_notes_o_acords_in_compas1754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nota_in_notes_o_acords1784 = new BitSet(new long[]{0x4020040100000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_acord_in_notes_o_acords1788 = new BitSet(new long[]{0x4020040100000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_82_in_optionsCompas1813 = new BitSet(new long[]{0x0009822140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_optionCompas_in_optionsCompas1815 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080800L});
+    public static final BitSet FOLLOW_75_in_optionsCompas1818 = new BitSet(new long[]{0x0009822140800000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_optionCompas_in_optionsCompas1820 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080800L});
+    public static final BitSet FOLLOW_83_in_optionsCompas1824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_optionCompas1854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARAULA_TEMPO_in_optionCompas1867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PARAULA_INTENSITAT_in_optionCompas1871 = new BitSet(new long[]{0x0000000000000002L});
 
 }

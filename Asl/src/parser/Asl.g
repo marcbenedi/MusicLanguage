@@ -176,7 +176,7 @@ piezzo	: PIEZZO^ ID params partitura ENDPIEZZO!
 
 nota: (
       ((PREMOD'.')? INT? NOTA_MUSICAL ('.' FIGURA)? PUNTET?) -> ^(NOTA_MUSICAL PREMOD? INT? FIGURA? PUNTET?)
-      | SILENCI ('.'FIGURA)? PUNTET?
+      | SILENCI ('.'FIGURA)? PUNTET? -> ^(SILENCI FIGURA? PUNTET?)
       )
       ;
 

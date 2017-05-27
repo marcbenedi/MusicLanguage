@@ -37,6 +37,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.io.*;
 import org.jfugue.player.Player;
+import org.jfugue.pattern.Pattern;
 
 /** Class that implements the interpreter of the language. */
 
@@ -184,6 +185,8 @@ public class Interp {
             case "Si":
                 res = "B";
                 break;
+            case "Silenci":
+                res = "R";
             default:
                 res = n;
         }
@@ -214,29 +217,31 @@ public class Interp {
         return res;
     }
 
-    private void tocarCompas(AslTree mods, AslTree notes_acords){
+    private void tocarCompas(AslTree mods, AslTree notes_acords, int tempo){
         int num_notes_o_acords = notes_acords.getChildCount();
         Player p = new Player();
+
         for (int i = 0; i < num_notes_o_acords; ++i){
             AslTree nota_o_acord = notes_acords.getChild(i);
             String nota_o_acord_text = nota_o_acord.getText();
+            Pattern pattern;
 
             if(nota_o_acord_text.equals("ACORD")){
                 int num_notes = nota_o_acord.getChildCount();
-                System.out.println(num_notes);
-                String converted_acord = "";
-                for (int j = 0; j < num_notes; ++j){
-                    //System.out.println(nota_o_acord.getChild(j).getText());
-                    //System.out.println(getStandard(nota_o_acord.getChild(j).getText()));
-                    converted_acord +=" V"+j+" "+"I[Piano] "+ getStandard(nota_o_acord.getChild(j).getText());
-                    //System.out.println(converted_acord);
+                String converted_acord = getStandard(nota_o_acord.getChild(0).getText());
+                for (int j = 1; j < num_notes; ++j){
+                    //converted_acord +=" V"+j+" "+"I[Piano] "+ getStandard(nota_o_acord.getChild(j).getText());
+                    converted_acord+="+"+getStandard(nota_o_acord.getChild(j).getText());
                 }
-                System.out.println(converted_acord);
-                p.play(converted_acord);
+                pattern = new Pattern(converted_acord).setTempo(tempo);
+                p.play(pattern);
             }
             else{
                 String trans_nota = getStandard(nota_o_acord_text);
-                p.play(trans_nota);
+                //p.play(trans_nota);
+                pattern = new Pattern(trans_nota).setTempo(tempo);
+                p.play(pattern);
+
             }
         }
     }
@@ -246,8 +251,25 @@ public class Interp {
         AslTree mods = partitura.getChild(0);
         AslTree veus = partitura.getChild(1);
 
+        int tempo = 60;
+        //TODO: Beat
+        if(mods != null){
+            //Hi ha modificacions de tempo i beat
+            AslTree tempo_tree = mods.getChild(0);
+            switch (tempo_tree.getType()){
+                case AslLexer.FIGURA_TEMPO:
+                    tempo = 10;
+                    //TODO: Obtenir tempo de figura tempo
+                    break;
+                case AslLexer.PARAULA_TEMPO:
+                    tempo = getTempo(tempo_tree.getText());
+                    break;
+            }
+            AslTree beat = mods.getChild(1);
+        }
+
         AslTree veu = veus.getChild(0);
-        System.out.println(veu.getChild(0).getText());
+        //System.out.println(veu.getChild(0).getText());
         int num_comp = veu.getChildCount();
 
         for (int i= 1; i < num_comp; ++i) {
@@ -267,7 +289,9 @@ public class Interp {
                 notes_acords = comp.getChild(1);
             }
 
-            //tocarCompas(mods_comp,notes_acords);
+            //tocarCompas(mods_comp,notes_acords,tempo);
+            Pattern p = new Pattern();
+            Voice v = new Voice();
 
         }
 
