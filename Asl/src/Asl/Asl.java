@@ -50,7 +50,7 @@ import interp.*;
 public class Asl{
 
     /** The file name of the program. */
-    private static String infile = null;
+    public static String infile = null;
     /** Name of the file representing the AST. */
     private static String astfile = null;
     /** Flag indicating that the AST must be written in dot format. */
@@ -59,6 +59,8 @@ public class Asl{
     private static String tracefile = null;
     /** Flag to indicate whether the program must be executed after parsing. */
     private static boolean execute = true;
+
+    public static boolean midi = false;
       
     /** Main program that invokes the parser and the interpreter. */
     
@@ -159,13 +161,16 @@ public class Asl{
                         .hasArg()
                         .withDescription ("write a trace of function calls during the execution of the program")
                         .create ("trace");
-                                       
+
+        Option midi_opt = new Option("midi", "outputs program in midi format");
+
         Options options = new Options();
         options.addOption(help);
         options.addOption(dot);
         options.addOption(ast);
         options.addOption(trace);
         options.addOption(noexec);
+        options.addOption(midi_opt);
         CommandLineParser clp = new GnuParser();
         CommandLine line = null;
 
@@ -201,6 +206,9 @@ public class Asl{
         
         // Option -noexec
         if (line.hasOption ("noexec")) execute = false;
+
+        // Option -midi
+        if (line.hasOption("midi")) midi = true;
 
         // Remaining arguments (the input file)
         String[] files = line.getArgs();

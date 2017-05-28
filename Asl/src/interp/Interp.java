@@ -27,6 +27,7 @@
 
 package interp;
 
+import Asl.Asl;
 import MusicalComponents.Voice;
 import org.jfugue.midi.MidiFileManager;
 import org.jfugue.pattern.Pattern;
@@ -478,12 +479,16 @@ public class Interp {
         Player p = new Player();
         p.play(pattern);
 
-        try {
-            //p.saveMidi(pattern, new File("music-file.mid"));
-            MidiFileManager.savePatternToMidi(pattern, new File("music-file.mid"));
-        } catch (IOException e) {
-            // Handle the exception
-        }
+
+        if (Asl.midi)
+            try {
+                //p.saveMidi(pattern, new File("music-file.mid"));
+                String name = Asl.infile.substring(0,Asl.infile.length()-4)+".mid";
+                System.out.println("Program formatted to midi - "+name);
+                MidiFileManager.savePatternToMidi(pattern, new File(name));
+            } catch (IOException e) {
+                // Handle the exception
+            }
 
 
     }
