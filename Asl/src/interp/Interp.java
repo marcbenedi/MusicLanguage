@@ -28,6 +28,7 @@
 package interp;
 
 import MusicalComponents.Voice;
+import org.jfugue.midi.MidiFileManager;
 import org.jfugue.pattern.Pattern;
 import parser.*;
 
@@ -477,6 +478,12 @@ public class Interp {
         Player p = new Player();
         p.play(pattern);
 
+        try {
+            //p.saveMidi(pattern, new File("music-file.mid"));
+            MidiFileManager.savePatternToMidi(pattern, new File("music-file.mid"));
+        } catch (IOException e) {
+            // Handle the exception
+        }
 
 
     }
