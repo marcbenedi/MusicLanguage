@@ -1,2 +1,2 @@
-Main-Class: Asl.Asl
-Class-Path: /home/marcbenedi/Desktop/MusicLanguage/Asl/libs/antlr-3.4-complete.jar /home/marcbenedi/Desktop/MusicLanguage/Asl/libs/commons-cli-1.2.jar /home/marcbenedi/Desktop/MusicLanguage/Asl/libs/jfugue-5.0.9.jar
+Main-Class: ML.ML
+Class-Path: /home/marcbenedi/Desktop/MusicLanguage/ML/libs/antlr-3.4-complete.jar /home/marcbenedi/Desktop/MusicLanguage/ML/libs/commons-cli-1.2.jar /home/marcbenedi/Desktop/MusicLanguage/ML/libs/jfugue-5.0.9.jar

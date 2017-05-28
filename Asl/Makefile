@@ -1,4 +1,4 @@
-TARGET =	Asl
+TARGET =	ML
 
 # Directories
 ROOT =		$(PWD)
@@ -48,7 +48,7 @@ INTERP_SRC =	$(INTERP)/Interp.java \
 				$(INTERP)/Stack.java \
 				$(INTERP)/Data.java \
 				$(INTERP)/$(TARGET)Tree.java \
-				$(INTERP)/AslTreeAdaptor.java
+				$(INTERP)/MLTreeAdaptor.java
 
 MUSICALCOMPONENTS_SRC = $(MUSICALCOMPONENTS)/Voice.java
 
@@ -71,7 +71,7 @@ exec:
 	if [ ! -e $(BIN) ]; then\
 	  mkdir $(BIN);\
 	fi
-	echo "Main-Class: Asl.Asl" > $(MANIFEST)
+	echo "Main-Class: ML.ML" > $(MANIFEST)
 	echo "Class-Path: $(JARPATH)" >> $(MANIFEST)
 	cd $(CLASSDIR); jar -cmf $(MANIFEST) $(JARFILE) *
 	printf "#!/bin/sh\n\n" > $(EXEC)

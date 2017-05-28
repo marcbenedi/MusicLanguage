@@ -31,9 +31,6 @@ package interp;
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
 
-import parser.*;
-
-
 
 /**
  * This is the tree adaptor for the extended class of AST nodes.
@@ -41,14 +38,14 @@ import parser.*;
  * to the new AST nodes.
  */
  
-public class AslTreeAdaptor extends CommonTreeAdaptor {
+public class MLTreeAdaptor extends CommonTreeAdaptor {
     public Object create(Token t) {
-        return new AslTree(t);
+        return new MLTree(t);
     }
 
     public Object dupNode(Object t) {
         if ( t==null ) return null;
-        return create(((AslTree)t).token);
+        return create(((MLTree)t).token);
     }
     
     public Object errorNode(TokenStream input, Token start, Token stop,

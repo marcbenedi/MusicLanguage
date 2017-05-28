@@ -25,12 +25,11 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package Asl;
+package ML;
 
 // Imports for ANTLR
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
-import org.antlr.stringtemplate.*;
 
 // Imports from Java
 import org.apache.commons.cli.*; // Command Language Interface
@@ -41,13 +40,13 @@ import parser.*;
 import interp.*;
 
 /**
- * The class <code>Asl</code> implement the main function of the
+ * The class <code>ML</code> implement the main function of the
  * interpreter. It accepts a set of options to generate the AST in
  * dot format and avoid the execution of the program. To know about
- * the accepted options, run the command Asl -help.
+ * the accepted options, run the command ML -help.
  */
 
-public class Asl{
+public class ML {
 
     /** The file name of the program. */
     public static String infile = null;
@@ -79,14 +78,14 @@ public class Asl{
         }
 
         // Creates the lexer
-        AslLexer lex = new AslLexer(input);
+        MLLexer lex = new MLLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lex);
 
         // Creates and runs the parser. As a result, an AST is created
-        AslParser parser = new AslParser(tokens);
-        AslTreeAdaptor adaptor = new AslTreeAdaptor();
+        MLParser parser = new MLParser(tokens);
+        MLTreeAdaptor adaptor = new MLTreeAdaptor();
         parser.setTreeAdaptor(adaptor);
-        AslParser.prog_return result = null;
+        MLParser.prog_return result = null;
         try {
             result = parser.prog();
         } catch (Exception e) {} // Just catch the exception (nothing to do)
@@ -100,7 +99,7 @@ public class Asl{
         }
 
         // Get the AST
-        AslTree t = (AslTree)result.getTree();
+        MLTree t = (MLTree)result.getTree();
 
         // Generate a file for the AST (option -ast file)
         if (astfile != null) {
@@ -174,7 +173,7 @@ public class Asl{
         CommandLineParser clp = new GnuParser();
         CommandLine line = null;
 
-        String cmdline = "Asl [options] file";
+        String cmdline = "ML [options] file";
         
         
         // Parse the options

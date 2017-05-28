@@ -25,11 +25,11 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-grammar Asl;
+grammar ML;
 
 options {
     output = AST;
-    ASTLabelType = AslTree;
+    ASTLabelType = MLTree;
 }
 
 // Imaginary tokens to create some AST nodes
@@ -57,7 +57,7 @@ tokens {
 
 @header {
 package parser;
-import interp.AslTree;
+import interp.MLTree;
 }
 
 @lexer::header {

@@ -27,7 +27,7 @@
 
 package interp;
 
-import Asl.Asl;
+import ML.ML;
 import MusicalComponents.Voice;
 import org.jfugue.midi.MidiFileManager;
 import org.jfugue.pattern.Pattern;
@@ -51,8 +51,8 @@ public class Interp {
      * Each entry of the map stores the root of the AST
      * correponding to the function.
      */
-    private HashMap<String,AslTree> FuncName2Tree;
-    private HashMap<String,AslTree> Piezzo2Tree;
+    private HashMap<String, MLTree> FuncName2Tree;
+    private HashMap<String, MLTree> Piezzo2Tree;
 
     /** Standard input of the interpreter (System.in). */
     private Scanner stdin;
@@ -73,7 +73,7 @@ public class Interp {
      * Constructor of the interpreter. It prepares the main
      * data structures for the execution of the main program.
      */
-    public Interp(AslTree T, String tracefile) {
+    public Interp(MLTree T, String tracefile) {
         assert T != null;
         MapFunctionsAndPiezzos(T);  // Creates the table to map function names into AST nodes
         PreProcessAST(T); // Some internal pre-processing ot the AST
@@ -110,20 +110,20 @@ public class Interp {
      * Gathers information from the AST and creates the map from
      * function names to the corresponding AST nodes.
      */
-    private void MapFunctionsAndPiezzos(AslTree T) {
-        assert T != null && T.getType() == AslLexer.LIST_FUNCTIONS;
-        FuncName2Tree = new HashMap<String,AslTree> ();
-        Piezzo2Tree = new HashMap<String,AslTree> ();
+    private void MapFunctionsAndPiezzos(MLTree T) {
+        assert T != null && T.getType() == MLLexer.LIST_FUNCTIONS;
+        FuncName2Tree = new HashMap<String, MLTree> ();
+        Piezzo2Tree = new HashMap<String, MLTree> ();
         int n = T.getChildCount();
         for (int i = 0; i < n; ++i) {
-            AslTree f = T.getChild(i);
+            MLTree f = T.getChild(i);
             String fname = f.getChild(0).getText();
             if (FuncName2Tree.containsKey(fname) ||  Piezzo2Tree.containsKey(fname)) {
                 throw new RuntimeException("Multiple definitions of function " + fname);
             }
-            if (f.getType() == AslLexer.FUNC) {
+            if (f.getType() == MLLexer.FUNC) {
                 FuncName2Tree.put(fname, f);
-            } else if (f.getType() == AslLexer.PIEZZO) {
+            } else if (f.getType() == MLLexer.PIEZZO) {
                 Piezzo2Tree.put(fname, f);
             } else {
               assert false;
@@ -134,14 +134,14 @@ public class Interp {
     /**
      * Performs some pre-processing on the AST. Basically, it
      * calculates the value of the literals and stores a simpler
-     * representation. See AslTree.java for details.
+     * representation. See MLTree.java for details.
      */
-    private void PreProcessAST(AslTree T) {
+    private void PreProcessAST(MLTree T) {
         if (T == null) return;
         switch(T.getType()) {
-            case AslLexer.INT: T.setIntValue(); break;
-            case AslLexer.STRING: T.setStringValue(); break;
-            case AslLexer.BOOLEAN: T.setBooleanValue(); break;
+            case MLLexer.INT: T.setIntValue(); break;
+            case MLLexer.STRING: T.setStringValue(); break;
+            case MLLexer.BOOLEAN: T.setBooleanValue(); break;
             default: break;
         }
         int n = T.getChildCount();
@@ -156,7 +156,7 @@ public class Interp {
     public int lineNumber() { return linenumber; }
 
     /** Defines the current line number associated to an AST node. */
-    private void setLineNumber(AslTree t) { linenumber = t.getLine();}
+    private void setLineNumber(MLTree t) { linenumber = t.getLine();}
 
     /** Defines the current line number with a specific value */
     private void setLineNumber(int l) { linenumber = l;}
@@ -218,7 +218,7 @@ public class Interp {
         return res;
     }
 
-    private String tocarNota(AslTree mods, AslTree nota){
+    private String tocarNota(MLTree mods, MLTree nota){
 
         //System.out.println("Entrant a tocar nota");
 
@@ -228,18 +228,18 @@ public class Interp {
 
         for (int i = 0; i < nota.getChildCount(); ++i){
             //System.out.println("nova iteracio");
-            AslTree mod = nota.getChild(i);
+            MLTree mod = nota.getChild(i);
             //System.out.println(mod.getText());
 
             switch (mod.getType()){
-                case AslLexer.PREMOD:
+                case MLLexer.PREMOD:
                         premod = mod.getText().equals("bm") ? "b" : "#";
                     break;
-                case AslLexer.INT:
+                case MLLexer.INT:
                         if (mod.getIntValue() < 0 | mod.getIntValue() > 10) throw new IllegalArgumentException("La octava no es correcte");
                         oct = String.valueOf(mod.getIntValue());
                     break;
-                case AslLexer.FIGURA:
+                case MLLexer.FIGURA:
                         switch (mod.getText()){
                             case "n":
                                 figure = 0.25;
@@ -265,7 +265,7 @@ public class Interp {
                         }
 
                     break;
-                case AslLexer.PUNTET:
+                case MLLexer.PUNTET:
                     //System.out.println("puntet");
                     figure*=1.5;
                     break;
@@ -280,14 +280,14 @@ public class Interp {
 
     }
 
-    private String tocarCompas(AslTree mods, AslTree notes_acords){
+    private String tocarCompas(MLTree mods, MLTree notes_acords){
 
         int num_notes_o_acords = notes_acords.getChildCount();
         String res = "";
 
         for (int i = 0; i < num_notes_o_acords; ++i){
             //System.out.println("Una altra iteracio");
-            AslTree nota_o_acord = notes_acords.getChild(i);
+            MLTree nota_o_acord = notes_acords.getChild(i);
             String nota_o_acord_text = nota_o_acord.getText();
 
             if(nota_o_acord_text.equals("ACORD")){
@@ -313,7 +313,7 @@ public class Interp {
         return res;
     }
 
-    private Voice tocarVeu(AslTree veu){
+    private Voice tocarVeu(MLTree veu){
 
         Voice v = new Voice(Voice.avaiable_id);
         int num_comp = veu.getChildCount();
@@ -321,15 +321,15 @@ public class Interp {
         for (int i= 1; i < num_comp; ++i) {
             //System.out.println("Estem tocant un compas");
 
-            AslTree comp_o_rep = veu.getChild(i);
+            MLTree comp_o_rep = veu.getChild(i);
             String c = "";
 
             switch (comp_o_rep.getType()){
-                case AslLexer.COMPAS:
+                case MLLexer.COMPAS:
 
                     int son = comp_o_rep.getChildCount();
-                    AslTree mods_comp = null;
-                    AslTree notes_acords = null;
+                    MLTree mods_comp = null;
+                    MLTree notes_acords = null;
 
                     if(son == 1) {
                         //No tenim mods
@@ -345,7 +345,7 @@ public class Interp {
                     v.addCompas(c);
                     break;
 
-                case AslLexer.REP_COMPAS:
+                case MLLexer.REP_COMPAS:
 
                     int reps = comp_o_rep.getChild(0).getIntValue();
                     //System.out.println(reps);
@@ -357,11 +357,11 @@ public class Interp {
 
                         for (int k = 1; k < num_comps_en_repeticio; ++k){//-1 perque el primer fill es el num_reps
                             //System.out.println("estem a la repetició "+j+" tocant el compas "+k);
-                            AslTree comp_intern_repe = comp_o_rep.getChild(k);
+                            MLTree comp_intern_repe = comp_o_rep.getChild(k);
 
                             int son_comp_repe = comp_intern_repe.getChildCount();
-                            AslTree mods_comp_repe = null;
-                            AslTree notes_acords_comp_repe = null;
+                            MLTree mods_comp_repe = null;
+                            MLTree notes_acords_comp_repe = null;
 
                             int repe_time = j; //Aixi ens assegurem de que si no hi ha restricció ens tocaran
 
@@ -378,18 +378,18 @@ public class Interp {
 
                                 for (int n = 0; n < mods_comp_repe.getChildCount(); ++n){
 
-                                    AslTree mod = mods_comp_repe.getChild(n);
+                                    MLTree mod = mods_comp_repe.getChild(n);
 
                                     switch (mod.getType()){
 
-                                        case AslLexer.EXPR_TIME:
+                                        case MLLexer.EXPR_TIME:
                                             int expr_value = evaluateExpression(mod.getChild(0).getChild(1)).getIntegerValue();
                                             repe_time = expr_value;
                                             System.out.println(expr_value);
                                             break;
-                                        case AslLexer.PARAULA_TEMPO:
+                                        case MLLexer.PARAULA_TEMPO:
                                             break;
-                                        case AslLexer.PARAULA_INTENSITAT:
+                                        case MLLexer.PARAULA_INTENSITAT:
                                             break;
 
                                     }
@@ -419,18 +419,18 @@ public class Interp {
         return v;
     }
 
-    private void executePiezzo(AslTree partitura){
+    private void executePiezzo(MLTree partitura){
 
-        AslTree mods = partitura.getChild(0);
-        AslTree veus = partitura.getChild(1);
+        MLTree mods = partitura.getChild(0);
+        MLTree veus = partitura.getChild(1);
 
         int tempo = 60;
         //TODO: Beat
         if(mods != null){
             //Hi ha modificacions de tempo i beat
-            AslTree tempo_tree = mods.getChild(0);
+            MLTree tempo_tree = mods.getChild(0);
             switch (tempo_tree.getType()){
-                case AslLexer.FIGURA_TEMPO:
+                case MLLexer.FIGURA_TEMPO:
                     tempo = 60;
                     String nota = tempo_tree.getChild(0).getText();
                     switch (nota){
@@ -457,11 +457,11 @@ public class Interp {
                             break;
                     }
                     break;
-                case AslLexer.PARAULA_TEMPO:
+                case MLLexer.PARAULA_TEMPO:
                     tempo = getTempo(tempo_tree.getText());
                     break;
             }
-            AslTree beat = mods.getChild(1);
+            MLTree beat = mods.getChild(1);
         }
 
         Pattern pattern = new Pattern();
@@ -470,7 +470,7 @@ public class Interp {
         int num_veus = veus.getChildCount();
         for(int i = 0; i < num_veus; ++i){
             //System.out.println("Estem tocant la veu "+i);
-            AslTree veu = veus.getChild(i);
+            MLTree veu = veus.getChild(i);
             Voice v = tocarVeu(veu);
             //System.out.println(v.getString());
             pattern.add(v.getString());
@@ -480,10 +480,10 @@ public class Interp {
         p.play(pattern);
 
 
-        if (Asl.midi)
+        if (ML.midi)
             try {
                 //p.saveMidi(pattern, new File("music-file.mid"));
-                String name = Asl.infile.substring(0,Asl.infile.length()-4)+".mid";
+                String name = ML.infile.substring(0, ML.infile.length()-3)+".mid";
                 System.out.println("Program formatted to midi - "+name);
                 MidiFileManager.savePatternToMidi(pattern, new File(name));
             } catch (IOException e) {
@@ -499,10 +499,10 @@ public class Interp {
      * @param args The AST node representing the list of arguments of the caller.
      * @return The data returned by the function.
      */
-    private Data executeFunction (String funcname, AslTree args) {
+    private Data executeFunction (String funcname, MLTree args) {
         Boolean piezzo = false;
         // Get the AST of the function
-        AslTree f = FuncName2Tree.get(funcname);
+        MLTree f = FuncName2Tree.get(funcname);
         if (f == null) {
           f = Piezzo2Tree.get(funcname);
           if (f == null) {
@@ -521,7 +521,7 @@ public class Interp {
         if (trace != null) traceFunctionCall(f, Arg_values);
 
         // List of parameters of the callee
-        AslTree p = f.getChild(1);
+        MLTree p = f.getChild(1);
         int nparam = p.getChildCount(); // Number of parameters
 
         // Create the activation record in memory
@@ -567,7 +567,7 @@ public class Interp {
      * @return The data returned by the instructions (null if no return
      * statement has been executed).
      */
-    private Data executeListInstructions (AslTree t) {
+    private Data executeListInstructions (MLTree t) {
         assert t != null;
         Data result = null;
         int ninstr = t.getChildCount();
@@ -586,7 +586,7 @@ public class Interp {
      * non-null only if a return statement is executed or a block
      * of instructions executing a return.
      */
-    private Data executeInstruction (AslTree t) {
+    private Data executeInstruction (MLTree t) {
         assert t != null;
 
         setLineNumber(t);
@@ -596,13 +596,13 @@ public class Interp {
         switch (t.getType()) {
 
             // Assignment
-            case AslLexer.ASSIGN:
+            case MLLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));
                 Stack.defineVariable (t.getChild(0).getText(), value);
                 return null;
 
             // If-then-else
-            case AslLexer.IF:
+            case MLLexer.IF:
                 value = evaluateExpression(t.getChild(0));
                 checkBoolean(value);
                 if (value.getBooleanValue()) return executeListInstructions(t.getChild(1));
@@ -611,7 +611,7 @@ public class Interp {
                 return null;
 
             // While
-            case AslLexer.WHILE:
+            case MLLexer.WHILE:
                 while (true) {
                     value = evaluateExpression(t.getChild(0));
                     checkBoolean(value);
@@ -621,7 +621,7 @@ public class Interp {
                 }
 
             // Return
-            case AslLexer.RETURN:
+            case MLLexer.RETURN:
                 if (t.getChildCount() != 0) {
                     return evaluateExpression(t.getChild(0));
                 }
@@ -629,7 +629,7 @@ public class Interp {
 
             // Read statement: reads a variable and raises an exception
             // in case of a format error.
-            case AslLexer.READ:
+            case MLLexer.READ:
                 String token = null;
                 Data val = new Data(0);;
                 try {
@@ -642,10 +642,10 @@ public class Interp {
                 return null;
 
             // Write statement: it can write an expression or a string.
-            case AslLexer.WRITE:
-                AslTree v = t.getChild(0);
+            case MLLexer.WRITE:
+                MLTree v = t.getChild(0);
                 // Special case for strings
-                if (v.getType() == AslLexer.STRING) {
+                if (v.getType() == MLLexer.STRING) {
                     System.out.format(v.getStringValue());
                     return null;
                 }
@@ -655,7 +655,7 @@ public class Interp {
                 return null;
 
             // Function call
-            case AslLexer.FUNCALL:
+            case MLLexer.FUNCALL:
                 executeFunction(t.getChild(0).getText(), t.getChild(1));
                 return null;
 
@@ -673,7 +673,7 @@ public class Interp {
      * @return The value of the expression.
      */
 
-    private Data evaluateExpression(AslTree t) {
+    private Data evaluateExpression(MLTree t) {
         assert t != null;
 
         int previous_line = lineNumber();
@@ -684,19 +684,19 @@ public class Interp {
         // Atoms
         switch (type) {
             // A variable
-            case AslLexer.ID:
+            case MLLexer.ID:
                 value = new Data(Stack.getVariable(t.getText()));
                 break;
             // An integer literal
-            case AslLexer.INT:
+            case MLLexer.INT:
                 value = new Data(t.getIntValue());
                 break;
             // A Boolean literal
-            case AslLexer.BOOLEAN:
+            case MLLexer.BOOLEAN:
                 value = new Data(t.getBooleanValue());
                 break;
             // A function call. Checks that the function returns a result.
-            case AslLexer.FUNCALL:
+            case MLLexer.FUNCALL:
                 value = executeFunction(t.getChild(0).getText(), t.getChild(1));
                 assert value != null;
                 if (value.isVoid()) {
@@ -716,14 +716,14 @@ public class Interp {
         value = evaluateExpression(t.getChild(0));
         if (t.getChildCount() == 1) {
             switch (type) {
-                case AslLexer.PLUS:
+                case MLLexer.PLUS:
                     checkInteger(value);
                     break;
-                case AslLexer.MINUS:
+                case MLLexer.MINUS:
                     checkInteger(value);
                     value.setValue(-value.getIntegerValue());
                     break;
-                case AslLexer.NOT:
+                case MLLexer.NOT:
                     checkBoolean(value);
                     value.setValue(!value.getBooleanValue());
                     break;
@@ -737,12 +737,12 @@ public class Interp {
         Data value2;
         switch (type) {
             // Relational operators
-            case AslLexer.EQUAL:
-            case AslLexer.NOT_EQUAL:
-            case AslLexer.LT:
-            case AslLexer.LE:
-            case AslLexer.GT:
-            case AslLexer.GE:
+            case MLLexer.EQUAL:
+            case MLLexer.NOT_EQUAL:
+            case MLLexer.LT:
+            case MLLexer.LE:
+            case MLLexer.GT:
+            case MLLexer.GE:
                 value2 = evaluateExpression(t.getChild(1));
                 if (value.getType() != value2.getType()) {
                   throw new RuntimeException ("Incompatible types in relational expression");
@@ -751,19 +751,19 @@ public class Interp {
                 break;
 
             // Arithmetic operators
-            case AslLexer.PLUS:
-            case AslLexer.MINUS:
-            case AslLexer.MUL:
-            case AslLexer.DIV:
-            case AslLexer.MOD:
+            case MLLexer.PLUS:
+            case MLLexer.MINUS:
+            case MLLexer.MUL:
+            case MLLexer.DIV:
+            case MLLexer.MOD:
                 value2 = evaluateExpression(t.getChild(1));
                 checkInteger(value); checkInteger(value2);
                 value.evaluateArithmetic(type, value2);
                 break;
 
             // Boolean operators
-            case AslLexer.AND:
-            case AslLexer.OR:
+            case MLLexer.AND:
+            case MLLexer.OR:
                 // The first operand is evaluated, but the second
                 // is deferred (lazy, short-circuit evaluation).
                 checkBoolean(value);
@@ -787,16 +787,16 @@ public class Interp {
      * @param t AST node of the second operand.
      * @return An Boolean data with the value of the expression.
      */
-    private Data evaluateBoolean (int type, Data v, AslTree t) {
+    private Data evaluateBoolean (int type, Data v, MLTree t) {
         // Boolean evaluation with short-circuit
 
         switch (type) {
-            case AslLexer.AND:
+            case MLLexer.AND:
                 // Short circuit if v is false
                 if (!v.getBooleanValue()) return v;
                 break;
 
-            case AslLexer.OR:
+            case MLLexer.OR:
                 // Short circuit if v is true
                 if (v.getBooleanValue()) return v;
                 break;
@@ -834,9 +834,9 @@ public class Interp {
      * @return The list of evaluated arguments.
      */
 
-    private ArrayList<Data> listArguments (AslTree AstF, AslTree args) {
+    private ArrayList<Data> listArguments (MLTree AstF, MLTree args) {
         if (args != null) setLineNumber(args);
-        AslTree pars = AstF.getChild(1);   // Parameters of the function
+        MLTree pars = AstF.getChild(1);   // Parameters of the function
 
         // Create the list of parameters
         ArrayList<Data> Params = new ArrayList<Data> ();
@@ -853,15 +853,15 @@ public class Interp {
         // reference and calculates the values and references of
         // the parameters.
         for (int i = 0; i < n; ++i) {
-            AslTree p = pars.getChild(i); // Parameters of the callee
-            AslTree a = args.getChild(i); // Arguments passed by the caller
+            MLTree p = pars.getChild(i); // Parameters of the callee
+            MLTree a = args.getChild(i); // Arguments passed by the caller
             setLineNumber(a);
-            if (p.getType() == AslLexer.PVALUE) {
+            if (p.getType() == MLLexer.PVALUE) {
                 // Pass by value: evaluate the expression
                 Params.add(i,evaluateExpression(a));
             } else {
                 // Pass by reference: check that it is a variable
-                if (a.getType() != AslLexer.ID) {
+                if (a.getType() != MLLexer.ID) {
                     throw new RuntimeException("Wrong argument for pass by reference");
                 }
                 // Find the variable and pass the reference
@@ -879,9 +879,9 @@ public class Interp {
      * @param f AST of the function
      * @param arg_values Values of the parameters passed to the function
      */
-    private void traceFunctionCall(AslTree f, ArrayList<Data> arg_values) {
+    private void traceFunctionCall(MLTree f, ArrayList<Data> arg_values) {
         function_nesting++;
-        AslTree params = f.getChild(1);
+        MLTree params = f.getChild(1);
         int nargs = params.getChildCount();
 
         for (int i=0; i < function_nesting; ++i) trace.print("|   ");
@@ -890,8 +890,8 @@ public class Interp {
         trace.print(f.getChild(0) + "(");
         for (int i = 0; i < nargs; ++i) {
             if (i > 0) trace.print(", ");
-            AslTree p = params.getChild(i);
-            if (p.getType() == AslLexer.PREF) trace.print("&");
+            MLTree p = params.getChild(i);
+            if (p.getType() == MLLexer.PREF) trace.print("&");
             trace.print(p.getText() + "=" + arg_values.get(i));
         }
         trace.print(") ");
@@ -909,18 +909,18 @@ public class Interp {
      * @param result The value of the result
      * @param arg_values The value of the parameters passed to the function
      */
-    private void traceReturn(AslTree f, Data result, ArrayList<Data> arg_values) {
+    private void traceReturn(MLTree f, Data result, ArrayList<Data> arg_values) {
         for (int i=0; i < function_nesting; ++i) trace.print("|   ");
         function_nesting--;
         trace.print("return");
         if (!result.isVoid()) trace.print(" " + result);
 
         // Print the value of arguments passed by reference
-        AslTree params = f.getChild(1);
+        MLTree params = f.getChild(1);
         int nargs = params.getChildCount();
         for (int i = 0; i < nargs; ++i) {
-            AslTree p = params.getChild(i);
-            if (p.getType() == AslLexer.PVALUE) continue;
+            MLTree p = params.getChild(i);
+            if (p.getType() == MLLexer.PVALUE) continue;
             trace.print(", &" + p.getText() + "=" + arg_values.get(i));
         }
 
