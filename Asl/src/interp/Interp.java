@@ -363,7 +363,7 @@ public class Interp {
                             MLTree mods_comp_repe = null;
                             MLTree notes_acords_comp_repe = null;
 
-                            int repe_time = j; //Aixi ens assegurem de que si no hi ha restricció ens tocaran
+                            boolean repe_time = true; //Aixi ens assegurem de que si no hi ha restricció ens tocaran
 
                             if(son_comp_repe == 1) {
                                 //No tenim mods
@@ -381,11 +381,11 @@ public class Interp {
                                     MLTree mod = mods_comp_repe.getChild(n);
 
                                     switch (mod.getType()){
-                                        //TODO: EXPR_TIME que també puguin ser BOOL
                                         case MLLexer.EXPR_TIME:
-                                            int expr_value = evaluateExpression(mod.getChild(0).getChild(1)).getIntegerValue();
+                                            Stack.defineVariable("TIME", new Data(j));
+                                            boolean expr_value = evaluateExpression(mod.getChild(0)).getBooleanValue();
+
                                             repe_time = expr_value;
-                                            System.out.println(expr_value);
                                             break;
                                         case MLLexer.PARAULA_TEMPO:
                                             break;
@@ -396,16 +396,11 @@ public class Interp {
 
                                 }
                             }
-                            if(repe_time == j){
+                            if(repe_time){
                                 c= tocarCompas(mods_comp_repe,notes_acords_comp_repe);
-                                System.out.println("Tocant el compas "+k);
+                                //System.out.println("Repetico "+j+" Tocant el compas "+k);
                                 v.addCompas(c);
                             }
-                            //System.out.println("Anem a tocar compas de repe");
-
-                            //System.out.println(c);
-
-
 
                         }
 
@@ -414,7 +409,6 @@ public class Interp {
             }
 
         }
-        //System.out.println("Hem acabat de tocar veu");
         v.addInstrument(veu.getChild(0).getText());
         return v;
     }
