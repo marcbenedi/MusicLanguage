@@ -218,6 +218,54 @@ public class Interp {
         return res;
     }
 
+    private double figuraToDouble(MLTree nota){
+        double t = 0.25;
+        for (int i = 0; i < nota.getChildCount(); ++i){
+            //System.out.println("nova iteracio");
+            MLTree mod = nota.getChild(i);
+            //System.out.println(mod.getText());
+
+            if(mod.getType() == MLLexer.FIGURA){
+                t = figureToDouble(mod.getText());
+            }
+            if(mod.getType() == MLLexer.PUNTET){
+                t *=1.5;
+            }
+        }
+        return t;
+    }
+
+    private double figureToDouble(String mod){
+        double figure = 0.25;
+
+                    switch (mod){
+                        case "n":
+                            figure = 0.25;
+                            break;
+                        case "b":
+                            figure = 0.5;
+                            break;
+                        case "c":
+                            figure = 0.125;
+                            break;
+                        case "sc":
+                            figure = 0.0625;
+                            break;
+                        case "f":
+                            figure = 0.03125;
+                            break;
+                        case "sf":
+                            figure = 0.015625;
+                            break;
+                        case "r":
+                            figure = 1.0;
+                            break;
+                    }
+
+        return figure;
+
+    }
+
     private String tocarNota(MLTree mods, MLTree nota){
 
         //System.out.println("Entrant a tocar nota");
@@ -236,33 +284,11 @@ public class Interp {
                         premod = mod.getText().equals("bm") ? "b" : "#";
                     break;
                 case MLLexer.INT:
-                        if (mod.getIntValue() < 0 | mod.getIntValue() > 10) throw new IllegalArgumentException("La octava no es correcte");
+                        if (mod.getIntValue() < 0 || mod.getIntValue() > 10) throw new IllegalArgumentException("La octava no es correcte");
                         oct = String.valueOf(mod.getIntValue());
                     break;
                 case MLLexer.FIGURA:
-                        switch (mod.getText()){
-                            case "n":
-                                figure = 0.25;
-                                break;
-                            case "b":
-                                figure = 0.5;
-                                break;
-                            case "c":
-                                figure = 0.125;
-                                break;
-                            case "sc":
-                                figure = 0.0625;
-                                break;
-                            case "f":
-                                figure = 0.03125;
-                                break;
-                            case "sf":
-                                figure = 0.015625;
-                                break;
-                            case "r":
-                                figure = 1;
-                                break;
-                        }
+                        figure = figureToDouble(mod.getText());
 
                     break;
                 case MLLexer.PUNTET:
@@ -272,18 +298,16 @@ public class Interp {
             }
 
         }
-        //System.out.println("Fin buble");
-
-        //System.out.println(getStandard(nota.getText())+premod+oct+"/"+String.valueOf(figure));
-
         return getStandard(nota.getText())+premod+oct+"/"+String.valueOf(figure);
 
     }
 
-    private String tocarCompas(MLTree mods, MLTree notes_acords){
+    private String tocarCompas(MLTree mods, MLTree notes_acords,double beat){
 
         int num_notes_o_acords = notes_acords.getChildCount();
         String res = "";
+
+        double figures_compas = 0.0;
 
         for (int i = 0; i < num_notes_o_acords; ++i){
             //System.out.println("Una altra iteracio");
@@ -295,9 +319,12 @@ public class Interp {
                 //System.out.println("Toquem un acord");
                 int num_notes = nota_o_acord.getChildCount();
                 String converted_acord = tocarNota(mods,nota_o_acord.getChild(0));
+                figures_compas += figuraToDouble(nota_o_acord.getChild(0));
 
+                //TODO: Modificacions nota son modificacions acord
                 for (int j = 1; j < num_notes; ++j){
                     converted_acord+="+"+tocarNota(mods,nota_o_acord.getChild(j));
+
                 }
 
                 res+=" "+converted_acord+" ";
@@ -306,14 +333,19 @@ public class Interp {
                 //System.out.println("Toquem una nota");
                 String trans_nota = tocarNota(mods,nota_o_acord);
                 res+=" "+trans_nota+" ";
+                //System.out.println(figuraToDouble(nota_o_acord));
+                figures_compas += figuraToDouble(nota_o_acord);
 
             }
         }
+
+        //System.out.println(figures_compas +" "+ beat);
+        if(figures_compas != beat) throw new IllegalArgumentException("One of the compas has wrong compas");
         //System.out.println("Acabem de tocar el compas");
         return res;
     }
 
-    private Voice tocarVeu(MLTree veu){
+    private Voice tocarVeu(MLTree veu,double beat){
 
         Voice v = new Voice(Voice.avaiable_id);
         int num_comp = veu.getChildCount();
@@ -341,7 +373,7 @@ public class Interp {
                         notes_acords = comp_o_rep.getChild(1);
                     }
 
-                    c= tocarCompas(mods_comp,notes_acords);
+                    c= tocarCompas(mods_comp,notes_acords,beat);
                     v.addCompas(c);
                     break;
 
@@ -397,7 +429,7 @@ public class Interp {
                                 }
                             }
                             if(repe_time){
-                                c= tocarCompas(mods_comp_repe,notes_acords_comp_repe);
+                                c= tocarCompas(mods_comp_repe,notes_acords_comp_repe,beat);
                                 //System.out.println("Repetico "+j+" Tocant el compas "+k);
                                 v.addCompas(c);
                             }
@@ -419,6 +451,7 @@ public class Interp {
         MLTree veus = partitura.getChild(1);
 
         int tempo = 60;
+        double beat_eq = 1;
         //TODO: Beat
         if(mods != null){
             //Hi ha modificacions de tempo i beat
@@ -456,6 +489,39 @@ public class Interp {
                     break;
             }
             MLTree beat = mods.getChild(1);
+            //TODO: Fer eval expression abans f'agafar una cosa perque poden ser variables. repassar el codi
+            MLTree numerador = beat.getChild(0);
+            MLTree denominador = beat.getChild(1);
+
+            int num = evaluateExpression(numerador).getIntegerValue();
+            int den = evaluateExpression(denominador).getIntegerValue();
+
+//            Cifra 1: es la redonda, la figura mayor.
+//            Cifra 2: indica la blanca, mitad de la redonda.
+//            Cifra 4: indica la negra, un cuarto de la redonda.
+//            Cifra 8: indica la corchea, un octavo de la redonda.
+
+            double base = 0;
+
+            switch (den) {
+                case 1:
+                    base = 1;
+                    break;
+                case 2:
+                    base = 0.5;
+                    break;
+                case 4:
+                    base = 0.25;
+                    break;
+                case 8:
+                    base = 0.125;
+                    break;
+                default:
+                    throw new IllegalArgumentException("The figure of the compass is not correct");
+            }
+
+            beat_eq = num * base;
+
         }
 
         Pattern pattern = new Pattern();
@@ -465,7 +531,7 @@ public class Interp {
         for(int i = 0; i < num_veus; ++i){
             //System.out.println("Estem tocant la veu "+i);
             MLTree veu = veus.getChild(i);
-            Voice v = tocarVeu(veu);
+            Voice v = tocarVeu(veu,beat_eq);
             //System.out.println(v.getString());
             pattern.add(v.getString());
         }
