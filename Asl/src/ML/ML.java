@@ -60,15 +60,21 @@ public class ML {
     private static boolean execute = true;
 
     public static boolean midi = false;
-      
+
     /** Main program that invokes the parser and the interpreter. */
-    
+
     public static void main(String[] args) throws Exception {
         // Parser for command line options
         if (!readOptions (args)) System.exit(1);
 
+        if(!infile.substring(infile.length()-3,infile.length()).equals(".ml")){
+            System.err.println("File extension not recognized (it has to be -ml)");
+            System.exit(1);
+        }
+
+
         // Parsing of the input file
-        
+
         CharStream input = null;
         try {
             input = new ANTLRFileStream(infile);
@@ -89,7 +95,7 @@ public class ML {
         try {
             result = parser.prog();
         } catch (Exception e) {} // Just catch the exception (nothing to do)
-        
+
         // Check for parsing errors
         int nerrors = parser.getNumberOfSyntaxErrors();
         if (nerrors > 0) {
@@ -174,8 +180,8 @@ public class ML {
         CommandLine line = null;
 
         String cmdline = "ML [options] file";
-        
-        
+
+
         // Parse the options
         try {
             line = clp.parse (options, args);
@@ -193,16 +199,16 @@ public class ML {
             formatter.printHelp (cmdline, options);
             return false;
         }
-        
+
         // Option -dot
         if (line.hasOption ("dot")) dotformat = true;
 
         // Option -ast dotfile
         if (line.hasOption ("ast")) astfile = line.getOptionValue ("ast");
-        
+
         // Option -trace dotfile
         if (line.hasOption ("trace")) tracefile = line.getOptionValue ("trace");
-        
+
         // Option -noexec
         if (line.hasOption ("noexec")) execute = false;
 
@@ -217,7 +223,7 @@ public class ML {
             formatter.printHelp (cmdline, options);
             return false;
         }
-        
+
         infile = files[0];
         return true;
     }

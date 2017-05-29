@@ -381,7 +381,7 @@ public class Interp {
                                     MLTree mod = mods_comp_repe.getChild(n);
 
                                     switch (mod.getType()){
-
+                                        //TODO: EXPR_TIME que també puguin ser BOOL
                                         case MLLexer.EXPR_TIME:
                                             int expr_value = evaluateExpression(mod.getChild(0).getChild(1)).getIntegerValue();
                                             repe_time = expr_value;
