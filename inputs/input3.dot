@@ -53,40 +53,47 @@ digraph {
   n28 [label="La"];
   n29 [label="7"];
   n30 [label="n"];
-  n31 [label="·"];
-  n32 [label="Re"];
-  n33 [label="ACORD"];
-  n33 [label="ACORD"];
-  n34 [label="Re"];
-  n35 [label="Fa"];
-  n36 [label="Silenci"];
-  n37 [label="COMPAS"];
-  n37 [label="COMPAS"];
-  n38 [label="NOTES_ACORDS"];
-  n38 [label="NOTES_ACORDS"];
-  n39 [label="La"];
-  n40 [label="Si"];
-  n41 [label="Do"];
-  n42 [label="Silenci"];
-  n43 [label="Voice"];
-  n43 [label="Voice"];
-  n44 [label="Flute"];
-  n45 [label="COMPAS"];
-  n45 [label="COMPAS"];
-  n46 [label="NOTES_ACORDS"];
-  n46 [label="NOTES_ACORDS"];
+  n31 [label="Re"];
+  n32 [label="ACORD"];
+  n32 [label="ACORD"];
+  n33 [label="Re"];
+  n34 [label="Fa"];
+  n35 [label="Silenci"];
+  n36 [label="COMPAS"];
+  n36 [label="COMPAS"];
+  n37 [label="NOTES_ACORDS"];
+  n37 [label="NOTES_ACORDS"];
+  n38 [label="La"];
+  n39 [label="Si"];
+  n40 [label="Do"];
+  n41 [label="Silenci"];
+  n42 [label="Voice"];
+  n42 [label="Voice"];
+  n43 [label="Flute"];
+  n44 [label="COMPAS"];
+  n44 [label="COMPAS"];
+  n45 [label="NOTES_ACORDS"];
+  n45 [label="NOTES_ACORDS"];
+  n46 [label="Do"];
   n47 [label="Do"];
   n48 [label="Do"];
-  n49 [label="Do"];
-  n50 [label="Silenci"];
-  n51 [label="Do"];
+  n49 [label="Silenci"];
+  n50 [label="COMPAS"];
+  n50 [label="COMPAS"];
+  n51 [label="NOTES_ACORDS"];
+  n51 [label="NOTES_ACORDS"];
   n52 [label="Do"];
   n53 [label="Do"];
   n54 [label="Do"];
   n55 [label="Do"];
-  n56 [label="Do"];
-  n57 [label="Do"];
+  n56 [label="COMPAS"];
+  n56 [label="COMPAS"];
+  n57 [label="NOTES_ACORDS"];
+  n57 [label="NOTES_ACORDS"];
   n58 [label="Do"];
+  n59 [label="Do"];
+  n60 [label="Do"];
+  n61 [label="Do"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -118,33 +125,36 @@ digraph {
   n27 -> n28 // "NOTES_ACORDS" -> "La"
   n28 -> n29 // "La" -> "7"
   n28 -> n30 // "La" -> "n"
-  n28 -> n31 // "La" -> "·"
-  n27 -> n32 // "NOTES_ACORDS" -> "Re"
-  n27 -> n33 // "NOTES_ACORDS" -> "ACORD"
-  n33 -> n34 // "ACORD" -> "Re"
-  n33 -> n35 // "ACORD" -> "Fa"
-  n27 -> n36 // "NOTES_ACORDS" -> "Silenci"
-  n24 -> n37 // "Voice" -> "COMPAS"
-  n37 -> n38 // "COMPAS" -> "NOTES_ACORDS"
-  n38 -> n39 // "NOTES_ACORDS" -> "La"
-  n38 -> n40 // "NOTES_ACORDS" -> "Si"
-  n38 -> n41 // "NOTES_ACORDS" -> "Do"
-  n38 -> n42 // "NOTES_ACORDS" -> "Silenci"
-  n23 -> n43 // "VEUS" -> "Voice"
-  n43 -> n44 // "Voice" -> "Flute"
-  n43 -> n45 // "Voice" -> "COMPAS"
-  n45 -> n46 // "COMPAS" -> "NOTES_ACORDS"
-  n46 -> n47 // "NOTES_ACORDS" -> "Do"
-  n46 -> n48 // "NOTES_ACORDS" -> "Do"
-  n46 -> n49 // "NOTES_ACORDS" -> "Do"
-  n46 -> n50 // "NOTES_ACORDS" -> "Silenci"
-  n46 -> n51 // "NOTES_ACORDS" -> "Do"
-  n46 -> n52 // "NOTES_ACORDS" -> "Do"
-  n46 -> n53 // "NOTES_ACORDS" -> "Do"
-  n46 -> n54 // "NOTES_ACORDS" -> "Do"
-  n46 -> n55 // "NOTES_ACORDS" -> "Do"
-  n46 -> n56 // "NOTES_ACORDS" -> "Do"
-  n46 -> n57 // "NOTES_ACORDS" -> "Do"
-  n46 -> n58 // "NOTES_ACORDS" -> "Do"
+  n27 -> n31 // "NOTES_ACORDS" -> "Re"
+  n27 -> n32 // "NOTES_ACORDS" -> "ACORD"
+  n32 -> n33 // "ACORD" -> "Re"
+  n32 -> n34 // "ACORD" -> "Fa"
+  n27 -> n35 // "NOTES_ACORDS" -> "Silenci"
+  n24 -> n36 // "Voice" -> "COMPAS"
+  n36 -> n37 // "COMPAS" -> "NOTES_ACORDS"
+  n37 -> n38 // "NOTES_ACORDS" -> "La"
+  n37 -> n39 // "NOTES_ACORDS" -> "Si"
+  n37 -> n40 // "NOTES_ACORDS" -> "Do"
+  n37 -> n41 // "NOTES_ACORDS" -> "Silenci"
+  n23 -> n42 // "VEUS" -> "Voice"
+  n42 -> n43 // "Voice" -> "Flute"
+  n42 -> n44 // "Voice" -> "COMPAS"
+  n44 -> n45 // "COMPAS" -> "NOTES_ACORDS"
+  n45 -> n46 // "NOTES_ACORDS" -> "Do"
+  n45 -> n47 // "NOTES_ACORDS" -> "Do"
+  n45 -> n48 // "NOTES_ACORDS" -> "Do"
+  n45 -> n49 // "NOTES_ACORDS" -> "Silenci"
+  n42 -> n50 // "Voice" -> "COMPAS"
+  n50 -> n51 // "COMPAS" -> "NOTES_ACORDS"
+  n51 -> n52 // "NOTES_ACORDS" -> "Do"
+  n51 -> n53 // "NOTES_ACORDS" -> "Do"
+  n51 -> n54 // "NOTES_ACORDS" -> "Do"
+  n51 -> n55 // "NOTES_ACORDS" -> "Do"
+  n42 -> n56 // "Voice" -> "COMPAS"
+  n56 -> n57 // "COMPAS" -> "NOTES_ACORDS"
+  n57 -> n58 // "NOTES_ACORDS" -> "Do"
+  n57 -> n59 // "NOTES_ACORDS" -> "Do"
+  n57 -> n60 // "NOTES_ACORDS" -> "Do"
+  n57 -> n61 // "NOTES_ACORDS" -> "Do"
 
 }

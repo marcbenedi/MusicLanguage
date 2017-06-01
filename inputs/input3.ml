@@ -7,6 +7,6 @@ Piezzo nocturne(a)
     Tempo b=2*30
     Compas 4:4
     Voice Piano || 7La.n Re [Re,Fa] Silenci| La Si Do Silenci ||
-    Voice Flute || Do Do Do Silenci Do Do Do Do Do Do Do Do ||
+    Voice Flute || Do Do Do Silenci | Do Do Do Do | Do Do Do Do ||
   }
 endPiezzo

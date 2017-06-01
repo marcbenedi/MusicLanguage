@@ -1,5 +1,6 @@
 func main()
   fur_elise();
+  part_inicial();
 endfunc
 
 //http://www.tusacordes.com/secciones/ver_tema.php?id=17860
