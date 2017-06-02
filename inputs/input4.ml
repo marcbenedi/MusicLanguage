@@ -25,7 +25,7 @@ Piezzo duracio()
   Partitura {
     Tempo n = 60
     Compas 4:4
-    Voice Piano || Do.r | Re.b Re.b|Mi.n Fa.c Fa.c Fa.b| Sol.sc Sol.sc Sol.sc Sol.sc La.f | Si.sf Do.n||
+    Voice Piano || Do.r | Re.b Re.b|Mi.n Fa.c Fa.c Fa.b| Sol.sc Sol.sc Sol.sc Sol.sc Sol.b·||
   }
 endPiezzo
 
@@ -33,6 +33,6 @@ Piezzo puntets()
   Partitura {
     Tempo n = 60
     Compas 2:4
-    Voice Piano || Do.b· Do.n | Silenci.n Re.n |Silenci.b Re | Silenci.n· Re.c||
+    Voice Piano || Do.n· Do.c | Silenci.n Re.n |Silenci.n Re | Silenci.n· Re.c||
   }
 endPiezzo
