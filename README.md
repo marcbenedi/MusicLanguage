@@ -12,3 +12,8 @@ It can also exports the file into midi format.
 
 
 Mark to be updated
+
+
+
+
+We used JFuge library. http://www.jfugue.org/
